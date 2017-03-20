@@ -1,0 +1,14 @@
+<?php  //add the category name to the header   ?>
+
+<?php if(Mage::registry('current_category')):?>
+
+        <?php
+            $_helper    = $this->helper('catalog/output');
+            $_category  = $this->getCurrentCategory(); ?>
+            
+      <div class="page-title">
+            <h1><?php echo $_category->getName() ?> </h1>
+            <?php echo $this->getLayout()->getBlock('breadcrumbs')->toHtml(); ?>
+        </div>
+        
+<?php endif; ?>

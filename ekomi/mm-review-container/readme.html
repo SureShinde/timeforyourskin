@@ -1,0 +1,447 @@
+<html>
+<head>
+
+    <style>ol li,optgroup,ul li{margin-top:.5em}blockquote,h2,h3,p,pre{margin:1em 0}*{margin:0;padding:0}body{font:13.34px helvetica,arial,freesans,clean,sans-serif;color:#000;line-height:1.4em;background-color:#F8F8F8;padding:.7em}pre,pre code{background-color:#eee}p{line-height:1.5em}table{font:100%;margin:1em}table th{border-bottom:1px solid #bbb;padding:.2em 1em}table td{border-bottom:1px solid #ddd;padding:.2em 1em}input[type=image],input[type=password],input[type=text],textarea{font:99% helvetica,arial,freesans,sans-serif}option,select{padding:0 .25em}code,pre{color:#444;font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace}code,pre,pre code{font-size:12px}pre{border:1px solid #ddd;padding:5px;line-height:1.5em;overflow:auto;-webkit-box-shadow:rgba(0,0,0,.07) 0 1px 2px inset;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}pre code{border:none;display:block;padding:.5em;color:#333;background:#f8f8ff}h1,h2,h3,h4,h5,h6,hr,img{border:0}code{background-color:#f8f8ff;padding:0 .2em;border:1px solid #dedede}a,a code,a:link code,a:visited code{color:#4183c4}img{max-width:100%}abbr{border-bottom:none}a{text-decoration:none}a:hover{text-decoration:underline}h1,h2{margin-top:1.5em}h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em}h1:first-child{margin-top:0;padding-top:.25em;border-top:none}h2{font-size:150%;border-bottom:1px solid #ddd;padding-bottom:.5em}h3{margin-top:1em}hr{height:0;margin:15px 0;overflow:hidden;background:0 0;border-bottom:4px solid #ddd}ol,ul{margin:1em 0 1em 2em}ol li,ul li{margin-bottom:.5em}ol ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}blockquote{border-left:5px solid #ddd;padding-left:.6em;color:#555}dt{font-weight:700;margin-left:1em}dd{margin-left:2em;margin-bottom:1em}@media screen and (min-width:768px){body{width:748px;margin:10px auto}}pre .comment,pre .diff .header,pre .javadoc,pre .template_comment{color:#998;font-style:italic}pre .css .rule .keyword,pre .javascript .title,pre .keyword,pre .nginx .title,pre .request,pre .status,pre .subst,pre .winutils{color:#333;font-weight:700}pre .hexcolor,pre .number,pre .ruby .constant{color:#099}pre .phpdoc,pre .string,pre .tag .value,pre .tex .formula{color:#d14}pre .coffeescript .params,pre .id,pre .scss .preprocessor,pre .title{color:#900;font-weight:700}pre .clojure .title,pre .javascript .title,pre .lisp .title,pre .subst{font-weight:400}pre .class .title,pre .haskell .type,pre .tex .command,pre .vhdl .literal{color:#458;font-weight:700}pre .django .tag .keyword,pre .rules .property,pre .tag,pre .tag .title{color:navy;font-weight:400}pre .attribute,pre .lisp .body,pre .variable{color:teal}pre .regexp{color:#009926}pre .class{color:#458;font-weight:700}pre .lisp .keyword,pre .prompt,pre .ruby .symbol .string,pre .symbol,pre .tex .special{color:#990073}pre .built_in,pre .clojure .built_in,pre .lisp .title{color:#0086b3}pre .cdata,pre .doctype,pre .pi,pre .preprocessor,pre .shebang{color:#999;font-weight:700}pre .deletion{background:#fdd}pre .addition{background:#dfd}pre .diff .change{background:#0086b3}pre .chunk{color:#aaa}</style>
+    <title>eKomi's Mass Market Review Container</title>
+</head>
+<body>
+<div style="text-align:center">
+    <h1 id="mass-market-review-container">MASS MARKET REVIEW CONTAINER</h1>
+    <p><img src="http://ns305980.ip-91-121-223.eu/_media/mm-review-container/mm-review-container-icon-min.png"
+            alt="mm-review-container-logo" title="The Mass Market Review Container logo"></p>
+</div>
+<h2 id="description">Description</h2>
+<p>The eKomi review container allows an easy integration of eKomi reviews and ratings into your web-shop. It also includes Google rich snippet functionality.</p>
+<p>The review container is by default responsive. Therefore, to get a better display experience - please put it in a div that is minimum 500px width or more.</p>
+<h2 id="system-requirements">System Requirements</h2>
+<p>Your host needs to meet those requirements:</p>
+<ul>
+    <li>Use at least PHP 5.2.4 or higher (recommended).</li>
+    <li>Installed database like MySQL, MSSQL, SQLite or similar.</li>
+    <li>Database access details; username, password, database name and host (ask your host/admin to provide this information).</li>
+</ul>
+<h2 id="end-user-installation">End-User Installation</h2>
+<p>The Mass Market Review Container comes in different versions; as a basic/standalone version or in a form of plugin. So far, eKomi has developed plugin versions for <a href="https://magento.com/">Magento</a>, <a href="https://www.prestashop.com">Prestashop</a> and <a href="https://en.shopware.com/">Shopware</a>.</p>
+<h3 id="standalone-version">Standalone Version</h3>
+<p>The installation of the review container is straightforward, first the script needs to generate a configuration file and do a first synchronisation of the reviews from eKomi's API into client's local database. Once the setup is done, you can then include the script with your application files.</p>
+<h4 id="setup-database-and-create-config-php">Setup Database and Create config.php</h4>
+<ol>
+    <li>After decompressing the <code>ekomi-mm-review-container-basis.2.x.x.zip</code> zip file, copy the decompressed folder <code>ekomi-mm-review-container-basis_xxxx</code> somewhere into your server.</li>
+    <li>Set the folder permissions to 777 to let the script create the config.php file.</li>
+    <li>Within your browser, navigate to that folder you just copied <code>your-website.com/ekomi-mm-review-container-basis_xxxx/</code>. The install page has a form with fields, fill them in and follow the setup instructions to install the application. The script will automatically create a configuration file and populate the given database.</li>
+    <li>Reset folder permissions to defaults.</li>
+</ol>
+<h4 id="including-the-script-in-clients-code-">Including the Script in Clients Code.</h4>
+<p>The Mass Market Review Container comes in different versions; either standalone or in a form of plugin. We developed plugin versions for Magento, Prestashop and Shopware, however, you can directly include the base version of review container into your PHP code by calling it like this:</p>
+<pre><code class="lang-php">&lt;?php
+<span class="comment">/**
+ * eKOMI MASS MARKET REVIEW CONTAINER
+ */</span>
+
+    <span class="comment">// Link to the autoload file</span>
+    <span class="comment">// If you uploaded the solution to say; </span>
+    <span class="comment">// "example.com/ekomi/ekomi-mm-review-container-basis_12345/" and you </span>
+    <span class="comment">// want to include the script in your "example.com/index.php"</span>
+    require <span class="string">'ekomi/ekomi-mm-review-container-basis_12345/includes/autoload.php'</span>;
+
+    <span class="comment">// Container parameters</span>
+    $params = array(
+    <span class="string">'returnInsteadEcho'</span> =&gt; <span class="literal">false</span>,
+    <span class="string">'productID'</span> =&gt; <span class="string">'p_CN_COYU_4504'</span>,
+    <span class="string">'productName'</span> =&gt; <span class="string">'My product name'</span>,
+    <span class="string">'hasReviewedItem'</span> =&gt; <span class="literal">true</span>,
+    <span class="string">'isStandalone'</span> =&gt; <span class="literal">true</span>,
+    <span class="string">'needsFullHtmlHeader'</span> =&gt; <span class="literal">true</span>,
+    <span class="string">'shopID'</span> =&gt; <span class="literal">null</span>
+    );
+
+    <span class="comment">// Init container</span>
+    $eKomi = <span class="keyword">new</span> mmReviewContainer($params);
+
+    <span class="comment">// Get full reviews view</span>
+    $eKomi-&gt;getProductReviews();
+
+    <span class="comment">// Get stars and counter mini view</span>
+    echo $eKomi-&gt;getMiniStarsCounter();
+
+    <span class="comment">// Get total product reviews in the tab</span>
+    echo $eKomi-&gt;getProductTotalReviews();
+    ?&gt;
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+<p>Those are the available parameters that you can pass to the review container.</p>
+<h5 id="returninsteadecho">returnInsteadEcho</h5>
+<p>Type: <code>Boolean</code>
+    Default: <code>false</code> </p>
+<p>to return or echo the html?</p>
+<h5 id="productid">productID</h5>
+<p>Type: <code>Mixed</code>
+    Default: <code>(empty string)</code></p>
+<p>The product ID for which you want to display the available reviews; Change this to reflect your product ID or SKU. You can also use multiple product IDs and provide them as an array in order to group the reviews of multiple products like for example:</p>
+<pre><code><span class="string">'productID'</span> =&gt; <span class="keyword">array</span>(<span class="string">'Custom-normal-Design'</span>,<span class="string">'103147698'</span>)
+</code></pre><h5 id="productname">productName</h5>
+<p>Type: <code>String</code>
+    Default: <code>(empty string)</code></p>
+<p>Product name; change this to reflect your product name.</p>
+<h5 id="hasrevieweditem">hasReviewedItem</h5>
+<p>Type: <code>Boolean</code>
+    Default: <code>true</code> </p>
+<p>Set to <code>true</code> if the page that displays the review container contains in its HTML the following; <code>itemscope itemtype="http://schema.org/Product" ..</code> This allows Google Reviews Rich Snippets to validate product reviews and ratings.</p>
+<h5 id="isstandalone">isStandalone</h5>
+<p>Type: <code>Boolean</code>
+    Default: <code>false</code> </p>
+<p>Tells the basis container that it is not running behind a plugin wrapper (like Magento or Prestahop plugins).</p>
+<h5 id="needsfullhtmlheader">needsFullHtmlHeader</h5>
+<p>Type: <code>Boolean</code>
+    Default: <code>false</code></p>
+<p>This generates the full <code>&lt;html&gt;</code> header and its closing tags. This way we don't show the full html inside the page when calling the container div.</p>
+<h5 id="shopid">shopID</h5>
+<p>Type: <code>String</code>
+    Default: uses the main shop ID used during the install.</p>
+<p>For multiple shops, you may use one review container installation for different shop IDs. During the install you can add more shops to be synchronized to your local database and then use this parameter to display reviews from the wanted shop.</p>
+<h5 id="languagelocale">languageLocale</h5>
+<p>Type: <code>String</code>
+    Default: 'en'.</p>
+<p>Changes the container's interface language. The locale is the language code and/or country code for the available container languages. For example, the locale for German is 'de'. Check the languages folder for available languages (de, es, fr, it, nl, pl, pt..)</p>
+<h4 id="methods">Methods</h4>
+<p>The review container comes with handy methods (functions) to display reviews. As you can see in the example demo (index.php), you can call these methods to display the type of container you want.</p>
+<h5 id="getproductreviews">getProductReviews</h5>
+<p>This is the main review container that you will be using frequently. It returns html of the full review container with sorting functions, votes, etc..</p>
+<h5 id="getproducttotalreviews">getProductTotalReviews</h5>
+<p>Returns the total number of reviews.</p>
+<h5 id="getproductstarsavg">getProductStarsAvg</h5>
+<p>Returns the average star ratings for the given product.</p>
+<h5 id="getministarscounteravg">getMiniStarsCounterAvg</h5>
+<p>Shows mini stars with total and average reviews.</p>
+<h5 id="getministarscounter">getMiniStarsCounter</h5>
+<p>Same as getMiniStarsCounterAvg but without average.</p>
+<h4 id="example-of-including-the-container-in-xt-commerce">Example of including the container in xt:commerce</h4>
+<p>Altough this is not recommanded, you can use the review container in the xt:commerce shop system by modifying 2 core files:</p>
+<ul>
+    <li>xtCommerce\xtCore\pages\product.php</li>
+    <li>xtCommerce\templates\xt_grid\xtCore\pages\product\product.html</li>
+</ul>
+<p>In product.php, after the line that says:</p>
+<pre><code class="lang-php"><span class="variable">$tpl_data</span>[<span class="string">'message'</span>] = <span class="variable">$info</span>-&gt;info_content;
+</code></pre>
+<p>Add the following code:</p>
+<pre><code class="lang-php"><span class="comment">/**
+ * eKOMI MASS MARKET REVIEW CONTAINER
+ */</span>
+
+    <span class="comment">// Link to the autoload file</span>
+    <span class="comment">// If you uploaded the solution to say;</span>
+    <span class="comment">// "example.com/ekomi/ekomi-mm-review-container-basis_12345/" and you</span>
+    <span class="comment">// want to include the script in your "example.com/index.php"</span>
+    require <span class="string">'ekomi/ekomi-mm-review-container-basis_1446548914/includes/autoload.php'</span>;
+
+    <span class="comment">// Container parameters</span>
+    $params = array(
+    <span class="string">'returnInsteadEcho'</span> =&gt; <span class="literal">false</span>,
+    <span class="string">'productID'</span> =&gt; $tpl_data[<span class="string">'products_id'</span>],
+    <span class="string">'productName'</span> =&gt; $tpl_data[<span class="string">'products_name'</span>],
+    <span class="string">'hasReviewedItem'</span> =&gt; <span class="literal">false</span>,
+    <span class="string">'returnInsteadEcho'</span> =&gt; <span class="literal">true</span>
+    );
+
+    <span class="comment">// Init container</span>
+    $eKomi = <span class="keyword">new</span> mmReviewContainer($params);
+
+    <span class="comment">// Assign the variables</span>
+    $tpl_data[<span class="string">'ekomiReviews'</span>] = $eKomi-&gt;getProductReviews();
+    $tpl_data[<span class="string">'ekomiReviewsCount'</span>] = $eKomi-&gt;getProductTotalReviews();
+</code></pre>
+<p>Then go to the product.html template file and replace:</p>
+<pre><code>{if $review_stars_rating}
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:void(0);"</span> <span class="attribute">rel</span>=<span class="value">"#reviews"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">itemprop</span>=<span class="value">"review"</span> <span class="attribute">itemscope</span> <span class="attribute">itemtype</span>=<span class="value">"http://data-vocabulary.org/Review-aggregate"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">itemprop</span>=<span class="value">"rating"</span> <span class="attribute">style</span>=<span class="value">"display:none;"</span>&gt;</span>{$products_average_rating}<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">itemprop</span>=<span class="value">"count"</span>&gt;</span>{if $products_rating_count}{$products_rating_count}{else}0{/if}<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span> {txt key=TEXT_XT_REVIEWS_INFO}<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    {/if}
+</code></pre><p>with:</p>
+<pre><code>{if $review_stars_rating}
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:void(0);"</span> <span class="attribute">rel</span>=<span class="value">"#reviews"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">itemprop</span>=<span class="value">"review"</span> <span class="attribute">itemscope</span> <span class="attribute">itemtype</span>=<span class="value">"http://data-vocabulary.org/Review-aggregate"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">itemprop</span>=<span class="value">"rating"</span> <span class="attribute">style</span>=<span class="value">"display:none;"</span>&gt;</span>{$products_average_rating}<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">itemprop</span>=<span class="value">"count"</span>&gt;</span>{if $ekomiReviewsCount}{$ekomiReviewsCount}{else}0{/if}<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span> {txt key=TEXT_XT_REVIEWS_INFO}<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    {/if}
+</code></pre><p>and replace also:</p>
+<pre><code>{if $review_stars_rating}
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"reviews"</span> <span class="attribute">class</span>=<span class="value">"ptabs textstyles"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"headline"</span>&gt;</span>{if $products_rating_count}{$products_rating_count}{else}0{/if} {txt key=TEXT_XT_REVIEWS_INFO}<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    {hook key=product_info_tpl_reviews}
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="comment">&lt;!-- #reviews --&gt;</span>
+    {/if}
+</code></pre><p>with:</p>
+<pre><code>{if $review_stars_rating}
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"reviews"</span> <span class="attribute">class</span>=<span class="value">"ptabs textstyles"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"headline"</span>&gt;</span>{if $ekomiReviewsCount}{$ekomiReviewsCount}{else}0{/if} {txt key=TEXT_XT_REVIEWS_INFO}<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    {$ekomiReviews}
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="comment">&lt;!-- #reviews --&gt;</span>
+    {/if}
+</code></pre><h3 id="magento-version">Magento version</h3>
+<ol>
+    <li>Upload the compressed file of the extension to the Magento's backend: System -&gt; Magento Connect -&gt; Magento Connect Manager.</li>
+    <li>Go to "Direct package file upload" and upload the provided zip file: this will install necessary module files as well as base review container code to the root directory of your Magento setup, for example like <code>mymagento.com/magento/ekomi/mm-review-container/</code>, if you have Magento installed inside a folder called <code>magento</code>.</li>
+    <li>Run MM Product Container's first time installer by visiting the extension directory's URL: that would look something like <code>http://mymagento.com/magento/ekomi/mm-review-container/install.php</code>.</li>
+    <li>Go to the Magento admin and create a new widget in <code>CMS-&gt; Widgets</code> then click on <code>Add New Widget Instance</code>.</li>
+    <li>For type select; <code>eKomi Review Container</code> and for Design Package/Theme choose your currently used theme and click on continue.</li>
+    <li>Give the widget a custom instance title in <code>Widget Instance Title</code> and assign it to any of the store views in <code>Assign to Store Views</code> like <code>All Store Views</code>. Add it to a block in the template by clicking in <code>Add Layout Update</code>: Display on <code>All product Types</code>, choose the preferred <code>Block Reference</code> and the <code>Template</code>.</li>
+    <li>Finally, switch to the <code>Widget Options</code> tab to setup which shop to get reviews from (during the container install you can add multiple shops). Choose how you want to get products from the database; by ID or SKU.</li>
+    <li>Click on <code>Save</code> and go to the frontend to see your newly created widget.</li>
+</ol>
+<h4 id="how-to-disable-customer-reviews-in-magento">How to disable customer reviews in Magento</h4>
+<p>After you log in to the admin panel of Magento, go to System menu&gt;Configuration. On the page that opens click on the Advanced button that is in the Advanced menu on the left, then, if it's not expanded, click on the Disable Modules Output panel on the right, set the Mage_Review drop-down menu to Disable and click on the Save Config button in the upper right corner. In this way customers will not be able to post reviews and rate products.</p>
+<h3 id="prestashop-version">Prestashop version</h3>
+<p>If you don't know the database settings, you can get them in the Prestashop file:</p>
+<pre><code>/prestashop/config/settings.inc.php
+</code></pre><h4 id="install-a-module-from-the-administration-panel">Install a module from the administration panel</h4>
+<p>This is the easiest method, but it may not work in certain cases. If it does not work, use the manual installation method described later on.</p>
+<ul>
+    <li>Log into your Prestashop 1.6 admin and click on "Modules and Services".</li>
+    <li>At the top right of the window, click on "Add a new module" and "Choose a file" that is the provided module zip file from your computer.</li>
+    <li>Finally, click on "Upload this module". The module will then appear in your list of modules under the "Front office Features" category.</li>
+    <li>Click on the install button to install the module.</li>
+    <li>Before activating (Install) the module, run MM Product Container's first time installer by visiting the exstention directory's URL: that would look something like <code>myprestashop.com/prestashop/modules/ekomireviewcontainer/mm-review-container/install.php</code>.</li>
+    <li>Once the module is configured, click on the green "Install" button to enable it.</li>
+</ul>
+<h4 id="install-a-module-manually">Install a module manually</h4>
+<p>Use this method if the administration panel installation does not work. It may seem tedious for beginners, because it requires a certain amount of knowledge of FTP, etc., however it is no more complex and may even be more convenient because it works every time.</p>
+<p>In addition, the know-how required for the installation is quite basic and is something that all store managers should master.</p>
+<p>To install a new PrestaShop module manually:</p>
+<ul>
+    <li>Unzip (decompress) the module archive file (.zip). This should result in a new folder.</li>
+    <li>Using your FTP client, place the folder in your PrestaShop /modules folder. Pay attention NOT to upload that folder in another module's folder (which can happen when drag-and-dropping items). Upload the whole folder, not just the files it contains.</li>
+    <li>Go to your back-office, in the "Modules" tab. Locate the new module in the modules list. You might have to scroll down; you can also use the list's search engine, which should give you a dynamically updated list of matching module names.</li>
+    <li>In the row for the new module, click the "Install" button.</li>
+    <li>Your module is now installed and should be activated too (green tick). If necessary, click on the module's "Configure" link. Pay close attention to any warning message that might be displayed by PrestaShop.</li>
+    <li>Once configuration is complete, be sure to test the module immediately to confirm that it works as expected.</li>
+</ul>
+<h4 id="uninstall-a-module">Uninstall a module</h4>
+<p>If you need to temporarily not use the module, but still wish to keep its configuration, you can simply disable it: just click on the green tick, which should then turn into a red cross, meaning that the module is still installed, but disabled.</p>
+<p>If you do not care about the module's configuration, click on the "Uninstall" button: your module's folder will still be in the /modules folder, but the module will not have any more impact on your shop.</p>
+<p>If you changed your theme to take the module into account, please ensure that the disabling or removal of the module does not break the theme.</p>
+<h4 id="calling-the-container-from-prestashop-themes-templates">Calling the container from Prestashop themes/templates</h4>
+<p>By default this module adds a new tab in the product page of Prestashop 1.6 using the default theme. However, sometimes you may want to display the review container somewhere else in your theme; like below the tile for example... To do this, you can use what we call "hooks", those are a small html text that you put in your theme's template files and it renders the appropriate display you passed in the hook parameters.</p>
+<p>So far, we have 3 hooks that you can use; <code>productReviewsWidget</code> to show the full review container, <code>productMiniStarsCounterWidget</code> to show the full mini stars container and <code>productTotalReviewsCount</code> to get total reviews number.</p>
+<h4 id="productreviewswidget">productReviewsWidget</h4>
+<p>Suppose we want somewhere in our theme or template to show the review container widget; all we need to do is call the hook like this:</p>
+<pre><code>{hook mod=<span class="string">'ekomireviewcontainer'</span> h=<span class="string">'EkomiReviews'</span> render=<span class="string">'productReviewsWidget'</span> product=<span class="variable">$product</span>}
+</code></pre><p>Note that we passed <code>productReviewsWidget</code> as a value in the <code>render</code> parameter.</p>
+<p>Note also the passed parameter <code>$product</code> this is a parameter available withing Smarty in the templates.</p>
+<h4 id="productministarscounterwidget">productMiniStarsCounterWidget</h4>
+<p>to show the mini stars content;</p>
+<pre><code>{hook mod=<span class="string">'ekomireviewcontainer'</span> h=<span class="string">'EkomiReviews'</span> render=<span class="string">'productMiniStarsCounterWidget'</span> product=<span class="variable">$product</span>}
+</code></pre><p>Note that we passed <code>productReviewsWidget</code> as a value in the <code>render</code> parameter.</p>
+<p>Note also the passed parameter <code>$product</code> this is a parameter available withing Smarty in the templates.</p>
+<h4 id="producttotalreviewscount">productTotalReviewsCount</h4>
+<p>Suppose we want somewhere in our theme or template to show the count of the reviews we have for the current product; we pass <code>productTotalReviewsCount</code> in the <code>render</code> parameter like this:</p>
+<pre><code>{hook mod=<span class="string">'ekomireviewcontainer'</span> h=<span class="string">'EkomiReviews'</span> render=<span class="string">'productTotalReviewsCount'</span> product=<span class="variable">$product</span>}
+</code></pre><h3 id="shopware-version">Shopware version</h3>
+<ol>
+    <li>Upload the zip file of the plugin using Shopware's backend.</li>
+    <li>Install and activate the plugin in configuration -&gt; Plugin Manager.</li>
+    <li>Run MM Product Container's first time installer by visiting the plugin directory's URL that would look something like:
+        <code>myshopware.com/engine/Shopware/Plugins/Local/Frontend/eKomiMmContainer/ekomi-mm-review-container-basis/install.php</code></li>
+</ol>
+<h4 id="including-the-container-inside-the-templates">Including the container inside the templates</h4>
+<p>Inside of a product page, insert the following:</p>
+<pre><code>{<span class="keyword">if</span> <span class="variable">$eKomiProductReviews</span>}
+    {<span class="variable">$eKomiProductReviews</span>}
+    {<span class="regexp">/if}
+</span></code></pre><p>You can show the total product reviews using;</p>
+<pre><code>{<span class="keyword">if</span> <span class="variable">$eKomiProductTotalReviews</span>}
+    {<span class="variable">$eKomiProductTotalReviews</span>}
+    {<span class="regexp">/if}
+</span></code></pre><h2 id="faq">FAQ</h2>
+<h3 id="why-the-cronjob-doesn-t-immediatly-syncronize-the-newly-added-reviews-">Why the cronjob doesn't immediatly syncronize the newly added reviews?</h3>
+<p>When you install the review container for the first time (or its derived plugins; Magento, Prestashop..) it calls the API and synchronizes/copies all the reviews to client's chosen database.  From then on, each time you call the container (ex. view it on the browser), it ignites the cronjob to see if there are new reviews not synchronized to local DB, <em>BUT</em> this time, it calls the API with a date range parameter (like; show me the last weeks new reviews).</p>
+<p><img src="http://ns305980.ip-91-121-223.eu/_media/mm-review-container/mm-review-container-workflow.png" alt="mm-review-container-workflow" title="The Mass Market Review Container Workflow"></p>
+<p>The time range is calculated by checking our local database for the most recent review, if it is not older than 1 week.. the cronjob is {color:red}cancelled{color}.. if it is more than 1 week then we call the API to see the last weeks reviews and synchronize them.. If the latest synched review is older than 1 month then we call the api with the range being 1 month and so on.
+    The default existing date ranges are; 1w, 1m, 3m, 6m, 1y and all.</p>
+<h2 id="developers">Developers</h2>
+<p>Stop reading here if you are not a developer!</p>
+<p>:)</p>
+<h3 id="repositories">Repositories</h3>
+<p>The code is hosted on <a href="https://bitbucket.org/">Bitbucket</a> and this is the related repositories:</p>
+<ul>
+    <li><a href="https://bitbucket.org/ateam_user/mm-review-container">Basic standalone version</a>.</li>
+    <li><a href="https://bitbucket.org/ateam_user/mm-review-container-magento">Magento plugin</a>.</li>
+    <li><a href="https://bitbucket.org/ateam_user/mm-review-container-prestashop">Prestashop plugin</a>.</li>
+    <li><a href="https://bitbucket.org/ateam_user/mm-review-container-shopware">Shopware plugin</a>.</li>
+</ul>
+<p>You can download latest distribution zip files from the <a href="https://bitbucket.org/CC-Lead/mm-review-container-bundle">review container bundle</a> repository.</p>
+<h3 id="project-dependencies">Project dependencies</h3>
+<p>This project uses Node.js to build the different parts of the application; grunt, bower... Please install the necessary software before proceeding further.</p>
+<ul>
+    <li>Bower =&gt; npm install -g bower</li>
+    <li>gem install sass</li>
+    <li>gem install compass</li>
+</ul>
+<h3 id="directory-structure">Directory structure</h3>
+<p>This is the directory structure of the review container:</p>
+<pre><code>|<span class="comment">-- .build                  # Built code; Node.js dependencies and build config.</span>
+    |<span class="comment">-- .data                   # Photoshop templates to generate seals and stars.</span>
+    |<span class="comment">-- .src                    # Front-end source code (+ browser dependencies)</span>
+    |       |<span class="comment">-- fonts</span>
+    |       |<span class="comment">-- images</span>
+    |       |<span class="comment">-- scripts</span>
+    |       |<span class="comment">-- scss</span>
+    |<span class="comment">-- www                     # PHP core code of the review container.</span>
+    |   |<span class="comment">-- assets              # This folder is automatically generated by Grunt.</span>
+    |   |<span class="comment">-- includes            # Core PHP files and dependency libraries.</span>
+    |       |<span class="comment">-- lib</span>
+    |               |<span class="comment">-- ezSQL</span>
+    |               |<span class="comment">-- l10n</span>
+    |               |<span class="comment">-- Twig</span>
+    |   |<span class="comment">-- languages           # Application translations: Poedit files.</span>
+    |   |<span class="comment">-- templates           # Twig HTML templates.</span>
+    |       |<span class="comment">-- partials</span>
+    |       |<span class="comment">-- widgets</span>
+</code></pre><h3 id="first-time-setup">First time setup</h3>
+<p>Inside the <code>.build</code> directory run the following commands:</p>
+<ol>
+    <li><code>npm install</code> to install <a href="http://www.nodejs.org/">Node</a> project packages; <a href="http://gruntjs.com/">Grunt</a>, <a href="http://compass-style.org/">Compass</a>... etc.</li>
+    <li><code>bower install</code> to install frontend libraries using <a href="http://bower.io/">Bower</a>.</li>
+    <li><code>composer install</code> to install the dependencies of the project using <a href="https://getcomposer.org/">Composer</a>.</li>
+</ol>
+<p>For templates we use <a href="http://twig.sensiolabs.org/">Twig</a> template engine.</p>
+<p>The responsive grid used in front end uses a slight port of the <a href="http://foundation.zurb.com/">Zurb's Foundation</a> framework.</p>
+<p>To generate a new build run <code>grunt</code> on the <code>.build</code> directory.</p>
+<p>To generate a new zip file of the project run <code>grunt zip</code> on the <code>.build</code> directory.</p>
+<h3 id="localization-translations">Localization &amp; Translations</h3>
+<p>We are using the gettext internationalization and localization (i18n) system. The languages folder contains the <code>ekomi.pot</code> file which is a Portable Object Template that we get when we extract texts from the application. We send this file to our translators to use as template for generating the <em>.po (Portable Object; text file that includes the original texts and the translations) and </em>.mo (Machine Object; compiled translations) files for each language.</p>
+<h4 id="translation-in-php-files">Translation in PHP files</h4>
+<p>Basically in our PHP file we just need to call one of the l10n functions, like;
+    <em>_</em>("Hi, I am translatable");</p>
+<h4 id="translation-inside-twig-html-template-files">Translation inside Twig html template files</h4>
+<p>With Twig we need to call one of the l10n functions, like;</p>
+<pre><code><span class="variable">{{ ___("Hi, I am translatable") }}</span>
+</code></pre><h5 id="important-notes">Important notes</h5>
+<ul>
+    <li>String parameters <strong>ALWAYS</strong> have to be within double quotes (they must not be in single quotes).</li>
+    <li>If a string contains HTML tags, tell Twig to not escape it like this; <code>{{ ___("Hi, I &lt;strong&gt;am&lt;/strong&gt; translatable")|raw }}</code></li>
+    <li>Sometimes translation strings might be ignored like in <code>value="{{ ___("My string here") }}"</code> better strip the "" so the string becomes; <code>value={{ ___("My string here") }}</code></li>
+</ul>
+<h4 id="configuring-poedit-to-find-translation-strings-in-template-files">Configuring Poedit to find translation strings in template files</h4>
+<p>In order for Poedit to find the translations inside the HTML files, create a new extractor for HTML files and use those settings:</p>
+<ul>
+    <li>language<blockquote>
+        <p>Twig HTML</p>
+    </blockquote>
+    </li>
+    <li>List of extensions<blockquote>
+        <p>*.twig</p>
+    </blockquote>
+    </li>
+    <li>Command to extract translations<blockquote>
+        <p>xgettext --language=C --force-po -o %o %C %K %F</p>
+    </blockquote>
+    </li>
+    <li>An item in the keyword list<blockquote>
+        <p>-k%k</p>
+    </blockquote>
+    </li>
+    <li>An item in the input file list list<blockquote>
+        <p>%f</p>
+    </blockquote>
+    </li>
+    <li>Source code charset<blockquote>
+        <p>--from-code=%c</p>
+    </blockquote>
+    </li>
+</ul>
+<h3 id="useful-snippets">Useful snippets</h3>
+<p>Quick snippets useful when testing a specfic product that doesn't exist yet in the db.</p>
+<h4 id="query-most-reviewed-products">Query most reviewed products</h4>
+<pre><code><span class="operator"><span class="keyword">SELECT</span> product_id, <span class="aggregate">COUNT</span>( * )
+<span class="keyword">FROM</span>  <span class="string">`63917_ekomi_product_reviews`</span>
+<span class="keyword">GROUP</span> <span class="keyword">BY</span>  <span class="string">`product_id`</span>
+<span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="aggregate">COUNT</span>( * ) <span class="keyword">DESC</span>
+</span></code></pre><h4 id="change-product-id-in-local-ekomi-reviews-table">Change product ID in local ekomi reviews table</h4>
+<pre><code><span class="operator"><span class="keyword">UPDATE</span> <span class="string">`63917_ekomi_product_reviews`</span> <span class="keyword">SET</span> <span class="string">`product_id`</span> =<span class="number">425</span> <span class="keyword">WHERE</span> <span class="string">`product_id`</span> = <span class="string">"Custom-normal-Design"</span>
+</span></code></pre><h2 id="to-do">To do</h2>
+<ol>
+    <li>Create some tests.</li>
+    <li>More code refactoring.</li>
+</ol>
+<h1 id="change-log">Change Log</h1>
+<p>All notable changes to this project will be documented in this file.
+    This project adheres to <a href="http://semver.org/">Semantic Versioning</a>.
+    Use tags: Added, Changed, Fixed, Removed</p>
+<h2 id="2-3-6-2016-02-19">2.3.6 - 2016-02-19</h2>
+<h3 id="added">Added</h3>
+<ul>
+    <li>languageLocale</li>
+</ul>
+<h2 id="2-3-5-2016-02-15">2.3.5 - 2016-02-15</h2>
+<h3 id="added">Added</h3>
+<ul>
+    <li>Update docs</li>
+    <li>Fixed bugs on load more</li>
+    <li>Fixed csvupload bug on win 7</li>
+</ul>
+<h2 id="2-3-4-2016-02-12">2.3.4 - 2016-02-12</h2>
+<h3 id="added">Added</h3>
+<ul>
+    <li>Unlimitted reviews in the container through -1 (SUPPORT-1131)</li>
+    <li>Language overwrite (SUPPORT-1185)</li>
+    <li>Grouped product IDs (<a href="https://ekomi01.atlassian.net/browse/SUPPORT-1119">https://ekomi01.atlassian.net/browse/SUPPORT-1119</a>)</li>
+    <li>Logo position #SUPPORT-1197</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+    <li>Readme typos</li>
+</ul>
+<h2 id="2-3-3-2016-01-15">2.3.3 - 2016-01-15</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+    <li>default timeZone</li>
+    <li>Removed putLog &amp; putPing</li>
+</ul>
+<h2 id="2-3-2-2016-01-15">2.3.2 - 2016-01-15</h2>
+<h3 id="added">Added</h3>
+<ul>
+    <li>getProductStarsAvg</li>
+</ul>
+<h2 id="2-3-1-2016-01-13">2.3.1 - 2016-01-13</h2>
+<h3 id="added">Added</h3>
+<ul>
+    <li>Separate ajax.php</li>
+</ul>
+<h2 id="2-3-0-2015-12-21">2.3.0 - 2015-12-21</h2>
+<h3 id="added">Added</h3>
+<ul>
+    <li>Multiple shop ids.</li>
+    <li>Adapting Magento container for multiple store ids.</li>
+    <li>Documentation on how to include the basic container inside xt:commerce.</li>
+    <li>Improvements related to ticket IMPLEMENT-511</li>
+    <li>Fixed jsHint errors</li>
+</ul>
+<h2 id="2-2-5-2015-11-12">2.2.5 - 2015-11-12</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+    <li>The docs.</li>
+</ul>
+<h2 id="2-2-4-2015-11-02">2.2.4 - 2015-11-02</h2>
+<h3 id="added">Added</h3>
+<ul>
+    <li>Allow changing the interface language of setup</li>
+</ul>
+<h2 id="2-2-3-2015-11-02">2.2.3 - 2015-11-02</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+    <li>Typo/bug in app.js</li>
+</ul>
+<h2 id="2-2-2-2015-10-28">2.2.2 - 2015-10-28</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+    <li>Conflict with Prestashop locale.</li>
+</ul>
+<h2 id="2-2-1-2015-10-26">2.2.1 - 2015-10-26</h2>
+<h3 id="added">Added</h3>
+<ul>
+    <li>Languages; Es, Fr, It, Nl, Pl and Pt.</li>
+</ul>
+<h2 id="2-2-0-2015-10-20">2.2.0 - 2015-10-20</h2>
+<h3 id="added">Added</h3>
+<ul>
+    <li>Custom message for if no product is found.</li>
+    <li>Auto loading of the language files during the install.</li>
+</ul>
+</body>
+</html>

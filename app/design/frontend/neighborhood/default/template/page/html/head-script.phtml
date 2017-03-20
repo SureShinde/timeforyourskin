@@ -1,0 +1,125 @@
+<script type="text/javascript">
+	
+	function successMessage(message,message1,message2,message3)
+		{
+		    jQuery('body').append('<div class="alert"><div class="alert-inner"></div></div>');
+		    var $alert = jQuery('.alert');
+		    var $alertInner = jQuery('.alert-inner');
+		    $alert.fadeIn(400);
+                    $alertInner.html(message).append('<button class="close"><i class="fa fa-times"></i></button><div class="alertcontent"><a class="close cart" href="<?php echo $this->getUrl('checkout/cart') ?>"><?php echo $this->__('Go to Cart') ?></a><a class="close continue"><?php echo $this->__('Continue Shopping') ?></a></div>');
+		    jQuery('.close').click(function () {
+			$alert.fadeOut(400);
+		    });
+		    $alert.fadeIn('400', function () {
+			setTimeout(function () {
+			    $alert.fadeOut('400', function () {
+				jQuery(this).fadeOut(400, function(){ jQuery(this).detach(); })
+			    });
+			}, 10000)
+		    });
+		}
+</script>
+
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="<?php echo $this->getSkinUrl('ie/respond.min.js'); ?>"></script>
+<![endif]-->
+
+
+
+<script type="text/javascript">
+	var settings = {
+		<?php echo Mage::helper("ExtraConfig")->zoomSetting(); ?>   
+	}
+</script>
+<script type="text/javascript">
+	jQuery(document).ready(function (j$) {
+			
+			j$('#layer_sidebar, .amshopby-page-container')
+				.theiaStickySidebar({
+					additionalMarginTop: 100,
+					additionalMarginBottom : 30
+				});
+			
+			if (j$(window).width() > 1041) {
+				j$(".hidefull").hide();
+				j$(".hiderespo").show();
+				if (j$('.navmain-container').find(".custom-grid-9").not('grid_9')) {
+                            j$('.navmain-container').find(".custom-grid-9").addClass('grid_9');
+                            j$('.navmain-container').find(".custom-grid-9").addClass('mobile-grid-half');
+                            j$('.navmain-container').find(".custom-grid-9").removeClass('grid_4');
+                    }
+                    if (j$('.navmain-container').find(".custom-grid-3").not('grid_3')) {
+                            j$('.navmain-container').find(".custom-grid-3").addClass('grid_3');
+                            j$('.navmain-container').find(".custom-grid-3").addClass('mobile-grid-half');
+                            j$('.navmain-container').find(".custom-grid-3").removeClass('grid_4');
+                    }
+                    
+                    if (j$('.header-primary-container').find(".custom-grid-4").not('grid_4')) {
+                            j$('.header-primary-container').find(".custom-grid-4").addClass('grid_4');
+                            j$('.header-primary-container').find(".custom-grid-4").removeClass('grid_12');
+                    }
+				
+			}else{
+				j$(".hiderespo").hide();
+				j$(".hidefull").show();
+				j$('.navmain-container').find(".custom-grid-9").removeClass('grid_9');
+				j$('.navmain-container').find(".custom-grid-9").removeClass('mobile-grid-half');
+				j$('.navmain-container').find(".custom-grid-9").addClass('grid_4');
+				
+				j$('.navmain-container').find(".custom-grid-3").removeClass('grid_3');
+				j$('.navmain-container').find(".custom-grid-3").removeClass('mobile-grid-half');
+				j$('.navmain-container').find(".custom-grid-3").addClass('grid_4');
+				
+				j$('.header-primary-container').find(".custom-grid-4").removeClass('grid_4');
+				j$('.header-primary-container').find(".custom-grid-4").addClass('grid_12');
+			}
+			
+			j$(window).resize(function() {
+			   if (j$(window).width() > 1041) {
+
+                   j$(".hidefull").hide();
+				   j$(".hiderespo").show();
+                    if (j$('.navmain-container').find(".custom-grid-9").not('grid_9')) {
+                            j$('.navmain-container').find(".custom-grid-9").addClass('grid_9');
+                            j$('.navmain-container').find(".custom-grid-9").addClass('mobile-grid-half');
+                            j$('.navmain-container').find(".custom-grid-9").removeClass('grid_4');
+                    }
+                    if (j$('.navmain-container').find(".custom-grid-3").not('grid_3')) {
+                            j$('.navmain-container').find(".custom-grid-3").addClass('grid_3');
+                            j$('.navmain-container').find(".custom-grid-3").addClass('mobile-grid-half');
+                            j$('.navmain-container').find(".custom-grid-3").removeClass('grid_4');
+                    }
+                    
+                    if (j$('.header-primary-container').find(".custom-grid-4").not('grid_4')) {
+                            j$('.header-primary-container').find(".custom-grid-4").addClass('grid_4');
+                            j$('.header-primary-container').find(".custom-grid-4").removeClass('grid_12');
+                    }
+                          
+               }else{
+			        j$(".hidefull").show();
+					j$(".hiderespo").hide();
+                    j$('.navmain-container').find(".custom-grid-9").removeClass('grid_9');
+                    j$('.navmain-container').find(".custom-grid-9").removeClass('mobile-grid-half');
+                    j$('.navmain-container').find(".custom-grid-9").addClass('grid_4');
+                    
+                    j$('.navmain-container').find(".custom-grid-3").removeClass('grid_3');
+                    j$('.navmain-container').find(".custom-grid-3").removeClass('mobile-grid-half');
+                    j$('.navmain-container').find(".custom-grid-3").addClass('grid_4');
+                    
+                    j$('.header-primary-container').find(".custom-grid-4").removeClass('grid_4');
+                    j$('.header-primary-container').find(".custom-grid-4").addClass('grid_12');
+               }
+            
+           });
+          
+      });
+	
+</script>
+
+<?php if(Mage::helper("ExtraConfig")->is_mobile() == true) { ?>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('.catalog-category-view .btn-cart span span').html("Acquista");
+	});
+</script>
+<?php } ?>

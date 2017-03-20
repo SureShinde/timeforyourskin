@@ -1,0 +1,84 @@
+<?php 
+    $barcode = Mage::helper('giftvoucher')->getGeneralConfig('barcode_enable');
+    $barcode_type = Mage::helper('giftvoucher')->getGeneralConfig('barcode_type');
+    $url_barcode = '';
+    if($barcode){
+        if($barcode_type == 'code128') $url_barcode = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'giftvoucher/template/barcode/default.png';
+        else $url_barcode = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'giftvoucher/template/barcode/qr.png';
+    }
+    if(!$template->getStyleColor()) $template->setStyleColor('orange');
+    if(!$template->getTextColor()) $template->setTextColor('#2f2f2f');
+    
+    if ($template->getImages()) {
+        $image = explode(',', $template->getImages());
+        $image = $image[0];
+    } else {
+        $image = 'default.png';
+    }
+    $image = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'giftvoucher/template/images/left/' . $image;
+    
+    if ($template->getData('background_img[value]')) {
+        $background = $template->getData('background_img[value]');
+    } else {
+        $background = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'giftvoucher/template/background/left/default.png';
+    }
+
+    if(Mage::getStoreConfig('giftvoucher/print_voucher/logo')) $logo = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'giftvoucher/pdf/logo/'.Mage::getStoreConfig('giftvoucher/print_voucher/logo');
+    else $logo = $this->getSkinUrl('images/logo_print.gif', array('_area'=>'frontend'));
+?>
+<style>
+    .giftcard-text-color{
+        color: <?php echo $template->getTextColor() ?>
+    }
+    .giftcard-style-color{
+        color: <?php echo $template->getStyleColor() ?>
+    }
+</style>
+<div id="giftcard-template-left" style="/*display:none*/overflow:hidden; width: 655px; height: 400px;font-size: 14px">
+    <div class="giftcard-template-content-left giftcard-change-image" style="width: 275px; height: 400px; float: left; background-color: #FFFFFF;background-image: url(<?php echo $image ?>); background-position: center; background-repeat: no-repeat;background-size: 275px 400px">
+        <div style="background:#FFFFFF; width: 275px; height: 50px; margin-top: 300px; padding-top: 7px; padding-bottom: 8px">
+            <div style="background: url(<?php echo $logo; ?>) center no-repeat; width: 275px; height: 50px;"></div>
+        </div>
+    </div>
+    <div class="giftcard-template-content" style="width: 340px; height: 360px; padding: 20px;margin-left: 275px; background-color:#FFFFFF; background-image: url(<?php echo $background ?>); background-position: center;background-repeat: no-repeat;background-size: 380px 400px">
+        <div class="giftcard-style-color giftcard-title" style="width: 340px; height: 60px; font-size: 40px; font-style: italic; font-family: time new roman">
+            <?php echo $template->getCaption() ?>
+        </div>
+        <div style="width: 340px;font-size: 16px; height: 25px">
+            <span style="width: 170px;margin-right: 30px">
+                <label class="giftcard-text-color" for="giftcard-from" style="font-style: italic; font-family: time new roman">from:</label>
+                <span class="giftcard-style-color giftcard-send-from" style="">...........</span>
+            </span>
+            |
+            <span style="width: 170px; margin-left: 30px">
+                <label class="giftcard-text-color" for="giftcard-to" style="font-style: italic; font-family: time new roman">to: </label>
+                <span class="giftcard-style-color giftcard-send-to" style="">...........</span>
+            </span>
+        </div>
+        <div style="overflow: hidden; width: 340px; height: 100px;margin-top: 10px; ">
+            <div style="padding: 6px; padding-bottom: 14px; background: url(<?php echo $this->getSkinUrl('images/giftvoucher/box-message.png', array('_area'=>'frontend')) ?>) no-repeat; width: 328px; height: 80px;display:table-cell; vertical-align: middle"><p class="giftcard-text-color giftcard-custom-message" style="margin: 0"><?php echo $this->__('Write message here ...') ?></p></div>
+        </div>
+        <div style="width: 340px;height: 15px; margin-top: 8px">
+            <span class="giftcard-text-color" style="width: 55px; float: left">value</span>
+            <span style="width: 285px; float: right; text-align: right">
+                <label class="giftcard-text-color">Card number:</label>
+                <?php if($url_barcode != ''): ?>
+                <span class="giftcard-style-color" style="font-weight: bold; font-family: time new roman">GIFT-XXXX-XXXX</span>
+                <?php endif; ?>
+            </span>
+        </div>
+        <div style="width: 340px;height: 70px">
+            <span class="giftcard-style-color" style="width: 130px; float: left; line-height: 45px; font-size: 30px; font-weight: bold; font-family: time new roman">$100.00</span>
+            <span style="width: 210px; float: right; text-align: right">
+                <?php if($url_barcode != ''): ?>
+                <img src="<?php echo $url_barcode ?>"/>
+                <?php else: ?>
+                <span class="giftcard-style-color giftcard-price-change" style="line-height: 50px; font-size: 20px; font-weight: bold; font-family: time new roman">GIFT-XXXX-XXXX</span>
+                <?php endif; ?>
+            </span>
+        </div>
+        <div style="width: 340px;height: 65px; overflow: hidden;display:table-cell; vertical-align: bottom">
+            <p style="font-size: 11px;line-height: 16px; margin: 0" class="giftcard-text-color"><?php echo Mage::getSingleton('giftvoucher/giftvoucher')->getPrintNotes(); ?></p>
+        </div>
+    </div>
+</div>

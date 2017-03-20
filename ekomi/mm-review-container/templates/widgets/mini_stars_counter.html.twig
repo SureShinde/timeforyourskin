@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+<div class="ekomi_mm_review_widget mini_stars_counter">
+    <div class="ekomi_stars_wrap">
+        <div class="ekomi_stars_gold" style="width:{{product_total_reviews_average * 20}}%"></div>
+    </div>
+	<div class="ekomi_total_reviews_wrap"><span class="total_reviews">({% if showAverage %}{{ product_total_reviews_average }}/{% endif %}{{ product_total_reviews }})</span></div>
+</div>
+{% endblock %}

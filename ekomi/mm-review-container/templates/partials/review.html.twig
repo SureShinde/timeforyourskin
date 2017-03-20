@@ -1,0 +1,48 @@
+<section itemprop="review" itemscope itemtype="http://schema.org/Review">
+
+    <span itemprop="author" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name"
+                                                                                      content="eKomi"></span>
+
+    <div class="ekomi_review ek-row">
+        <div class="ek-large-4 ek-column ek-text-center">
+
+            <div class="ekomi_stars_container" {% if review is not empty %}itemprop="reviewRating" itemscope
+                 itemtype="http://schema.org/Rating"{% endif %}>
+
+                {% if review is not empty %}
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="ratingValue" content="{{ review.stars }}">
+                    <meta itemprop="bestRating" content="5">
+                {% endif %}
+
+                <div class="ekomi_stars_wrap">
+                    <div class="ekomi_stars_gold" style="width:{{ review.stars * 20 }}%"></div>
+                </div>
+            </div>
+
+            <span class="ekomi_review_time" itemprop="datePublished"
+                  content="{{ review.dateISO8601 }}">{{ review.date }}</span>
+        </div>
+
+        <div class="ek-large-8 ek-column">
+            <p class="ekomi_review_text" itemprop="reviewBody">{{ review.review_comment_text|raw }}</p>
+
+            {# Should we show the votes on reviews? this can be controlled throught the config.php #}
+            {% if EKOMI_VOTES_ON_REVIEWS %}
+                <div class="ekomi_review_helpful_button_wrapper ">
+                    <span class="ekomi_review_helpful_info ek-small-text-center ek-medium-text-left" {% if review.helpful_total== 0 %} style="display:none;" {% endif %}>{{ review.helpfulness_status_msg|raw }}</span>
+                    <div class="ekomi_review_helpful_thankyou ek-small-text-center ek-medium-text-left"
+                         style="display:none;">{{ ___("Thank you for your vote!") }}
+                    </div>
+                    <div class="ekomi_review_helpful_question ek-small-text-center ek-medium-text-left">
+                        <span>{{ ___("Did you find this review helpful?") }}</span>
+                        <input type="submit" class="ekomi_button ekomi_review_helpful_button" name="ekomi_answer"
+                               data-review-helpfulness="1" data-review-id="{{ review.id }}" value={{ ___("Yes") }}>
+                        <input type="submit" class="ekomi_button ekomi_review_helpful_button" name="ekomi_answer"
+                               data-review-helpfulness="0" data-review-id="{{ review.id }}" value={{ ___("No") }}>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

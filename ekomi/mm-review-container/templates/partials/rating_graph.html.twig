@@ -1,0 +1,19 @@
+<div class="ekomi_rating_graph">
+    {% for rating in 5..1 %}
+    <div class="ek-row ekomi_bar ek-small-collapse" data-sort-id={{ rating }}>
+        <div class="ek-small-3 ek-large-3 ek-columns ek-text-right">
+            <span class="ratings_stars_amount">{{ rating }} {{_n("Star", "Stars", rating)}}</span>
+        </div>
+        <div class="ek-small-6 ek-large-6 ek-columns">
+            <div class="progress round">
+                <span class="meter"
+                      style="width: {{((reviews_data.stars_array[rating] / reviews_data.total_product_reviews) * 100)|number_format(0, '.', ',') }}%"></span>
+            </div>
+        </div>
+        <div class="ek-small-3 ek-large-3 ek-columns ek-text-left">
+            <span class="ratings_overview_number">{{reviews_data.stars_array[rating]}}</span>
+            <input type="submit" class="ekomi_button ekomi_ratings_filter_reset" value="X"/>
+        </div>
+    </div>
+    {% endfor %}
+</div>

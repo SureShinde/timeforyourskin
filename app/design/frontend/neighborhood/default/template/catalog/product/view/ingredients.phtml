@@ -1,0 +1,4 @@
+<?php $_product = $this->getProduct(); ?>
+<?php if($_product->getIngredients()): ?>
+       <?php echo nl2br($_product->getIngredients()); ?>
+<?php endif; ?>

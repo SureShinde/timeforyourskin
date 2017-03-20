@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Fabio_MilanoDelivery>
+            <version>0.1.0</version>
+        </Fabio_MilanoDelivery>
+    </modules>
+    <global>
+	    <helpers>
+	        <fabio_milanodelivery>
+	            <class>Fabio_MilanoDelivery_Helper</class>
+	        </fabio_milanodelivery>
+	    </helpers>
+	    <models>
+		    <fabio_milanodelivery>
+		        <class>Fabio_MilanoDelivery_Model</class>
+		    </fabio_milanodelivery>
+		</models>
+	</global>
+    <default>
+	    <carriers>
+	        <fabiocarrier>
+	            <active>0</active>
+	            <show_delivery_date>0</show_delivery_date>
+	            <model>fabio_milanodelivery/carrier_fabio</model>
+	            <title>Fabio Milano Carrier</title>
+	            <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+	            <sallowspecific>1</sallowspecific>
+	            <specificcountry>GB</specificcountry>
+	            <showmethod>0</showmethod>
+	            <sort_order>100</sort_order>
+	        </fabiocarrier>
+	    </carriers>
+	</default>
+</config>

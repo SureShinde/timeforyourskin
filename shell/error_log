@@ -1,0 +1,1 @@
+[30-Aug-2016 09:38:56 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 81 bytes) in /home/timefor2/public_html/app/code/core/Mage/Checkout/Block/Total/Tax.php on line 0

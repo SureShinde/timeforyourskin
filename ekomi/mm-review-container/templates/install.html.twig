@@ -1,0 +1,282 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+    <div class="ekomi_mm_review_widget view_install row">
+
+        <div class="small-9 columns">
+            <h1 class="title">{{ ___("Install & Settings") }}</h1>
+        </div>
+
+        {# The languages flags #}
+        <div class="small-3 columns languages-bar">
+            {% for language in form_defaults.available_languages %}
+                <a href="?languageLocale={{ language.code }}"><i class="flag flag-{{ language.code }}"></i></a>
+            {% endfor %}
+        </div>
+
+        <div class="small-12 columns">
+
+            <form id="ekomi_install_form" data-abide="ajax">
+
+                <div class="row">
+
+                    <div class="small-12 large-4 columns">
+                        <div class="alert_connection_state"></div>
+
+                        {% if config_file_exist %}
+
+                            <div data-alert=""
+                                 class="alert-box warning radius">{{ ___("It appears that you have already configured the solution. However, you can re-configure the settings by deleting the “config.php” file. Do you want to <a href='#delete_config' class='delete_config_php'>delete it</a> now?")|raw }}
+                                <a href="#" class="close">×</a></div>
+
+                        {% else %}
+
+                            <p>{{ ___("No “config.php” file exists. This is required before continuing.")|raw }}</p>
+                        {% endif %}
+
+
+                        <p>{{ ___("Please enter your MySQL database connection details. If unsure about these, contact your administrator. This is required for first time configuration only.") }}</p>
+
+                        <p>{{ ___("Once you entered all the settings, click “Check Database Connection” button to validate then “Populate & Sync Database”.") }}</p>
+                        <button class="check_db button small radius expand">
+                            <i class="fa fa-cog fa-spin shows_loading_icon" style="display: none"></i>
+                            {{ ___("Check Database Connection") }}
+                        </button>
+                        <button class="populate_db button small radius expand disabled"><i
+                                    class="fa fa-cog fa-spin shows_loading_icon"
+                                    style="display: none"></i>{{ ___("Populate & Sync Database") }} {#<span
+                                    class="shows_populated_percentage"></span>#}
+                        </button>
+
+                        <div class="success progress">
+                            <div id="install-progress-meter" class="progress-meter" style="width: 0%"></div>
+                        </div>
+                        <p id="install-status-message" class="description"></p>
+
+
+                    </div>
+
+                    <div class="small-12 large-8 columns">
+                        <fieldset>
+                            <legend>{{ ___("Database settings") }}
+                                <small class="description">* {{ ___("Required") }}</small>
+                            </legend>
+                            <div class="row">
+                                <div class="small-6 columns">
+                                    <label>{{ ___("Database hostname") }}
+                                        <small>*</small>
+                                        <input name="db_host" type="text" placeholder="{{ form_defaults.db_host }}"
+                                               value="{% if ek_debug %}{{ form_defaults.db_host }}{% endif %}" required
+                                        />
+                                    </label>
+                                    <small class="error">{{ ___("This field is required.") }}</small>
+                                </div>
+                                <div class="small-6 columns">
+                                    <label>{{ ___("Database name") }}
+                                        <small>*</small>
+                                        <input name="db_name" type="text" placeholder="{{ form_defaults.db_name }}"
+                                               value="{% if ek_debug %}{{ form_defaults.db_name }}{% endif %}"
+                                               required/>
+                                    </label>
+                                    <small class="error">{{ ___("This field is required.") }}</small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="small-6 columns">
+                                    <label>{{ ___("Database username") }}
+                                        <small>*</small>
+                                        <input name="db_user" type="text" placeholder="{{ form_defaults.db_user }}"
+                                               value="{% if ek_debug %}{{ form_defaults.db_user }}{% endif %}"
+                                               required
+                                        />
+                                    </label>
+                                    <small class="error">{{ ___("This field is required.") }}</small>
+                                </div>
+                                <div class="small-6 columns">
+                                    <label>{{ ___("Database password") }}
+                                        <input name="db_password" type="text"
+                                               value="{% if ek_debug %}{{ form_defaults.db_password }}{% endif %}"
+                                               placeholder="{{ form_defaults.db_password }}"/>
+                                    </label>
+                                    <small class="error">{{ ___("This field is required.") }}</small>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>{{ ___("eKomi settings") }}
+                                <small class="description">* {{ ___("Required") }}</small>
+                            </legend>
+                            <div class="small-6 columns">
+                                <label>{{ ___("eKomi interface ID") }}
+                                    <small>*</small>
+                                    <input name="ekomi_interface_id" type="text"
+                                           value="{% if ek_debug %}{{ form_defaults.ekomi_interface_id }}{% endif %}"
+                                           required/>
+                                </label>
+                                <small class="error">{{ ___("This field is required.") }}</small>
+                            </div>
+                            <div class="small-6 columns">
+                                <label>{{ ___("eKomi interface password") }}
+                                    <small>*</small>
+                                    <input name="ekomi_interface_password" type="text"
+                                           value="{% if ek_debug %}{{ form_defaults.ekomi_interface_password }}{% endif %}"
+                                           required/>
+                                </label>
+                                <small class="error">{{ ___("This field is required.") }}</small>
+                            </div>
+
+                            <div class="row">
+                                <div class="small-12 columns section">
+                                    <label class="m-b-sm">Create additional shops</label>
+                                    <div id="additional-shops-container"></div>
+                                    <a class="button tiny radius m-t-sm m-b-none add_extra_shop"><i
+                                                class="fa fa-plus"></i> Add shop</a>
+                                    <a class="button tiny radius m-t-sm m-b-none trash_extra_shop"><i
+                                                class="fa fa-trash-o"></i> Remove shop</a>
+                                </div>
+                            </div>
+
+                            {# Handlebars template#}
+                            <script id="additional-shops-template" type="text/x-handlebars-template">
+                                <div class="extra-shop">
+                                    {% verbatim %}
+                                    <div class="small-6 columns">
+                                        <label>eKomi interface ID
+                                            <small>*</small>
+                                            <input name="shops[]" type="text" value="" data-name="ekomi_interface_id" data-index="{{ index }}" required/>
+                                        </label>
+                                        <small class="error">This field is required.</small>
+                                    </div>
+                                    <div class="small-6 columns">
+                                        <label>eKomi interface password
+                                            <small>*</small>
+                                            <input name="shops[]" type="text" value="" data-name="ekomi_interface_password" data-index="{{ index }}" required/>
+                                        </label>
+                                        <small class="error">This field is required.</small>
+                                    </div>
+                                {% endverbatim %}
+                                </div>
+                            </script>
+
+
+                            {# This needs a fix as we have to choose which data we should
+                            sync; product reviews or shop reviews?
+                            The difference between the two is due to the data returned
+                            by the API calls: getFeedback vs getProductfeedback.
+                            For the moment we will use in eKomiDB.php the getProductfeedback
+                            API call.
+                            <div class="small-12 columns">
+                                <label>{{ What kind of reviews to sync? }}</label>
+
+                                <input type="radio" name="reviews_sync_type" value="products" id="sync_product_reviews" checked>
+                                <label for="sync_product_reviews">{{ Product reviews }}</label>
+
+                                <input type="radio" name="reviews_sync_type" value="shop" id="sync_shop_reviews">
+                                <label for="sync_shop_reviews">{{ Shop reviews }}</label>
+                            </div>
+                            #}
+
+                            <!---->
+                        </fieldset>
+                        <fieldset>
+                            <legend>{{ ___("Miscellaneous settings") }}
+                                <small class="description">* {{ ___("Required") }}</small>
+                            </legend>
+                            <div class="small-12 columns section">
+                                <label>{{ ___("In case of no product reviews, display:") }}</label>
+
+                                <input type="radio" id="ekomi_no_reviews_found_action_show_nothing"
+                                       name="ekomi_no_reviews_found_action" value="show_nothing">
+                                <label for="ekomi_no_reviews_found_action_show_nothing">{{ ___("nothing") }}</label>
+                                <br>
+
+                                <input type="radio" id="ekomi_no_reviews_found_action_show_message"
+                                       name="ekomi_no_reviews_found_action" value="show_message" checked>
+                                <label for="ekomi_no_reviews_found_action_show_message">{{ ___("text message") }}</label>
+                                <br>
+
+                                <input type="radio" id="ekomi_no_reviews_found_action_show_empty_container"
+                                       name="ekomi_no_reviews_found_action" value="show_empty_container">
+                                <label for="ekomi_no_reviews_found_action_show_empty_container">{{ ___("empty container") }}</label>
+                            </div>
+                            <div class="small-12 columns section">
+                                <label>{{ ___("Text message to be displayed in case of no product reviews (only if text message option is chosen)") }}
+                                    <p class="description">{{ ___("You may use ##product_name## and ##product_id## placeholders and they will be replaced by actual product values.") }}</p>
+                                    <textarea name="ekomi_no_reviews_found_message"
+                                              rows="3">{{ ___("No product reviews received for product ##product_name## with product ID ##product_id##.") }}</textarea>
+                                </label>
+                            </div>
+                            <div class="small-4 columns section">
+                                <label>{{ ___("Language") }}
+                                    <select name="ekomi_app_locale">
+                                        {% for language in form_defaults.available_languages %}
+                                            <option value="{{ language.code }}"
+                                                    {% if form_defaults.default_language == language.code %}selected{% endif %}>{{ language.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="small-4 columns section">
+                                <label>{{ ___("Reviews per page") }}
+                                    <input name="ekomi_reviews_per_page" type="number"
+                                           placeholder="{{ form_defaults.ekomi_reviews_per_page }}"
+                                           value="{{ form_defaults.ekomi_reviews_per_page }}" min="0"/>
+                                </label>
+                            </div>
+                            <div class="small-4 columns section">
+                                <label>{{ ___("Cronjob delay") }}
+                                    <small class="description" id="ekomi_cron_job_delay">{{ ___("(Hours)") }}
+                                    </small>
+                                    <input name="ekomi_cron_job_delay" type="number"
+                                           placeholder="{{ form_defaults.ekomi_cron_job_delay }}"
+                                           value="{{ form_defaults.ekomi_cron_job_delay }}" min="24"/>
+                                </label>
+                            </div>
+                            <div class="small-12 columns section">
+                                <label>{{ ___("eKomi logo link:") }}</label>
+
+                                <input type="radio" id="ekomi_url_nothing"
+                                       name="ekomi_url" value="nothing">
+                                <label for="ekomi_url_nothing">{{ ___("do not link the eKomi logo") }}</label>
+                                <br>
+
+                                <input type="radio" id="ekomi_url_cp"
+                                       name="ekomi_url" value="certificate">
+                                <label for="ekomi_url_cp">{{ ___("link to the certificate page") }}</label>
+                                <br>
+
+                                <input type="radio" id="ekomi_url_website"
+                                       name="ekomi_url" value="website" checked>
+                                <label for="ekomi_url_website">{{ ___("link to the eKomi website in the chosen language") }}</label>
+                            </div>
+                            <div class="small-12 columns section">
+                                <label>{{ _x("Check all that applies:", "Checkboxes inside a form") }}</label>
+
+                                <input id="ekomi_force_delete" type="checkbox" name="ekomi_force_delete">
+                                <label for="ekomi_force_delete">{{ ___("delete all existing reviews in database") }}</label>
+                                <br>
+
+                                <input id="ekomi_html_on_comments" type="checkbox" name="ekomi_html_on_comments">
+                                <label for="ekomi_html_on_comments">{{ ___("allow HTML in comments") }}</label>
+                                <br>
+
+                                <input id="ekomi_votes_on_reviews" type="checkbox" name="ekomi_votes_on_reviews"
+                                       checked>
+                                <label for="ekomi_votes_on_reviews">{{ ___("allow votes on reviews") }}</label>
+                                <br>
+                                {# Will be applied later
+                                <input id="ekomi_autoload_on_scroll" type="checkbox" name="ekomi_autoload_on_scroll">
+                                <label for="ekomi_autoload_on_scroll">{{ Autoload reviews on scroll? }}</label>
+                                #}
+                                <input type="hidden" name="ekomi_autoload_on_scroll" val="">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                </div>
+                <input type="hidden" name="ekomi_app_uri" value="{{ getAppURI() }}">
+            </form>
+        </div>
+    </div>
+{% endblock %}

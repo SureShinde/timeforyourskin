@@ -1,0 +1,68 @@
+<?php
+if(Mage::getStoreConfig('multiproduct/block7/enable')) :
+?>
+<div class="pull-container">
+<?php
+$enabledBlock = 0;
+for($i=1; $i<=4; $i++){
+	if(Mage::getStoreConfig('multiproduct/block7/multi_option'.$i) != 'none'){
+ 	$enabledBlock++;
+    }
+}
+?>
+
+<?php if($enabledBlock > 0) : ?>
+    <?php for($i=1; $i<=4; $i++) :?>
+    <?php
+	$tabOptions = Mage::getStoreConfig('multiproduct/block7/multi_option'.$i);
+	$displayBlock = false;
+    
+	if ($tabOptions != null || $tabOptions != " ") {
+	    $displayBlock = true;
+	    
+	    $defaultTabs = array("new","random","rated");
+	    
+	    $tabValue = explode("_",$tabOptions);                                
+	    $filterBy = isset($tabValue[1]) ? $tabValue[1] : null;
+	    $activeTab = $filterBy;                        
+	    if(in_array($activeTab,$defaultTabs)) {
+		$activeTab = "_default_".$activeTab;
+	    }
+	    else {
+		$activeTab = "_customlist";
+	    }
+	}    
+   ?>
+	
+	    <?php if($tabOptions != 'none') : ?>
+	   
+		<?php $page = Mage::app()->getLayout()->getBlock('root')->getTemplate();
+		    if ($page == "page/1column.phtml") {
+			$page = 1;
+		    }
+		    elseif ($page == "page/2columns-left.phtml" || $page == "page/2columns-right.phtml") {
+			$page = 2;
+		    }
+		    elseif($page == "page/1column.phtml") {
+			$page = 3;		
+		    }
+		    else {
+			$page = 0;
+		    }		
+		?>
+		    <div class="marbot20 grid_<?php echo 12/$enabledBlock;?> mini-product">
+			<div class="accordion mobile-accordion">
+			    <span class="opener"></span>
+			    <div class="section-line block-title">
+				    <h2><?php echo $this->__($filterBy); ?></h2>
+				</div>
+				<div class="block-content">
+				    <?php if($activeTab == '_default_new'){ ?><div class="new-product"><?php } ?><?php echo $this->getLayout()->createBlock('multiproduct/product'.$activeTab)->setCustomproduct($filterBy)->setCustomBlockId("block7")->setBlockLimitId("7")->setTemplate('catalog/product/multiproduct/list-mini.phtml')->toHtml(); ?><?php if($activeTab == '_default_new'){ ?></div><?php } ?>
+				</div>
+			</div>
+		    </div>
+	    <?php endif; ?>    
+	<?php endfor; ?>
+    <?php endif; ?>
+</div>
+<?php endif; ?>

@@ -1,0 +1,48 @@
+{% if args.needsFullHtmlHeader %}<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>{{ page_title }}</title>
+
+    <link href="{{ getAppURI() }}assets/css/vendor.min.css" rel="stylesheet">
+    {% if needs_foundation %}
+    <link href="{{ getAppURI() }}assets/css/vendor.foundation.min.css" rel="stylesheet">
+    {% endif %}
+
+    <link href="{{ getAppURI() }}assets/css/app.min.css" rel="stylesheet">
+
+</head>
+<body>
+{% endif %}
+
+<div class="ek-row" {% if not args.hasReviewedItem %} itemscope itemtype="http://schema.org/Product" {% endif %}>
+    <meta itemprop='productID' content='{{ productID }}'/>
+    {% block content %}{% endblock %}
+</div>
+
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var ekomi_app = {
+        app_uri: "{{ getAppURI() }}",
+        css_vendor: "{{ getAppURI() }}assets/css/vendor.min.css",
+        css_foundation: "{{ getAppURI() }}assets/css/vendor.foundation.min.css",
+        css_app: "{{ getAppURI() }}assets/css/app.min.css",
+        ajaxurl: "{{ getAppURI() }}ajax.php",
+        i18n: {
+            'config_deleted' : '{{ ___("Config.php deleted!") }}',
+            'db_populated' : '{{ ___("Database populated successfully! You can now use the solution.") }}',
+            'wait_for_task' : '{{ ___("Please wait for the current task to finish!") }}'
+        }
+    };
+    /* ]]> */
+</script>
+
+<script src="{{ getAppURI() }}assets/scripts/vendor.min.js"></script>
+<script src="{{ getAppURI() }}assets/scripts/app.min.js"></script>
+
+{% if args.needsFullHtmlHeader %}
+</body>
+</html>
+{% endif %}

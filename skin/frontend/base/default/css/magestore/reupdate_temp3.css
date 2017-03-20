@@ -1,0 +1,912 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15-08-2014, 09:33:08
+    Author     : MSI
+*/
+/*---Detail Template 3---*/
+    #giftcard-template-back .giftcard-template-content{display: none; height: 0px}
+    #giftcard-template-back giftcard-change-image-background-popup .giftcard-style-color.giftcard-send-from{
+        padding-right: 5px;
+        border-right: 1px solid;
+    }       
+    #giftcard-template-back .logo-title .giftcard-logo {
+        width: 45%;
+        margin-top: 5px; 
+        background-size: 80% !important;
+        float: left;
+        height: 40px
+    }
+    #giftcard-template-back .logo-title {
+        width: 90%; 
+        padding: 0px 5%; 
+        font-size: 40px;
+        font-style: italic;
+        color: orange; 
+        margin-top: 10px; 
+        text-align: center;
+        float:left;
+        box-sizing: content-box;
+    }
+    #giftcard-template-back .logo-title .giftcard-style-color.giftcard-title {
+        width: 50%;
+        float: right; 
+        font-family: time new roman;
+        font-size: 30px;
+    }   
+    #giftcard-template-back .from-to {
+        width: 100%;
+        height: 20px;
+        font-size: 16px; 
+        float: left;       
+        paddig:0;
+        box-sizing: content-box;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #giftcard-template-back .from-to .giftcard-form{       
+        float: left; 
+        text-align: right;
+        width: 48%;
+        border-right: 1px solid;
+    }
+    #giftcard-template-back .from-to .giftcard-form .giftcard-text-color{
+        font-style: italic;
+        font-family: time new roman;
+    }
+    #giftcard-template-back .from-to .giftcard-style-color.giftcard-send-to {
+        color: orange;
+        font-weight: bold;
+    }
+    #giftcard-template-back .from-to .giftcard-to {
+        float: left; 
+        text-align: left;
+        width:45%;
+    }
+    #giftcard-template-back .from-to .giftcard-to .giftcard-text-color {
+        font-style: italic;
+        font-family: time new roman;
+        padding-left: 5px;        
+    }
+    #giftcard-template-back .giftcard-change-image-background-popup .giftcard-style-color.giftcard-send-from{
+        padding-right: 5px;
+    }
+    #giftcard-template-back .from-to .giftcard-style-color{font-size: 13px;}
+    #giftcard-template-back .from-to .giftcard-style-color.giftcard-send-to{
+        color: orange;
+        font-weight: bold;
+    }
+    #giftcard-template-back .giftcard-box{
+        overflow: hidden;
+        width: 600px; 
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 10px;
+    } 
+    #giftcard-template-back .giftcard-box .giftcard-text-box{
+        background: #fff;
+        border-radius: 5px;
+        border:1px solid #cccccc; 
+        padding: 0; 
+        padding-bottom: 16px; 
+        padding-top: 3px;         
+        display:table-cell;
+        vertical-align: middle;
+    }
+    #giftcard-template-back .giftcard-box{
+        overflow: hidden;
+        width: 600px; 
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }	
+    #giftcard-template-back .giftcard-text-color.giftcard-custom-message{
+        margin: 0;
+        white-space: pre-wrap; 
+        max-height: 85px; 
+        overflow: hidden;
+        font-size: 11px;
+    }
+    #giftcard-template-back .giftcard-value-barcode .giftcard_value {
+        width: 100%;
+        float: left;
+        height: auto;
+        margin:0;
+    }
+    #giftcard-template-back .giftcard-value-barcode .giftcard-style-color .price {
+        font-size: 25px;
+        width: 50%;
+        color: orange;
+        font-weight: bold;
+        font-family: Time New Roman;
+        clear: both;
+        float: left;
+    }
+    #giftcard-template-back .giftcard-barcode{
+        width: 100%;
+        float: left;
+        position: absolute;
+        margin-top: 20px;
+    }
+    #giftcard-template-back .giftcard-barcode .giftcard-style-color{
+        color: orange;
+        font-weight: bold;
+        font-size:15px; 
+        font-family: time new roman;
+    }
+    #giftcard-template-back .giftcard-barcode .giftcard-style-color{
+        font-size: 12px; 
+        line-height: 52px;
+        color: orange; 
+        font-weight: bold; 
+        font-family: time new roman;
+    }
+    #giftcard-template-back  .giftcard-note{
+        width: 90%;
+        margin-top: 25px;
+        padding: 0px 5%; 
+        float:left;
+        box-sizing: content-box;
+        overflow: hidden;
+        background: #FFF;
+        opacity: 0.7;
+        text-align: center;
+        vertical-align: middle;
+    }
+    #giftcard-template-back  .giftcard-note .form-note{
+        width: 100%; 
+        margin: 0 auto;
+    }
+    #giftcard-template-back  .giftcard-note .giftcard-text-color{
+        font-size: 12px;
+        line-height: 15px;
+        margin: 0;
+        height:45px;
+    }   
+    #giftcard-template-back .giftcard_value .giftcard-text-color {
+        float: left;       
+        padding-right: 5%;
+        width: auto;
+        font-size: 12px;
+    }      
+    #giftcard-template-back {width: 100% ;float: left; position: relative}
+    #giftcard-template-back .giftcard-change-image-background-popup{
+        width: 100%;
+        position: absolute;
+        top: 0%;
+    }
+    #giftcard-template-back .giftcard-box .giftcard-text-box {
+        display: inherit !important; 
+        background-size: 100% !important; 
+        width: 100% !important;
+        height: 85px;
+    }
+    #giftcard-template-back .giftcard-box {
+        width: 93% !important; 
+        height: 95px; 
+        padding: 5px 3%; 
+        margin-top: 0px !important;
+        box-sizing: content-box;
+        float: left;
+    }
+    #giftcard-template-back .giftcard-value-barcode {
+        width: 100%;
+        padding:0;
+        float:left;
+        box-sizing: content-box;        
+    }
+    #giftcard-template-back .giftcard-value-color{
+        float: left;
+        width: 20%;
+        padding-left:10%;
+    }
+    #giftcard-template-back .giftcard-number{
+        float: right;
+        text-align: right;
+        width: 60%;
+        padding-right: 5%;
+    }
+    #giftcard-template-back .giftcard_value .giftcard-style-color{
+        font-size: 12px;
+    }
+    #giftcard-template-back .giftcard-barcode span.barcode  {
+        width: 60%;
+        float:right;
+        padding-right: 25%;
+    }   
+      
+    /*****template 03 width devices*******/    
+    .giftcard-change-image-background-popup img#img-type-background{
+        position: relative;
+        top: 0;
+        z-index: 10;
+        left:0;         
+    }
+    #giftcard-template-back img#img-type-background{width: 100%}
+    #giftcard-preview-template img#img-type-background{width: 100%}   
+     #giftcard-preview-template #giftcard-template-back .giftcard-number{float: left !important; text-align: left !important;margin-top: 0px;}
+      #giftcard-preview-template{top:100px;}  
+      #giftcard-preview-template .giftcard-change-image-background-popup .giftcard_value .giftcard-style-color{font-size: 14px}    
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-number .giftcard-text-color{
+        padding-left: 15%;        
+        padding-right: 10px;
+    }   
+        
+/*Theme change*/
+ #giftcard-template-back .hidden-content-background .giftcard_value .giftcard-text-color{font-size: 9px !important}
+    #giftcard-template-back .hidden-content-background .logo-title .giftcard-logo{height: 0 !important;}
+    #giftcard-template-back .hidden-content-background{
+        overflow:hidden; 
+        width: 655px;
+        height: 400px;
+        font-size: 14px;
+        position: absolute;
+        top: -2%;
+        width: 100% !important;
+    }
+    #giftcard-template-back img#img-type-background{
+        
+    }
+    
+    /****************/    
+     #giftcard-template-back .hidden-giftcard-content-background .from-to{
+           width: 100%;
+     }
+       #giftcard-template-back .hidden-giftcard-content-background .from-to .giftcard-form{
+         width: 48%; overflow:hidden;
+     }   
+     #giftcard-template-back .hidden-giftcard-content-background .giftcard-barcode span.barcode{
+        
+     }
+     #giftcard-template-back .hidden-giftcard-content-background .giftcard-value-barcode{
+         margin-top: 10px;
+     }
+     #giftcard-template-back .hidden-giftcard-content-background .giftcard-note .giftcard-text-color{
+         font-size: 12px;
+     }
+     #giftcard-template-back .hidden-giftcard-content-background .logo-title{
+         /*height: 75px;*/
+     }
+     #giftcard-template-back .hidden-giftcard-content-background .giftcard_value .giftcard-style-color{
+         margin-top: 0px !important;
+     }
+     #giftcard-template-back .hidden-giftcard-content-background .giftcard-barcode .giftcard-style-color{
+         font-size: 14px;
+     }
+     /**********Preview************/
+     /*popup*/
+/*---Detail Popup Template 3---*/
+#giftcard-preview-template  #giftcard-preview-template-content .giftcard-change-image-background-popup.giftcard-change-image {
+    width: 100% !important; 
+    background-size: 100% !important;
+    float:none !important; 
+    height:400px;
+    position: absolute;
+    top: 0%;
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .giftcard-box {
+    max-height: 70px !important;
+    width: 90% !important;
+    padding: 0px 5%;
+    box-sizing: content-box;
+    overflow: inherit !important;
+    float: left;
+    margin-bottom: 20px;
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box {
+    float: left; 
+    background-size: 100% !important; 
+    width: 100% !important;
+    border: 1px solid #ccc;
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .giftcard-text-box {
+    background-size: 100% !important
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode {
+    width: 100% !important; 
+    float:left;     
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .giftcard-barcode {
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .giftcard-barcode span img{
+    background-size: 100%;
+    float:left;
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .giftcard-note {
+    margin-top: 15px;
+    background: #FFF;
+    opacity: 0.7; 
+    float:left;
+    width: 90%;
+    padding:0 5%;
+    box-sizing: content-box;
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .logo-title {
+    float: left;
+    width: 100%;
+    padding-top: 30px;
+    margin-top:0px !important
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .logo-title .giftcard-logo {
+    margin-top:0px !important; 
+    float:left; width:40%;
+    background-size: 50% !important;
+    padding-left: 10%;
+    height: 30px;
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .logo-title .giftcard-title {
+    float:right; width:50%;
+    padding-right: 70px;
+    text-align: right;
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .from-to{
+    /*float:left; clear:both;*/ width: 100%;
+    height:30px; 
+    font-style:italic;
+    font-size: 18px;
+    float: left;
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .from-to label.giftcard-text-color{
+    font-family:time new roman;
+    padding-right: 5px;
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .giftcard-form{
+    width: 47%;
+    float: left;
+    text-align: right;
+    border-right: 1px solid;
+    margin-right: 5px;
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .giftcard-to{
+    width: 46%;
+    float: left;
+   // padding-left: 19px;
+    height: 20px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+#giftcard-preview-template .giftcard-change-image-background-popup .giftcard-barcode span.barcode {
+    float:right;  
+    padding-right:5%;
+    margin-top: -30px;
+    width: 62%;
+}   
+  #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode .giftcard_value{
+      padding-left: 10%;
+     height:auto;
+      width:100%;
+      float:left;
+      margin: 0;
+  }
+  #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-number{width: 70%; float: right; text-align: right}
+  #giftcard-preview-template .giftcard-change-image-background-popup .giftcard_value .giftcard-style-color .price{font-size: 30px}
+   #giftcard-preview-template .giftcard-change-image-background-popup .giftcard_value .giftcard-value-color{float: left; width: 20%;}
+/*************/       
+  #giftcard-preview-template  .hidden-content-background .giftcard_value .giftcard-style-color{
+    margin-top: 0;
+}
+    #giftcard-preview-template .hidden-content-background .logo-title .giftcard-title{
+        float: right;
+        width: 40%;
+        padding-right: 0px;
+        text-align: left;
+        margin-top: -5px;
+    }
+    #giftcard-preview-template .hidden-content-background .giftcard-form{
+        width: 48%;
+        float: left;
+        text-align: right;
+    }
+    #giftcard-preview-template .hidden-content-background .giftcard-text-color{
+            font-size: 15px !important;
+    }  
+    #giftcard-preview-template .hidden-content-background .giftcard-value-color .giftcard-text-color{
+        line-height: 10px;
+    }
+     #giftcard-preview-template .hidden-content-background .giftcard-number .giftcard-text-color{float: left}
+    #giftcard-preview-template .hidden-content-background .giftcard-text-color{
+        margin-top: 3px;
+        padding-right: 5px;
+    }    
+    #giftcard-preview-template .hidden-content-background .giftcard_value .giftcard-style-color{}
+    #giftcard-preview-template .hidden-content-background .giftcard-logo{margin-top:35px;}
+    #giftcard-preview-template .hidden-content-background .giftcard-box{overflow: hidden;}
+    #giftcard-preview-template .hidden-content-background .giftcard-barcode{width: 100% !important;}
+    #giftcard-preview-template .hidden-content-background .giftcard-barcode span.barcode{margin-top: -24px; width: 55%;}
+    #giftcard-preview-template .hidden-content-background .giftcard-to{width:48%;}
+    #giftcard-preview-template .hidden-content-background .giftcard-box .giftcard-text-box{height: 70px;}    
+    
+    /**************/
+     #giftcard-template-back .hidden-content-background .giftcard-note .giftcard-text-color {
+        font-size: 11px !important;
+    }
+    #giftcard-template-back .hidden-content-background .giftcard_value .giftcard-style-color .price{font-size: 25px;}
+     #giftcard-template-back .hidden-content-background .giftcard_value .giftcard-style-color{font-size: 10px !important}
+    #giftcard-template-back .hidden-content-background .giftcard-value-barcode .giftcard-style-color.giftcard-price-change{font-size: 14px !important;}
+     #giftcard-template-back .hidden-content-background .giftcard-barcode span.barcode{
+        width: 35% !important;
+    }
+    /*#giftcard-template-back .hidden-giftcard-content-background .giftcard-barcode span.barcode{width: 55% !important}*/
+    #giftcard-template-back .hidden-content-background .giftcard-barcode span.barcode  img{
+        float:right;
+        max-width: 100% !important;
+    }
+    #giftcard-template-back .giftcard-barcode span.barcode img{float: left; max-width: 80%}
+    #giftcard-template-back .hidden-content-background .giftcard-box{height:50px;}
+    #giftcard-template-back .hidden-content-background .from-to{width:100%; font-size:9px;}
+    #giftcard-template-back .hidden-content-background .from-to .giftcard-form{
+        overflow:hidden;
+        padding-right: 5px;
+        width: 48%;
+        text-align: right;
+    }
+    #giftcard-template-back .hidden-content-background .from-to .giftcard-to{
+        overflow:hidden; 
+        padding-left: 5px;        
+        width: 47%;
+    }
+    #giftcard-template-back .hidden-content-background .giftcard-box .giftcard-text-box{height:34px !important}
+    /******************/    
+@media only screen and (max-width: 1230px){
+    #giftcard-template-back .hidden-content-background .giftcard-note .giftcard-text-color{height: 39px; line-height: 13px;}
+    
+}
+@media only screen and (max-width: 1180px){   
+    #giftcard-template-back .giftcard-value-barcode .giftcard-style-color .price{font-size: 20px !important}
+    #giftcard-template-back .giftcard-note{margin-top: 9px;}    
+    #giftcard-template-back .logo-title .giftcard-style-color.giftcard-title{font-size: 25px}
+    /*********/
+    #giftcard-template-back .hidden-content-background .giftcard-note {margin-top: 15px;}
+    #giftcard-template-back .hidden-content-background .giftcard-box .giftcard-text-box{height: 35px !important;}
+    #giftcard-template-back .hidden-content-background .giftcard-box{height: 38px;}
+    #giftcard-template-back .hidden-content-background .giftcard-note .giftcard-text-color{height: 25px}
+}
+@media (max-width:1099px){
+    #giftcard-template-back .hidden-content-background{
+        height:360px;
+    }
+}
+@media only screen and (max-width: 1050px){
+    #giftcard-template-back  .giftcard-note .giftcard-text-color{
+        line-height: 15px; 
+    }
+    #giftcard-template-back .giftcard-box{height: 45px}
+    #giftcard-template-back .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box {height: 45px;}
+    #giftcard-template-back  .hidden-content-background .giftcard-text-color{
+        line-height: 13px; 
+    }
+    #giftcard-template-back .hidden-content-background .giftcard-box .giftcard-text-box{
+        height:10px;
+    }    
+    
+    #giftcard-template-back .hidden-content-background .giftcard-box{height: 35px;}
+    #giftcard-template-back .hidden-content-background .from-to{font-size: 12px;}
+}
+@media only screen and (max-width: 979px){
+    #giftcard-template-back .from-to{
+       
+    }
+    #giftcard-template-back .from-to .giftcard-form {width: 48%;}   
+    #giftcard-template-back .giftcard-number {
+       width: 65%;
+    }    
+    #giftcard-template-back .giftcard-barcode {
+        float: left !important;
+    }
+    #giftcard-template-back .giftcard-barcode span {
+      
+    }
+    #giftcard-template-back .giftcard-barcode span {
+      
+    }
+    #giftcard-template-back .giftcard-style-color.giftcard-title{
+        font-size: 35px
+    }   
+    #giftcard-template-back .from-to{
+        font-size:12px;
+    }
+    #giftcard-template-back .hidden-content-background .giftcard-barcode span.barcode{   
+        padding-right: 30%;
+    }
+    #giftcard-template-back .hidden-content-background{
+        height:320px;
+    }
+    #giftcard-template-back .hidden-content-background .logo-title{
+        margin-top: 0px;
+    }
+    #giftcard-template-back .hidden-content-background .giftcard-value-barcode{
+       
+    }
+    #giftcard-template-back .hidden-content-background .giftcard-note{
+        margin-top: 15px;
+    }
+    #giftcard-template-back .hidden-content-background .giftcard_value .giftcard-style-color{
+        font-size:8px !important;
+    }
+    #giftcard-template-back .hidden-content-background .from-to{
+        font-size:10px;
+    }
+    #giftcard-template-back .hidden-content-background .giftcard-number{padding-right: 0px !important; float: left; text-align: left}
+    #giftcard-template-back .hidden-content-background .from-to .giftcard-form{width: 47%}
+    #giftcard-template-back .hidden-content-background .giftcard-value-barcode{
+         margin-top: 0px !important;
+     }
+     #giftcard-template-back .hidden-content-background .from-to{margin-top: 0px !important}
+     #giftcard-template-back .hidden-giftcard-content-background .giftcard-note .giftcard-text-color{font-size: 10px}
+     #giftcard-template-back .hidden-content-background .from-to .giftcard-form{
+        width:48%;
+        height: 20px;
+      line-height: 20px;
+      overflow: hidden;
+    }    
+    #giftcard-template-back .hidden-giftcard-content-background{top: 2% !important; width: 100%;}
+    #giftcard-template-back .hidden-content-background .giftcard-box .giftcard-text-box{
+        height: 30px !important;
+    }
+    #giftcard-template-back .hidden-content-background .giftcard-style-color.giftcard-title{font-size:18px;}
+    #giftcard-template-back .hidden-content-background .giftcard-note .giftcard-text-color{font-size:9px;}
+    #giftcard-template-back .hidden-content-background .giftcard-barcode .giftcard-style-color{font-size:11px;}
+    #giftcard-template-back .hidden-content-background .from-to{font-size:9px !important}
+}
+@media only screen and (max-width: 900px){
+     #giftcard-template-back .giftcard-note .giftcard-text-color{
+       line-height: 13px;
+        font-size: 11px;
+        height: 27px;
+    }
+    #giftcard-template-back .logo-title{
+        margin-top: 0px;
+    }
+    /*********/
+    #giftcard-template-back .hidden-content-background .giftcard_value .giftcard-style-color{font-size: 7px !important;}
+    #giftcard-template-back .hidden-content-background .giftcard-note{margin-top: 10px}
+    #giftcard-template-back .hidden-content-background .giftcard-box{padding: 0 5% !important;}
+   #giftcard-template-back .hidden-content-background .from-to{
+       font-size:10px;
+   }
+   #giftcard-template-back .hidden-content-background .giftcard-value-barcode .giftcard-style-color.giftcard-price-change{
+       font-size:13px;
+   }
+  #giftcard-template-back .hidden-giftcard-content-background .logo-title .giftcard-style-color.giftcard-title{
+       //font-size:25px
+   }
+}
+ @media only screen and (max-width: 809px){
+        #giftcard-template-back .hidden-content-background .giftcard-change-image-background-popup{top: 0%;}
+        #giftcard-template-back .from-to{
+            margin-bottom: 0;
+            margin-top: 0;                           
+        }
+        #giftcard-template-back .giftcard-box{height: 35px;}
+        #giftcard-template-back .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box {height:35px; }
+        #giftcard-preview-template .giftcard-change-image-background-popup .logo-title .giftcard-logo {
+            background-size: 65% !important;
+            width: 40%;
+        }
+        #giftcard-preview-template #giftcard-preview-template-content .giftcard-change-image-background-popup.giftcard-change-image {
+            background-size: 100% 105% !important;
+        }
+    }
+@media only screen and (max-width: 770px){    
+    #giftcard-template-back .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box{height: 85px }
+    #giftcard-template-back .hidden-content-background .giftcard-box{height: 25px !important;}
+    #giftcard-template-back .giftcard-change-image-background-popup{width: 100%;}
+    #giftcard-preview-template .hidden-giftcard-content-background .giftcard-barcode span.barcode{margin-top: -11px !important; }
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-barcode span.barcode{
+        float: right;
+        width: 55%;
+        margin-top: -25px; 
+    }   
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard_value .giftcard-style-color .price{font-size: 20px;}
+    #giftcard-template-back img#img-type-background{width: 100%}
+    #giftcard-template-back .giftcard-note{margin-top: 40px;}
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode .giftcard_value{margin-top: 5px;}
+    #giftcard-template-back .from-to{
+        
+    }    
+    #giftcard-template-back .giftcard-box { 
+        height: 100px;
+        margin-bottom: 10px;
+    }    
+    #giftcard-template-back .hidden-giftcard-content-background .giftcard-box .giftcard-text-box{
+        height: 10px !important;
+    }
+    #giftcard-template-back .giftcard-barcode span.barcode{
+        padding-right:0px;
+    }
+    #giftcard-template-back .giftcard-value-barcode .giftcard-style-color .price{
+        font-size: 24px;
+    }
+    #giftcard-template-back .giftcard-style-color.giftcard-title{
+        font-size: 40px;
+    }
+    #giftcard-template-back .giftcard-logo{
+        background-size:70% 50px;
+    }
+    #giftcard-template-back .from-to{
+        font-size:16px;
+    }   
+    #giftcard-preview-template .giftcard-change-image-background-popup .logo-title .giftcard-logo{padding-left: 0}
+    #giftcard-preview-template .giftcard-change-image-background-popup .logo-title .giftcard-title{
+        padding-right: 0 !important;
+        float: left !important;
+        text-align: left !important;
+    }
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box{height: 60px;}
+    /******/
+    #giftcard-template-back .hidden-content-background .from-to{
+        font-size:14px;
+    }
+    #giftcard-template-back .hidden-content-background img#img-type-background{width: 50% !important}
+    #giftcard-template-back .giftcard-change-image-background-popup{top:8%;}
+    #giftcard-template-back .from-to .giftcard-text-color{font-size: 15px !important;}
+    #giftcard-template-back .giftcard_value .giftcard-text-color{font-size: 15px !important;}   
+    #giftcard-template-back .hidden-content-background .logo-title .giftcard-style-color.giftcard-title{font-size: 20px;}
+    #giftcard-template-back .hidden-content-background .logo-title .giftcard-logo{height: 0px; margin-top: 0;}
+    #giftcard-template-back .hidden-content-background .from-to{font-size: 10px;}
+    #giftcard-template-back .hidden-content-background .giftcard_value .giftcard-text-color{font-size: 10px}
+    #giftcard-template-back .hidden-content-background .giftcard-box{height: 25px; margin-bottom: 0}
+    #giftcard-template-back .hidden-content-background .giftcard-value-barcode{margin-top: 0;}
+    #giftcard-template-back .hidden-content-background .giftcard-barcode span.barcode img{max-height: 60%;}
+    #giftcard-template-back .hidden-content-background .giftcard-value-barcode .giftcard-style-color.giftcard-price-change{font-size: 15px !important}
+    #giftcard-template-back .hidden-content-background {width: 100% !important;}
+    #giftcard-template-back .hidden-content-background .giftcard-value-color{padding-left: 5%; }
+    #giftcard-template-back .hidden-content-background .giftcard-number{width: 70%;}
+    #giftcard-template-back .giftcard_value .giftcard-style-color{font-size: 15px !important}
+    #giftcard-template-back .hidden-content-background{top:4%;}
+    #giftcard-template-back .giftcard-note .giftcard-text-color{
+        line-height: 15px;
+        font-size: 13px;
+        height: 45px;
+    }
+    
+}
+@media only screen and (max-width: 767px){
+        #giftcard-template-back .giftcard-note .giftcard-text-color{
+            line-height: 15px;
+            font-size: 12px;
+            height: 45px;
+        }
+        #giftcard-template-back .giftcard-note{margin-top: 35px}
+        #giftcard-template-back .giftcard_value .giftcard-style-color{font-size: 15px !important;}
+         #giftcard-template-back .giftcard_value .price{font-size: 20px;}
+        #giftcard-template-back .from-to{margin-bottom: 10px}
+        #giftcard-template-back .giftcard-change-image-background-popup .giftcard-box{height: 90px}
+        #giftcard-template-back .logo-title .giftcard-style-color.giftcard-title{font-size: 30px;}
+        #giftcard-template-back .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box{height: 90px;}
+        #giftcard-template-back .hidden-giftcard-content-background{width: 100% !important;}
+        #giftcard-template-back .giftcard-change-image-background-popup{width: 100%;}
+        
+        #giftcard-template-back .hidden-content-background .logo-title .giftcard-logo{background-size: 70% !important;}     
+        #giftcard-template-back .hidden-content-background .logo-title{margin-top:20px;}
+        #giftcard-template-back .hidden-content-background .from-to{font-size: 16px;}
+        #giftcard-template-back .hidden-content-background .from-to .giftcard-form{width: 48%;}
+        #giftcard-template-back .hidden-content-background .giftcard-box{height: 90px;}
+        #giftcard-template-back .hidden-content-background .giftcard-box .giftcard-text-box{height: 45px !important;}
+        #giftcard-template-back .hidden-content-background .giftcard-barcode span.barcode{padding-left: 20%;}
+        #giftcard-template-back .hidden-content-background .giftcard-value-barcode{margin-top: 10px;}
+        #giftcard-template-back .hidden-content-background .giftcard-note .giftcard-text-color{font-size: 12px;}
+        #giftcard-template-back .hidden-content-background{height:400px;}
+        #giftcard-template-back .hidden-content-background .giftcard-style-color.giftcard-title{font-size: 40px;}
+         #giftcard-template-back .hidden-content-background .giftcard-style-color.giftcard-title{
+         font-size: 40px;
+         }
+         #giftcard-template-back .hidden-giftcard-content-background .logo-title .giftcard-logo{height: 30px}
+         #giftcard-template-back .hidden-giftcard-content-background .logo-title .giftcard-style-color.giftcard-title{
+             height: 30px; 
+             font-size: 35px;
+            margin-top: 15px;
+         }         
+         #giftcard-template-back .hidden-giftcard-content-background .giftcard_value .giftcard-text-color{font-size: 13px !important}
+         #giftcard-template-back .hidden-giftcard-content-background .giftcard_value .giftcard-price-change{font-size: 30px; line-height: 30px;}
+         #giftcard-template-back .hidden-giftcard-content-background .giftcard-barcode span.barcode{width: 55% !important;}
+         #giftcard-template-back .hidden-giftcard-content-background .giftcard-barcode span.barcode img{float: left; width: 55%}
+         #giftcard-template-back .hidden-giftcard-content-background .giftcard-note .giftcard-text-color{height: 45px; font-size: 13px;}
+         #giftcard-template-back .hidden-giftcard-content-background .giftcard-note{margin-top: 40px !important}
+         #giftcard-template-back .hidden-giftcard-content-background .from-to .giftcard-form{padding-right: 5px; text-align: right}
+         #giftcard-template-back .hidden-giftcard-content-background .from-to .giftcard-to .giftcard-text-color{padding-left: 5px}         
+         #giftcard-template-back .hidden-giftcard-content-background .giftcard_value .giftcard-style-color{font-size: 13px}
+         #giftcard-template-back .hidden-giftcard-content-background .giftcard-box .giftcard-text-box{height: 60px !important}
+         #giftcard-preview-template .giftcard-change-image-background-popup .giftcard_value .giftcard-style-color{font-size: 12px;}
+    }
+
+      @media only screen and (max-width: 700px){
+         #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-box {
+             max-height: 85px !important;
+             margin-top: 0;
+         }
+        #giftcard-preview-template #giftcard-preview-template-content .giftcard-change-image-background-popup.giftcard-change-image{
+                background-size: 100% 110% !important;
+        }
+        #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-barcode span.barcode img{
+            float:left;
+            width:auto !important;
+            max-width: 60%;
+        }
+        #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-note {
+            margin-top: 10px !important;
+            float:left; 
+            background:#fff; 
+            opacity: 0.7;}
+        #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode {
+            margin-top:0px}// edit by Sally
+        #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-barcode img{width:130px !important; height:40px;}
+         #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-barcode .giftcard-style-color{font-size:13px;}
+          #giftcard-preview-template .giftcard-change-image-background-popup .from-to{font-size: 13px}
+          #giftcard-preview-template .giftcard-change-image-background-popup .logo-title{padding-top: 0px;}
+        
+    }
+@media only screen and (max-width: 650px){
+    #giftcard-template-back .giftcard-box{
+        height: 85px;
+    }
+    #giftcard-template-back .giftcard-box .giftcard-text-box{
+        height: 73px
+    }
+    #giftcard-template-back .from-to{
+       
+    }  
+    #giftcard-template-back .hidden-content-background .giftcard-box{height: 60px !important;}
+     #giftcard-template-back .hidden-content-background .giftcard-box .giftcard-text-box{height: 40px !important;}
+    
+}
+     @media only screen and (max-width: 640px){ 
+         #giftcard-template-back .giftcard-note .giftcard-text-color{
+             line-height: 12px !important;
+             font-size: 11px !important;
+             height: 25px !important;
+         }
+     }
+    @media only screen and (max-width: 630px){       
+        #giftcard-template-back .giftcard-note .giftcard-text-color{
+            line-height: 12px !important;
+            font-size: 11px !important;
+            height: 25px !important;
+        }
+        #giftcard-template-back .giftcard-barcode span.barcode img{max-width: 55%}
+        #giftcard-template-back .giftcard-change-image-background-popup .giftcard-box{height: 35px !important;}
+        #giftcard-template-back .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box{height: 50px !important}
+        #giftcard-preview-template .giftcard-change-image-background-popup .logo-title .giftcard-logo{backgound-size: 80%;}
+        #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box{height:45px !important;}
+        #giftcard-template-back .giftcard_value .giftcard-text-color,
+        #giftcard-template-back .giftcard-change-image-background-popup .giftcard_value .giftcard-style-color{font-size: 12px !important;}
+    }
+    @media only screen and (max-width: 607px){
+        #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode {background-size: 100% !important}
+        #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-style-color.giftcard-title {font-size: 30px !important; margin-top:5px; padding-right:12%;}
+        #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode{padding:0 0 0 10%;}
+        #giftcard-preview-template .giftcard-change-image-background-popup .logo-title .giftcard-logo{background-size: 80% !important;}
+        
+        #giftcard-template-back .hidden-giftcard-content-background .giftcard-note{margin-top: 30px !important}
+        #giftcard-template-back .hidden-giftcard-content-background .giftcard-box .giftcard-text-box{
+         height: 25px !important;
+     }
+     #giftcard-template-back .hidden-giftcard-content-background .giftcard-box{height: 50px !important}
+     #giftcard-template-back hidden-giftcard-content-background .giftcard-barcode span.barcode img{max-width: 70%}
+    }
+    @media  (max-width:580px){
+        #giftcard-preview-template{display:none;}
+         .overlay_dialog{display: none;}
+        #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-style-color.giftcard-title{font-size:27px !important }
+    }  
+    @media only screen and (max-width: 550px){
+    
+    #giftcard-template-back .giftcard-note{margin-top: 25px !important;}
+    #giftcard-template-back .giftcard-change-image-background-popup .giftcard-box{height: 40px !important;}
+    #giftcard-template-back .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box{height: 40px!important}
+    #giftcard-template-back .from-to .giftcard-text-color{font-size: 11px !important}
+    #giftcard-template-back .giftcard-style-color.giftcard-title{
+        font-size: 30px !important
+    }
+    #giftcard-template-back .giftcard-value-barcode .giftcard-style-color .price{
+        font-size:20px;
+    }
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-style-color.giftcard-title {font-size: 27px !important}
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode{margin-top: 30px;}
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-text-color{font-size:12px;}
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode{padding-left: 2%;}
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-form{ padding-left:10%;}     
+    #giftcard-template-back .hidden-giftcard-content-background .giftcard-note{margin-top: 20px !important}
+    #giftcard-template-back .hidden-giftcard-content-background .logo-title .giftcard-style-color.giftcard-title{font-size: 30px !important}
+    #giftcard-template-back .hidden-giftcard-content-background .from-to .giftcard-text-color{font-size: 11px !important;}
+    #giftcard-template-back .hidden-giftcard-content-background .giftcard_value .giftcard-style-color{font-size: 11px !important}
+    #giftcard-template-back .hidden-giftcard-content-background .giftcard-value-barcode{margin-top: 0;}
+}
+@media only screen and (max-width: 460px){
+    #giftcard-template-back .giftcard-change-image-background-popup{top:0%;}   
+    #giftcard-template-back .giftcard-box .giftcard-text-box{
+        height: 70px
+    }
+    #giftcard-template-back .giftcard-value-barcode .giftcard-style-color .giftcard-price-change{
+        font-size:20px;
+    }
+    #giftcard-template-back .giftcard-send-from{
+        font-size: 12px;
+    }
+    #giftcard-template-back .giftcard-send-to{
+        font-size: 12px;
+    }
+    
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-box {height: 60px}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-change-image-background-popup.giftcard-change-image {background-size:  100% 100%}
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode {padding: 0px 0px 0px 30px;}
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-box{max-height: 85px}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-change-image-background-popup.giftcard-change-image .giftcard-logo{margin-top:-5px !important;}
+    #giftcard-preview-template .giftcard-change-image-background-popup .logo-title .giftcard-logo
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box{height:45px;}
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode{margin-top:-13px;}
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-box{padding:0px 35px;}
+    #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-text-color{font-size:11px !important;}
+}
+    @media  (max-width:480px){
+        #giftcard-preview-template .giftcard-change-image-background-popup .from-to{padding:0px}
+        #giftcard-template-back .hidden-content-background .giftcard-note .giftcard-text-color{font-size: 9px;} 
+        #giftcard-template-back .hidden-giftcard-content-background .logo-title{margin-top: 0px} 
+        #giftcard-template-back .hidden-giftcard-content-background .from-to{font-size: 14px;}
+        #giftcard-template-back .hidden-giftcard-content-background .giftcard-barcode span.barcode{padding-left: 0;}
+        #giftcard-template-back .hidden-giftcard-content-background .giftcard-send-from{font-size: 11px;}
+        #giftcard-preview-template .hidden-content-background .giftcard-value-barcode { margin-top:0px}
+        #giftcard-template-back .hidden-giftcard-content-background .logo-title .giftcard-style-color.giftcard-title{
+            height: 25px;           
+            margin-top: 12px;
+        }
+        #giftcard-template-back .hidden-giftcard-content-background .logo-title .giftcard-logo{
+            height: 25px;
+        }
+        #giftcard-template-back .hidden-giftcard-content-background .from-to{
+            font-size: 10px;
+        }
+    }               
+      @media only screen and (max-width: 420px){
+          #giftcard-template-back .giftcard_value .giftcard-text-color, #giftcard-template-back .giftcard_value .giftcard-style-color{font-size: 10px !important;}
+          #giftcard-template-back .from-to{height: 12px;}
+          #giftcard-template-back .giftcard-change-image-background-popup .giftcard-box {height: 15px !important;}
+          #giftcard-template-back .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box{height: 15px !important}
+          #giftcard-template-back .giftcard-change-image-background-popup .giftcard_value .giftcard-style-color{font-size: 9px !important;}
+          #giftcard-template-back .from-to .giftcard-style-color{font-size: 11px;}
+     #giftcard-template-back .giftcard-style-color.giftcard-title{font-size: 25px !important}
+     #giftcard-template-back .hidden-giftcard-content-background .giftcard-box{height: 30px !important}
+     #giftcard-template-back .hidden-giftcard-content-background .giftcard-box .giftcard-text-box{height: 15px !important}
+     #giftcard-template-back .hidden-giftcard-content-background .logo-title .giftcard-style-color.giftcard-title{font-size: 25px !important}
+     #giftcard-template-back .hidden-giftcard-content-background .from-to{margin-top: 0px}
+     #giftcard-template-back .hidden-giftcard-content-background .giftcard-note{margin-top: 15px !important}
+     #giftcard-template-back .hidden-giftcard-content-background .logo-title .giftcard-logo{height: 10px}
+      }   
+      @media only screen and (max-width: 380px){
+     #giftcard-template-back .giftcard-barcode span{
+         font-size: 11px !important
+     }
+     #giftcard-template-back .giftcard-style-color.giftcard-title {
+         font-size: 30px !important; margin-top: 5px !important
+     }
+     #giftcard-template-back .giftcard-value-barcode{
+         padding:0px 5px; padding-left:5px;
+     }
+     #giftcard-template-back .giftcard-value-barcode .giftcard-style-color .price{
+         font-size:18px;
+     }
+      #giftcard-template-back .giftcard-number .giftcard-text-color{
+          font-size:12px;
+      }
+      #giftcard-template-back .hidden-content-background .giftcard-style-color.giftcard-title{margin-top: 5px !important;}  
+      #giftcard-template-back .hidden-content-background .from-to{margin-left: 10%;font-size: 14px;}
+      #giftcard-template-back .hidden-content-background .from-to .giftcard-form{width: 45%;}
+      #giftcard-template-back .hidden-content-background{height: 350px }
+      #giftcard-template-back .hidden-giftcard-content-background{height:350px;}
+      
+      #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-box .giftcard-text-box{height:45px;}
+      #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode .giftcard_value{margin-top:33px;}
+      #giftcard-preview-template .giftcard-change-image-background-popup .giftcard_value .giftcard-style-color{font-size: 15px;margin-top: -4px;}
+      #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-value-barcode{padding-left:2px;}
+      #giftcard-preview-template .giftcard-change-image-background-popup .giftcard-barcode .giftcard-style-color{font-size:11px;}
+      #giftcard-template-back .hidden-giftcard-content-background .giftcard-note{margin-top: 0}
+}
+     
+    @media only screen and (max-width: 350px){
+        #giftcard-template-back .hidden-giftcard-content-background .giftcard_value .giftcard-style-color{font-size: 9px !important}
+        #giftcard-template-back .giftcard-note{margin-top: 0px !important}
+        #giftcard-template-back .hidden-giftcard-content-background .giftcard-note{margin-top: 0px !important}
+    }

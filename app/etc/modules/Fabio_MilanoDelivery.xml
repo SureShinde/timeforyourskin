@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Fabio_MilanoDelivery>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Shipping />
+                <Mage_Checkout />
+                <Mage_Sales />
+            </depends>
+        </Fabio_MilanoDelivery>
+    </modules>
+</config>

@@ -1,0 +1,43 @@
+<?php
+/** @var Webgriffe_Tntpro_Block_Checkout_Onepage_Billing_Extra $this */
+?>
+<li id="tnt_delivery_point" class="control">
+    <input type="radio" name="billing[use_tnt_delivery_point]" id="billing:use_tnt_delivery_point" value="2" title="<?php echo  $this->__('Ship to TNT Delivery Point') ?>" class="radio" />
+    <label for="billing:use_tnt_delivery_point"><?php echo  $this->__('Ship to TNT Delivery Point') ?> <img src="<?php echo $this->getSkinUrl('images/wgtntpro/info.png') ?>" title="<?php echo $this->__('_tnt_locator_info_') ?>" id="wgtntpro-info" /></label>
+</li>
+
+<li id="tnt_delivery_point_selection" class="wide exclude_from_hide" style="display:none;">
+    <label for="tnt_autocomplete" class="required">
+        <em>*</em>
+        <img src="<?php echo $this->getSkinUrl('images/wgtntpro/ajax-loader.gif') ?>" alt="Loading..." id="wgtntpro-ajax-loader" style="display: none;" />
+        <?php echo $this->__('Select a TNT Delivery Point') ?>
+    </label>
+    <div class="input-box">
+        <input type="text" id="tnt_autocomplete"
+               name="<?php echo Webgriffe_Tntpro_Block_Checkout_Onepage_Billing_Extra::TNT_POINTS_AUTOCOMPLETE_NAME ?>"
+               placeholder="<?php echo $this->__('Search by City, Postcode or Name...') ?>" class="input-text required-entry" />
+        <div id="tnt_autocomplete_results" class="tnt-autocomplete-results"></div>
+        <input type="hidden" name="<?php echo Webgriffe_Tntpro_Block_Checkout_Onepage_Billing_Extra::TNT_POINTS_SELECT_NAME ?>"
+               id="<?php echo Webgriffe_Tntpro_Block_Checkout_Onepage_Billing_Extra::TNT_POINTS_SELECT_NAME ?>" class="required-entry" />
+    </div>
+    <div id="tnt_delivery_map" class="buttons-set" style="margin-top: 1em;">
+        <div class="control" style="overflow: hidden;">
+            <div class="input-box">
+                <input type="checkbox" name="tntpointtype1" id="tntpointtype1" value="1" title="<?php echo  $this->__('TNT Center') ?>" class="checkbox tntpointtype" checked />
+                <label for="tntpointtype1"><?php echo  $this->__('TNT Center') ?></label>
+            </div>
+            <div class="input-box">
+                <input type="checkbox" name="tntpointtype3" id="tntpointtype3" value="3" title="<?php echo  $this->__('TNT Point') ?>" class="checkbox tntpointtype" checked />
+                <label for="tntpointtype3"><?php echo  $this->__('TNT Point') ?></label>
+            </div>
+            <div class="input-box">
+                <input type="checkbox" name="tntpointtype5" id="tntpointtype5" value="5" title="<?php echo  $this->__('TNT Lockerbox') ?>" class="checkbox tntpointtype" checked />
+                <label for="tntpointtype5"><?php echo  $this->__('TNT Lockerbox') ?></label>
+            </div>
+        </div>
+        <script src="//maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+        <div id="map_canvas" style="width:560px; height:400px; margin-top: 1em;"></div>
+    </div>
+</li>
+
+<?php echo $this->getChildHtml('javascript'); ?>

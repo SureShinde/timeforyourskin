@@ -1,0 +1,49 @@
+<?php if(Mage::helper("ExtraConfig")->is_mobile() == false){ ?>
+<div id="newsletter-popup" class="newsletter-popup">
+     <div class="container_12 clearfix" style="">
+          <button class="close_window">&times;</button>
+          <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('promotional-popup')->toHtml() ?>
+     </div>
+</div>
+<style type="text/css">
+     #newsletter-popup{
+          display: none;
+     }
+</style>
+      
+<script type="text/javascript">
+
+jQuery(document).ready(function(j$){
+     var check_cookie = jQuery.cookie('newsletter_popup');
+     if(check_cookie == null){
+          j$("#newsletter-popup").show();
+          popupNewsletter();
+     }else{
+          j$("#newsletter-popup").hide();
+     }
+     
+     j$(".close_window").on("click",function(){
+          j$("#newsletter-popup").hide();
+          j$.cookie('newsletter_popup','dontshowitagain');            
+     })
+    
+     function popupNewsletter() {
+         //var scrolltop = j$(document).scrollTop();
+         //var popuph  = ((j$(window).height() + scrolltop) - j$("#newsletter-popup").height() - 2);
+         //j$('#newsletter-popup').animate({top:popuph+'px'},{duration:1000,queue:false});
+         j$('#newsletter-popup').css("bottom", "-100%");
+         setTimeout(
+               j$('#newsletter-popup').animate({bottom:"0px"},{duration:1000,queue:false}),
+          2000);
+         j$(window).scroll(function () {
+             j$('#newsletter-popup').css("bottom", "auto");
+             var scrolltop = j$(document).scrollTop();
+             var popuph  = ((j$(window).height() + scrolltop) - j$("#newsletter-popup").height() - 2);
+             j$('#newsletter-popup').animate({top:popuph+"px"},{duration:700,queue:false});
+          });
+          jQuery('#newsletter-popup').trigger('click');
+          };
+     
+});
+</script>
+<?php } ?>

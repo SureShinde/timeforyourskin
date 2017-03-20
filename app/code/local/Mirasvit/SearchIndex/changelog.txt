@@ -1,0 +1,7 @@
+2016-04-12 apopov
+* Css modifications
+Changed files:
+/public_html/prova/app/design/frontend/base/default/template/searchindex/result_tabs.phtml
+/public_html/prova/app/design/frontend/base/default/template/mst_misspell/suggest.phtml
+/public_html/prova/app/design/frontend/base/default/template/searchindex/catname.phtml - new file
+/public_html/prova/app/design/frontend/base/default/layout/searchindex.xml

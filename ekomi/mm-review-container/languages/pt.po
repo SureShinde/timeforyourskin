@@ -1,0 +1,459 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: eKomi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-08 17:26+0100\n"
+"PO-Revision-Date: 2016-01-11 16:01+0100\n"
+"Last-Translator: \n"
+"Language-Team: A-team <aidrissi@ekomi.de>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n;_n:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;___\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: .build\n"
+"X-Poedit-SearchPathExcluded-1: .src\n"
+"X-Poedit-SearchPathExcluded-2: assets\n"
+"X-Poedit-SearchPathExcluded-3: includes/lib\n"
+
+#: includes/Utils.php:292
+msgctxt ""
+"This is an HTML entity; it stands for Horizontal Ellipsis. It looks like 3 "
+"dots..."
+msgid "&hellip;"
+msgstr "&hellip;"
+
+#: includes/eKomiDB.php:147 includes/eKomiDB.php:266
+#, php-format
+msgid ""
+"Error establishing a database connection. This either means that the "
+"username and password information are incorrect or we can't contact the "
+"database server at %s"
+msgstr ""
+"Erro ao estabelecer a conexão com a base de dados. Isto significa que tanto "
+"as informações de usuário e senha estão incorretas ou que não pode se "
+"conectar ao servidor da base de dados como %s."
+
+#: includes/eKomiDB.php:177
+#, php-format
+msgid "Unknown database %s Please create the %s database first!"
+msgstr ""
+"Base de dados %s desconhecida. Por favor cree a base de dados %s antes!"
+
+#: includes/eKomiDB.php:194
+#, php-format
+msgid "Table %s does not exist."
+msgstr "Tabela %s não existe."
+
+#: includes/eKomiDB.php:206 includes/eKomiDB.php:217
+#, php-format
+msgid ""
+"eKomi can now communicate with your %s local database. To populate your "
+"local database with product reviews, please click on \"Populate & Sync "
+"Database\""
+msgstr ""
+"eKomi agora pode comunicar com o seu %s base de dados local. Para preencher "
+"a base de dados local com análises de produtos, por favor clique em "
+"\"Preencher e Sincronizar a base de dados\"."
+
+#: includes/eKomiDB.php:301
+#, php-format
+msgid "Could not create the database %s"
+msgstr "Impossível de crear a base de dados %s"
+
+#: includes/eKomiDB.php:323
+#, php-format
+msgid "Database %s created successfully."
+msgstr "Base de dados %s creada com succeso."
+
+#: includes/eKomiDB.php:334
+#, php-format
+msgid "Database %s already exist."
+msgstr "Banco de dados %s já existe."
+
+#: includes/eKomiDB.php:365 includes/eKomiDB.php:385
+#, php-format
+msgid ""
+"The credentials you supplied for interface ID %s were not correct or did not "
+"grant access to the eKomi API."
+msgstr ""
+"As credenciais fornecidas para a interface ID%s não são corretas ou não "
+"conceden acesso à API eKomi."
+
+#: includes/eKomiDB.php:401 includes/eKomiDB.php:451
+msgid "No database connection or interface ID not provided."
+msgstr "Nenhum banco de dados conexão ou interface ID não fornecido."
+
+#: includes/eKomiDB.php:466
+msgid "Populating database..."
+msgstr "Preencher o banco de dados..."
+
+#: includes/eKomiDB.php:596 includes/eKomiDB.php:616
+#, php-format
+msgid "Could not drop the reviews table! %s Last error was: %s"
+msgstr "Impossível de borrar a tabela das opinioes! %s Ultimo error foe: %s"
+
+#: includes/eKomiDB.php:659 includes/eKomiDB.php:693
+#, php-format
+msgid "Could not create the database tables! %s Last error was: %s"
+msgstr "Impossível de crear a tabela das opinioes! %s Ultimo error foe: %s"
+
+#: includes/eKomiDB.php:728
+msgid "Could not talk to the API using the current ID & password combination!"
+msgstr "Não poderia falar com a API usando a combinação de ID e a senha atual!"
+
+#: includes/eKomiDB.php:772
+msgid "Config file exists and not updated."
+msgstr "O ficheiro de configuracao existe e  nao è atualizado."
+
+#: includes/eKomiDB.php:781
+msgid "Config file \"config.php\" already exists!"
+msgstr "O ficheiro “config.php” jà existe!"
+
+#: includes/eKomiDB.php:847
+msgid ""
+"A config-sample.php file is needed to work from. Please re-upload this file "
+"and try again!"
+msgstr ""
+" É necessário trabalhar apartir de um ficheiro config-sample. php. Por "
+"favor, recarregue esse ficheiro e tente novamente!"
+
+#: includes/eKomiDB.php:895
+#, php-format
+msgid "It is not possible to write in the %s folder."
+msgstr "Não é possível gravar na pasta %s."
+
+#: includes/eKomiDB.php:927
+msgid "Config file created."
+msgstr "Ficheiro de configuracao creado com succeso."
+
+#: includes/eKomiDB.php:1091
+#, php-format
+msgctxt "First number is total helpful, second is total not helpful."
+msgid "%s person found this review helpful."
+msgid_plural "%s people out of %s found this review helpful."
+msgstr[0] "%s pessoa acharam este comentario util."
+msgstr[1] "%s pessoas de %s acharam este comentario util."
+
+#: includes/eKomiDB.php:1353
+#, php-format
+msgid "The query argument of % s must have a placeholder."
+msgstr "O argumento da consulta %s deverá ter um placeholder."
+
+#: includes/mmReviewContainer.php:329
+#, php-format
+msgid "eKomi mass market review container log: %s"
+msgstr "log do Review Container da eKomi Mass Market: %s"
+
+#: includes/mmReviewContainer.php:339 includes/mmReviewContainer.php:390
+#: includes/mmReviewContainer.php:417
+msgid "eKomi › Reviews"
+msgstr "eKomi › Avaliações"
+
+#: includes/mmReviewContainer.php:645
+msgid "eKomi › Setup"
+msgstr "eKomi › Setup"
+
+#: templates/install.html.twig:8
+msgid "Install & Settings"
+msgstr "Instalação e Configuração"
+
+#: templates/install.html.twig:30
+msgid ""
+"It appears that you have already configured the solution. However, you can "
+"re-configure the settings by deleting the “config.php” file. Do you want to "
+"<a href='#delete_config' class='delete_config_php'>delete it</a> now?"
+msgstr ""
+"Parece que você já tenha configurado a solução. No entanto, você pode "
+"reconfigurar as definições, apagar o ficheiro \"config.php\". Você quer <a "
+"href='#delete_config' class='delete_config_php'>apaga-lo</a> agora?"
+
+#: templates/install.html.twig:35
+msgid "No “config.php” file exists. This is required before continuing."
+msgstr ""
+"O ficheiro “config.php” existe. Isto será necessário, antes de continuar."
+
+#: templates/install.html.twig:39
+msgid ""
+"Please enter your MySQL database connection details. If unsure about these, "
+"contact your administrator. This is required for first time configuration "
+"only."
+msgstr ""
+"Por favor introduza os dados das sua conexão à base de dados MySQL. Se não "
+"tiver certeza, contate o seu administrador. Isto será necessário apenas para "
+"a primeira configuração."
+
+#: templates/install.html.twig:41
+msgid ""
+"Once you entered all the settings, click “Check Database Connection” button "
+"to validate then “Populate & Sync Database”."
+msgstr ""
+"Uma vez realizada todas as configurações, clique no botão \"Verificar "
+"conexão da base de dados\" para validar, e em seguida no botão  \"Preencher "
+"e Sincronizar a base de dados\"."
+
+#: templates/install.html.twig:44
+msgid "Check Database Connection"
+msgstr "Verificar conexão da base de dados"
+
+#: templates/install.html.twig:48
+msgid "Populate & Sync Database"
+msgstr "Preencher e Sincronizar a base de dados"
+
+#: templates/install.html.twig:55
+msgid "Database settings"
+msgstr "Configurações da base de dados"
+
+#: templates/install.html.twig:56 templates/install.html.twig:101
+#: templates/install.html.twig:177
+msgid "Required"
+msgstr "Requerido"
+
+#: templates/install.html.twig:60
+msgid "Database hostname"
+msgstr "Nome do host da base de dados"
+
+#: templates/install.html.twig:66 templates/install.html.twig:75
+#: templates/install.html.twig:87 templates/install.html.twig:95
+#: templates/install.html.twig:110 templates/install.html.twig:119
+msgid "This field is required."
+msgstr "Este campo é obrigatório."
+
+#: templates/install.html.twig:69
+msgid "Database name"
+msgstr "Nome da base de dados"
+
+#: templates/install.html.twig:80
+msgid "Database username"
+msgstr "Nome do utilizador da base de dados"
+
+#: templates/install.html.twig:90
+msgid "Database password"
+msgstr "Senha da base de dados"
+
+#: templates/install.html.twig:100
+msgid "eKomi settings"
+msgstr "Configurações eKomi"
+
+#: templates/install.html.twig:104
+msgid "eKomi interface ID"
+msgstr "Interface  ID eKomi "
+
+#: templates/install.html.twig:113
+msgid "eKomi interface password"
+msgstr "Senha interface eKomi "
+
+#: templates/install.html.twig:176
+msgid "Miscellaneous settings"
+msgstr "Configurações diversas"
+
+#: templates/install.html.twig:180
+msgid "In case of no product reviews, display:"
+msgstr "Em caso de não ter avaliaçõesde produtos, mostrar:"
+
+#: templates/install.html.twig:184
+msgid "nothing"
+msgstr "vazio"
+
+#: templates/install.html.twig:189
+msgid "text message"
+msgstr "mensagem de texto"
+
+#: templates/install.html.twig:194
+msgid "empty container"
+msgstr "container vazio"
+
+#: templates/install.html.twig:197
+msgid ""
+"Text message to be displayed in case of no product reviews (only if text "
+"message option is chosen)"
+msgstr ""
+"Mensagem de texto a ser exibido no caso de nao haver comentários sobre "
+"produtos (somente se a opção de mensagem de texto for escolhida)"
+
+#: templates/install.html.twig:198
+msgid ""
+"You may use ##product_name## and ##product_id## placeholders and they will "
+"be replaced by actual product values."
+msgstr ""
+"Você pode usar os placeholders  ##product_name## e ##product_id## e eles "
+"serão substituídos por valores reais dos produtos."
+
+#: templates/install.html.twig:200
+msgid ""
+"No product reviews received for product ##product_name## with product ID "
+"##product_id##."
+msgstr ""
+"Não recebemos avaliações de produtos para o produto ##product_name## com "
+"identificação ##product_id##."
+
+#: templates/install.html.twig:204
+msgid "Language"
+msgstr "Idioma"
+
+#: templates/install.html.twig:214
+msgid "Reviews per page"
+msgstr "Avaliações por página"
+
+#: templates/install.html.twig:221
+msgid "Cronjob delay"
+msgstr "Atraso do Cronjob "
+
+#: templates/install.html.twig:222
+msgid "(Hours)"
+msgstr "(Horas)"
+
+#: templates/install.html.twig:230
+msgid "eKomi logo link:"
+msgstr "ligação logotipo eKomi:"
+
+#: templates/install.html.twig:234
+msgid "do not link the eKomi logo"
+msgstr "o logo eKomi não será um link"
+
+#: templates/install.html.twig:239
+msgid "link to the certificate page"
+msgstr "ligar à página de certificação"
+
+#: templates/install.html.twig:244
+msgid "link to the eKomi website in the chosen language"
+msgstr "ligar ao site eKomi na língua escolhida"
+
+#: templates/install.html.twig:247
+msgctxt "Checkboxes inside a form"
+msgid "Check all that applies:"
+msgstr "Confira tudo o que se aplica:"
+
+#: templates/install.html.twig:250
+msgid "delete all existing reviews in database"
+msgstr "eliminar  todas as avaliações existentes na base de dados"
+
+#: templates/install.html.twig:254
+msgid "allow HTML in comments"
+msgstr "permitir HTML nos comentários"
+
+#: templates/install.html.twig:259
+msgid "allow votes on reviews"
+msgstr "permitir votações sobre comentários"
+
+#: templates/partials/average_rating.html.twig:4
+msgid "Average rating"
+msgstr "Média das avaliações "
+
+#: templates/partials/average_rating.html.twig:20
+msgid "Calculated from"
+msgstr "Calculado apartir de "
+
+#: templates/partials/average_rating.html.twig:22
+msgid "review"
+msgid_plural "reviews"
+msgstr[0] "avaliação"
+msgstr[1] "avaliações "
+
+#: templates/partials/rating_graph.html.twig:5
+msgid "Star"
+msgid_plural "Stars"
+msgstr[0] "Estrela"
+msgstr[1] "Estrelas"
+
+#: templates/partials/review.html.twig:35
+msgid "Thank you for your vote!"
+msgstr "Obrigado por votar!"
+
+#: templates/partials/review.html.twig:38
+msgid "Did you find this review helpful?"
+msgstr "Você achou esta avaliação útil?"
+
+#: templates/partials/review.html.twig:40
+msgid "Yes"
+msgstr "Sim"
+
+#: templates/partials/review.html.twig:42
+msgid "No"
+msgstr "Não"
+
+#: templates/partials/reviews_sort.html.twig:2
+msgid "Newest reviews"
+msgstr "Avaliações mais recentes "
+
+#: templates/partials/reviews_sort.html.twig:3
+msgid "Oldest reviews"
+msgstr "Avaliações mais antigas"
+
+#: templates/partials/reviews_sort.html.twig:4
+msgid "Most helpful reviews"
+msgstr "Avaliações mais úteis"
+
+#: templates/partials/reviews_sort.html.twig:5
+msgid "Highest rating"
+msgstr "Classificação mais alta"
+
+#: templates/partials/reviews_sort.html.twig:6
+msgid "Lowest rating"
+msgstr "Classificação mais baixa"
+
+#: templates/widgets/reviews_large.html.twig:20
+msgid "Product review for"
+msgid_plural "Product reviews for"
+msgstr[0] "Avaliação do produto para"
+msgstr[1] "Avaliações do produto para"
+
+#: templates/widgets/reviews_large.html.twig:26
+msgid "Powered by"
+msgstr "Powered by"
+
+#: templates/widgets/reviews_large.html.twig:55
+#, c-format
+msgid "%s out of %d review"
+msgid_plural "%s out of %d reviews"
+msgstr[0] "%s de %d avaliação"
+msgstr[1] "%s de %d avaliações"
+
+#: templates/widgets/reviews_large.html.twig:72
+msgid "Show more"
+msgstr "Mostrar mais"
+
+#~ msgid ""
+#~ "Sorry, I need a config-sample.php file to work from. Please re-upload "
+#~ "this file and try again!"
+#~ msgstr ""
+#~ "Descuple, eu preciso um ficheiro config-sample.php para trabalhar. Voce "
+#~ "pode carregar-lho e ententar ainda!"
+
+#~ msgid "Sorry, I cannot write in the %s folder."
+#~ msgstr "Desculpe, è impossível de escrever na pasta %s."
+
+#~ msgid "not link the ekomi logo"
+#~ msgstr "não vincular o logotipo ekomi"
+
+#~ msgid "link to certificate page"
+#~ msgstr "link para a página certificado"
+
+#~ msgid "link to language specific ekomi website"
+#~ msgstr "link para o site específico linguagem eKomi"
+
+#~ msgid ""
+#~ "The credentials you supplied were not correct or did not grant access to "
+#~ "the eKomi API."
+#~ msgstr ""
+#~ "Os dados que você ofereceu não são correcoas ou não dão acesso na "
+#~ "interface API de eKomi."
+
+#~ msgid "Could not drop the reviews tables! %s Last error was: %s"
+#~ msgstr "Impossível de borrar a tabela das opinioes! %s Ultimo error foe: %s"
+
+#~ msgid "Time"
+#~ msgstr "Tempo"
+
+#~ msgid "Thank you for your review!"
+#~ msgstr "Obrigado pela sua avaliação!"
+
+#~ msgid "from"
+#~ msgstr "de"

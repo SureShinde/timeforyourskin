@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+    <ekomi_product_reviews type="reviewcontainer/product_container" module="reviewcontainer">
+        <name>eKomi Review Container</name>
+        <description>Displays the product reviews for a given product in the frontend</description>
+        <parameters>
+            <shop_id>
+                <label>Get product reviews for shop ID</label>
+                <type>select</type>
+                <visible>1</visible>
+                <required>1</required>
+                <source_model>reviewcontainer/source_config_shops</source_model>
+            </shop_id>
+            <query_reviews_by>
+                <label>Get product reviews by</label>
+                <type>select</type>
+                <visible>1</visible>
+                <required>1</required>
+                <source_model>reviewcontainer/source_config_reviews</source_model>
+            </query_reviews_by>
+            <languageLocale>
+                <label>Container language</label>
+                <type>select</type>
+                <visible>1</visible>
+                <source_model>reviewcontainer/source_config_languages</source_model>
+            </languageLocale>
+            <template>
+                <label>View to render</label>
+                <type>select</type>
+                <values>
+                    <reviews_container translate="label">
+                        <label>Product reviews container</label>
+                        <value>ekomi/reviewcontainer/reviews_container.phtml</value>
+                    </reviews_container>
+                    <ministarscounter translate="label">
+                        <label>Total reviews count</label>
+                        <value>ekomi/reviewcontainer/ministarscounter.phtml</value>
+                    </ministarscounter>
+                </values>
+                <sort_order>30</sort_order>
+                <visible>1</visible>
+                <required>1</required>
+            </template>
+        </parameters>
+    </ekomi_product_reviews>
+</widgets>

@@ -1,0 +1,928 @@
+
+.giftcard-product-media{float:Left;width: 100%;}
+#giftcard-preview-template-content{float:left;width: 100%;overflow: hidden;}
+/****************************Template 01 _ left*************************************/
+.giftvoucher-product-info{overflow: hidden}
+#giftcard-template-left{
+    overflow:hidden;
+    width: 655px; 
+    font-size: 14px;
+    float:left;
+    background-size: 100% 100%;
+}
+#giftcard-preview-template .giftcard_value-color .giftcard-text-color{
+    padding-right: 10px;
+    margin-top: 15px;
+}
+/*#giftcard-preview-template-content {float: left;overflow: hidden;}*/
+.dialog.giftcard-preview-template-dialog .dialog_e{background:none;}
+.giftcard-template-content-left,.giftcard-change-image{
+    width: 275px; 
+    height: auto; 
+    display:block; 
+    float: left;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: 275px 400px;
+}
+.giftcard-logo{  
+    width: 100%; 
+    padding-top: 7px;
+    padding-bottom: 8px;
+}
+.logo1 { width: 100%; height: 50px; margin-top: -7px;}
+.giftcard-template-content{
+    width: 340px; 
+    height: auto; 
+    padding: 5px 20px;
+    margin-left: 275px;
+    background-color:#FFFFFF; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 380px 400px;
+}
+#giftcard-template-left .giftcard-title{
+    width: 340px;
+    height: 60px; 
+    font-size: 35px;
+    line-height: 35px;
+    font-style: italic; 
+    color: orange; 
+    font-family: time new roman;
+}
+.giftcard-from-to{width: 340px;font-size: 95%;}
+.giftcard-from{ 
+    margin-right: 15px;
+    overflow: hidden;
+    display: table-cell;
+    float: left; 
+}
+.giftcard-from-to .giftcard-text-color{font-style: italic; font-family: time new roman;}
+.giftcard-from-to  .giftcard-style-color{color: orange; font-size:14px}
+.giftcard-to{max-height: 25px;}
+.giftcard-box{overflow: hidden;margin-top: 10px;}
+.giftcard-box  .giftcard-text-box{
+    padding: 0 6px;   
+    height: 85px;
+    display:table-cell;
+    vertical-align: middle; 
+    background:#fff;
+    border: 1px solid #ececece;
+    border-radius: 5px;
+}
+.giftcard_value{width: 340px;height: 25px; margin-top: 8px;}
+.giftcard_value .giftcard-text-color{
+    float: left;
+    padding-right: 10px;
+}
+#giftcard-preview-template .giftcard-template-content .giftcard_value .giftcard-text-color{
+    padding-right: 10px; 
+    margin-top: 10px;
+}
+.giftcard_value .giftcard-style-color{
+    float: left; 
+    font-size: 20px; 
+    color: orange;
+    font-weight: bold; 
+    font-family: time new roman;
+}
+.giftcard-code{/*width: 50%;*/height: 70px;}
+.giftcard-number{
+    width: 100%;
+    float: right; 
+    text-align: right;
+}
+.giftcard-number .giftcard-style-color{
+    color: orange;
+    font-weight: bold;
+    font-family: time new roman;
+}
+.giftcard-custom-message{
+    margin: 0; 
+    white-space: pre-wrap; 
+    max-height: 85px; 
+    overflow: hidden; 
+    font-size: 11px;
+}
+.giftcard-barcode{
+    width: 100%; 
+    float: right; 
+    text-align: right;
+}
+.giftcard-barcode  .giftcard-style-color{
+    line-height: 50px;
+    font-size: 15px; 
+    color: orange; 
+    font-weight: bold;
+    font-family: time new roman;
+}
+.giftcard-text{
+    width: 340px;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+.giftcard-text  .giftcard-text-color{
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0;
+    height:45px;
+}
+#giftcard-template-show-images .gift-active{overflow:hidden}
+#giftcard-template-show-images .gift-active img{ display:inline;}
+/******************Detail giftcard by Crystal****************/
+#giftcard-template-left .giftcard-template-content .giftcard-box .giftcard-text-box{
+    display: block !important; 
+    background: #fff;
+    border-radius: 5px;
+    border:1px solid #cccccc;
+    height: 125px !important;
+}
+#giftcard-template-left .giftcard-template-content {
+    background-position: 0!important;
+    background-size: 100% !important;
+    width: 48% !important;
+    display: block !important;
+    margin-left: 0 !important; 
+    float: right;
+    height: auto;
+    background-repeat: repeat !important;
+    padding: 0 0 10px 2% !important;
+    box-sizing: content-box;
+}
+#giftcard-template-left .giftcard-template-content div{height: auto !important;}
+#giftcard-template-left .giftcard-logo div{width: 100% !important; margin-top: -7px !important;background-size: 80% 50px !important;}
+#giftcard-template-left .giftcard-logo {
+    width: 100% !important; 
+    margin-top: 0;
+    position: absolute;
+    z-index: 11;
+    top:60%;
+    text-align: center;
+    background: #fff;
+}
+#giftcard-template-left .giftcard-text-color {font-size: 11px !important}
+#giftcard-template-left .giftcard-style-color.giftcard-price-change {width: 0px !important; font-size: 20px; margin-top: -10px}
+#giftcard-template-left{width: 100% !important}
+#giftcard-template-left .giftcard-change-image {
+        width: 50% !important; 
+        background-position:inherit !important; 
+        background-size: 100% 100% !important;
+        height: auto; 
+        padding-bottom: 0;
+        position: relative;
+}
+.giftcard-change-image img{
+    
+    max-width: 100%;
+    display: inline;
+}
+.giftcard-change-image img#img-type-left{
+    position: relative;
+    top: 0;
+    z-index: 10;
+    left:0; 
+}
+.giftcard-template-content-left .giftcard-logo{
+    background: #fff;
+    position: absolute;
+    top: 60%;
+    z-index: 14;
+}
+/*#giftcard-template-left .giftcard-template-content div {width: 100% !important; float: left;}*/
+#giftcard-template-left .giftcard-template-content div.giftcard-style-color,
+#giftcard-template-left .giftcard-template-content div.giftcard-from-to,
+#giftcard-template-left .giftcard-template-content div.giftcard-box,
+#giftcard-template-left .giftcard-template-content div.giftcard_value,
+#giftcard-template-left .giftcard-template-content div.giftcard-code,
+#giftcard-template-left .giftcard-template-content div.giftcard-text{width: 100% !important; float: left;}
+#giftcard-template-left .giftcard-template-content .giftcard_value{margin-top: 10px;}
+#giftcard-template-left .giftcard-template-content .giftcard-box {width: 100% !important}
+#giftcard-template-left .giftcard-number{float: left !important;text-align: left !important;}
+#giftcard-template-left .giftcard-number span {font-size: 12px !important;}
+#giftcard-template-left .giftcard-barcode {width:70% !important; float: left}
+#giftcard-template-left .giftcard-barcode img {width: 100% !important}    
+#giftcard-template-left .giftcard-to{width: 100% !important;float: left;clear: both;margin-left: 0px;}    
+#giftcard-template-show-images {padding-top: 10px !important;}
+
+/*Change theme*/
+
+#giftcard-template-left .hidden-content .giftcard-box .giftcard-text-box {
+    height: 30px !important
+}
+#giftcard-template-left .hidden-content .giftcard-title{
+    font-size: 25px;
+}
+#giftcard-template-left .hidden-change-image{
+    height: 302px;
+}
+#giftcard-template-left .hidden-content .giftcard-price-change{
+    margin-top: 0px !important;
+}
+#giftcard-template-left .hidden-content .giftcard-price-change .price{
+    font-size:20px;
+    position: absolute;
+    line-height: 15px;
+}
+#giftcard-template-left .hidden-content .giftcard-from{
+    /*margin-top: 10px;*/
+}
+#giftcard-template-left .hidden-content-left{
+    height: auto;
+}
+/**Popup**/
+#giftcard-preview-template .hidden-content .giftcard-box .giftcard-text-box {
+   width: 98% !important;
+    height: 80px;
+}
+#giftcard-preview-template .hidden-content .giftcard-box{
+    overflow: visible;
+    width: 95% !important;
+}
+#giftcard-preview-template .hidden-content .giftcard_value .price{
+    font-size: 30px;
+}
+#giftcard-template-left .hidden-content{height: auto}
+
+/**********add giftcard by Sally************/
+#addredeem-giftvoucher-code .buttons-set {margin-bottom: 10px;}
+#addredeem-giftvoucher-code .buttons-set p.required{float:right; width: 40%}
+#addredeem-giftvoucher-code .input-box{padding-top:5px !important;}
+#addredeem-giftvoucher-code .button-add-list{float:left; width:55%;}
+#addredeem-giftvoucher-code .buttons-set button.button{float:left !important;}
+#addredeem-giftvoucher-code .buttons-set button.button:hover {background: #2e8ab8}
+#gift-voucher-code{width:55% !important;}
+/***************checkout cart by Sally***************/
+.giftvoucher #giftvoucher{position: relative;margin-right: -33px;margin-top: 10px;margin-left: 15px;}
+.giftcard_change img{display:inline;}
+/*************shopping cart by Sally*************/
+.discount .giftvoucher #giftvoucher{position: relative;margin-right: 0px;margin-top: 0px;margin-left: 0px;}
+.giftvoucher-discount-code img{display:inline}
+/************my account by Sally***********/
+.data-table .giftvoucher-grid-detail .input-text{width:160px;}
+.data-table .giftvoucher-grid-title-hidden{display:none;}
+.data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range img{width:inherit !important; height:inherit !important; padding-top:9px; float: left}
+.data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range .label{width:50px !important; padding-top:9px;}
+.data-table .giftvoucher-grid-search .giftvoucher-grid-search-item select{width:65px !important; }
+.data-table .balance .left{color:#3091C2!important;}
+.data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range input.range-text{margin-bottom:5px !important; margin-top:0px;}
+.data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range input#giftvoucher_grid-balance-to{margin-top:0px;}
+.data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range input#giftvoucher_grid-balance-from{margin-top:0px;}
+.data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range input.data-table-balance_change-from{margin-top:0px;}
+.data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range input.data-table-balance_change-to{margin-top:0px;}
+.data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .to-date img{padding-top:17px;}
+.data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .to-price .label{padding-top:11px;}
+.data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .to-date .label{padding-top:13px;}
+.data-table .pager{padding-top:10px;}  
+.balance .view-detail{margin-bottom:10px;margin-top:10px; background:none; padding-left:0px !important;}
+.balance .view-detail.button:hover{background:none;}
+.amount .addredeem{float:right; margin-top:31px; padding:7px 17px;}
+/***********View giftcard*************/   
+#giftcard_history_table .item-hidden{display:none;}
+.giftvoucher-index-view .custom-field{float:left; width: 45% !important}
+.giftvoucher-index-email  .custom-field{float:left;}
+.giftvoucher-index-view .form-list li{width:100%; float: left;} 
+.giftvoucher-index-email .form-list li{width:100%; float: left;} 
+/******History balance*******/
+.customer-account-giftcard .sub-title {font-size:24px !important; text-transform:uppercase; border-bottom:1px solid silver;margin-bottom:15px;font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;}
+#history_grid .giftvoucher-grid-search{width:100%;}
+#history_grid .giftvoucher-grid-search .giftvoucher-grid-search-item{width:100% !important;}
+#history_grid .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range input#history_grid-balance_change-from{margin-top:0px;}
+#history_grid .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range input#history_grid-balance_change-to{margin-top:0px;}
+#history_grid .giftvoucher-grid-search .giftvoucher-grid-search-item #history_grid-giftcard_code{width:50%}
+
+/*---Detail Popup Template 1---*/
+.dialog.giftcard-preview-template-dialog {left: 50% !important; width: 660px !important; margin-left: -330px;}
+#giftcard-preview-template { position: absolute; left: 50%;margin-left: -330px;}
+#giftcard-preview-template .giftcard_value .giftcard-style-color {margin-top: 0px}
+#giftcard-preview-template .giftcard-style-color.giftcard-title {font-size: 35px; font-family: time new roman; font-style: italic;}
+#giftcard-preview-template #giftcard-preview-template-content .giftcard-change-image {
+    background-size: 100% !important;
+    width: 50% !important
+}
+#giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content { 
+    height: 400px !important;
+    width: 46% !important; 
+    margin-left:0px !important; 
+    float:right;
+    box-sizing: content-box;
+    padding:0 2% 0 2%;
+}
+/*#giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content div {width: 100% !important}*/
+ #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content div.giftcard-text {
+     margin-top: 30px; 
+     width: 100%;
+ }
+ #giftcard-preview-template .hidden-content div.giftcard-code {
+     width: 100%;
+ }
+#giftcard-preview-template .giftcard-template-content .giftcard-box {width: 100% !important}
+#giftcard-preview-template .giftcard-template-content .giftcard-box .giftcard-text-box {display: inherit !important; background-size: 100% 100%!important; width: 100% !important;border: 1px solid #cecece;}
+#giftcard-preview-template .giftcard-text-color {font-size: 13px !important; max-height: 90px;line-height: 15px}	
+#giftcard-preview-template .giftcard-barcode,
+#giftcard-preview-template .giftcard-number{float: left !important; text-align: left !important;}
+#giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content .giftcard-from {float:left;width:100%;}
+#giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content .giftcard-from .giftcard-style-color{margin-right:10px}
+.dialog.giftcard-preview-template-dialog .dialog_w{background: none;}
+/*---End Detail Popup Template 1---*/
+
+
+
+/***********End Detail Popup Template 3*************/
+
+/******************Send email***************/
+.giftvoucher-product-info .giftcard-send-friend {
+    float: left; 
+    clear: both; 
+    width: 190px !important;
+    padding-bottom: 10px;
+}
+.giftvoucher-product-info .giftcard-date-box img {float: right; margin-top: 8px;margin-right: 40px;display: block;}
+.giftvoucher-product-info .giftcard-date-box input.validate-date-giftcard {float: left;margin-right: 3px;width: 140px !important;}    
+#giftcard-preview-button-add span {padding-left: 0 !important}
+.giftcard-date-box button span{padding-left: 0 !important}
+.add-to-box {clear: both}
+.giftvoucher-receiver{float: left; clear: both; padding-bottom: 20px; width: 100%}
+.giftvoucher-product-info #giftcard-template-show-images {width: 100% !important;}
+.giftvoucher-product-info .validation-advice{float: left; clear: both;}
+.recipient_email,
+.message,
+.recipient_ship_form {float:left; clear:both;}
+
+/******************End***********************/
+/***************checkout cart by Sally***************/
+.fieldset .giftvoucher  #giftvoucher{position: relative;margin-right: -33px;margin-top: 10px;margin-left: 15px;}
+.giftcard_change img{display:inline;}
+.fieldset .giftvoucher_credit #giftvoucher_credit{position: relative;margin-right: -33px;margin-top: 10px;margin-left: 15px;}
+.fieldset #giftvoucher_container{float:left;width: 100% !important;}  
+.fieldset .sp-methods{float:left; clear:both; width: 100% !important;} 
+.credit_input img {display:inline;}
+.credit_input  .input-text{width:68px !important;}
+#giftvoucher_container dt label{display:initial !important;}
+.notice-msg li{font-weight:700;}
+.giftvoucher-index-index .pager{margin-top:7px;}
+/*************shopping cart by Sally*************/
+.discount-form.giftvoucher   #giftvoucher{position: relative;margin-right: 5px;margin-top: 5px;margin-left: 0px;}
+.discount-form .giftvoucher_credit  #giftvoucher_credit{position: relative;margin-right: 5px;margin-top: 5px;margin-left: 0px; float:left}
+.giftvoucher-discount-code img{display:inline;}
+dd#giftcard_shoppingcart_apply, dd.giftvoucher li, dt.giftvoucher, dt.giftvoucher_credit, dd.giftvoucher-credit,li.giftvoucher-discount-code strong{float:left; clear:both; width: 100% !important}
+
+
+.giftcard-code-hidden{display:none;}
+
+@media  (max-width:1199px){
+    /**********add giftcard************/
+    #gift-voucher-code{width:65% !important;}
+}
+@media (max-width:1099px){
+    #history_grid  .giftvoucher-grid-search-item{width:280px !important;}  
+    #history_grid  #giftvoucher_grid-gift_code{width:170px !important; margin-left:70px;}
+    #history_grid   .giftvoucher-grid-search .giftvoucher-grid-search-item select{ margin-left:70px;width:170px !important; }
+    #history_grid  .giftvoucher-grid-title{display:none;}
+    #history_grid  .giftvoucher-grid-title-hidden{display:block;}
+    #history_grid th {float:left;display:block !important; text-align:left; /* width:100%; */border:none; background:none !important;}
+    #history_grid th .giftvoucher-grid-title-hidden{float:left;display:block; text-align:left; text-transform:initial; font-weight:bold;}
+    #history_grid th .giftvoucher-grid-detail{ margin-left:270px; display:block; /* width:100%; */ text-align:left;} 
+    #history_grid td{display:block; float:left; border-bottom:none; /* width:100%; */}
+    #history_grid td .giftvoucher-grid-title-hidden{float:left;display:block; text-align:left; font-weight:bold;}
+    #history_grid td .giftvoucher-grid-detail{ margin-left:300px; display:block; /* width:100%; */} 
+    #history_grid  .giftvoucher-grid-search{border-bottom:1px solid #AAA2A2;}
+    #history_grid tr{border-bottom:1px solid #AAA2A2;}
+    .from-price{float:left;  }
+    .to-price{float:left;  }
+    .from-date{float:left;}
+    .to-date{float:right;}
+    #history_grid  .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range .label{width:50px !important; text-align:right; padding-right:3px;}
+    #history_grid  .pager-header{display:none !important;}
+    #history_grid  .giftvoucher-grid-search .giftvoucher-grid-search-item .to-price input.range-text{margin-left:20px;}
+    #history_grid  .giftvoucher-grid-search .giftvoucher-grid-search-item .from-price  input.range-text{margin-left:20px;}
+    #history_grid   .giftvoucher-grid-search .giftvoucher-grid-search-item .to-date .label{padding-top:9px !important;}
+    #history_grid  .giftvoucher-grid-search .giftvoucher-grid-search-item .to-date img{padding-top:9px !important;}
+    #history_grid .giftvoucher-grid-search .giftvoucher-grid-search-item .search-text{width: 170px !important; margin-left: 70px;}
+    #history_grid  .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range .label{padding-top:0px !important;}
+    #history_grid  .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range img{padding-top:0px !important;}
+    /* ********************* */
+  
+}
+@media only screen and (max-width: 1050px){
+    /******************details giftcard by Crystal***********************/
+    #giftcard-template-left .giftcard_value {margin-top: -30px;}
+    
+}
+@media only screen and (max-width: 979px){
+    /******************Details giftcard by Crystals**************************/ 
+
+    #giftcard-template-left {width: 100% !important; overflow: hidden !important;height:auto;}
+    #giftcard-template-left .giftcard-template-content {
+        width: 48% !important;
+        background-size: 100% !important;
+        height: auto;
+        box-sizing: content-box;
+        padding:0 0 0 2%;
+    }
+    #giftcard-template-left .giftcard-template-content .giftcard-box .giftcard-text-box {
+        height: 75px !important; 
+        background-size: 100% 100% !important; 
+        display: block !important;
+    }
+    #giftcard-template-left .giftcard-template-content .giftcard-box {
+        width: 100% !important; 
+        height: 85px !important;
+    }
+     #giftcard-template-left .hidden-content .giftcard-box .giftcard-text-box {
+         height: 35px !important;
+     }
+    #giftcard-template-left .hidden-content .giftcard-box {
+        height: 38px !important;
+    }
+    #giftcard-template-left  .giftcard-change-image {
+        backgorund-size: 100% !important;
+        width: 50% !important;
+    }
+    #giftcard-template-left .giftcard-number {float: left !important}
+    #giftcard-template-left .giftcard_value {margin-top: 40px;} 
+    #giftcard-template-left .giftcard_value{margin-top: 15px;}
+   
+    /**********add giftcard by Sally************/
+    #gift-voucher-code{width:90% !important;}    
+    #giftcard-template-left .giftcard-template-content .hidden-giftcard {
+        height: 65px !important;
+    }
+#giftcard-template-left .hidden-content {height: auto}
+}
+@media (max-width:990px){
+    /************my account***********/
+    .giftvoucher-grid-search-item{width:280px !important;}  
+    #giftvoucher_grid-gift_code{
+        width:170px !important; margin-left:70px;}
+    .data-table .giftvoucher-grid-search .giftvoucher-grid-search-item select{ margin-left:70px; }
+    .giftvoucher-grid-title{display:none;}
+    .giftvoucher-grid-title-hidden{display:block;}
+    #giftvoucher_grid th {
+        float:left;
+        display:block !important;
+        text-align:left; /* width:100%; */
+        border:none; 
+        background:none !important;
+    }
+    #giftvoucher_grid th .giftvoucher-grid-title-hidden{
+        float:left;
+        display:block;
+        text-align:left; 
+        text-transform:initial;
+        font-weight:bold;
+    }
+    #giftvoucher_grid th .giftvoucher-grid-detail{ 
+        margin-left:300px; 
+        display:block; /* width:100%; */ 
+        text-align:left;
+    } 
+    #giftvoucher_grid td{
+        display:block; 
+        float:left; 
+        border-bottom:none;
+        width:100%;
+    }
+    #giftvoucher_grid td .giftvoucher-grid-title-hidden{
+        float:left;
+        display:block; 
+        text-align:left;
+        font-weight:bold;
+    }
+    #giftvoucher_grid td .giftvoucher-grid-detail{
+        margin-left:300px;
+        display:block; /* width:100%; */
+    } 
+    .giftvoucher-grid-search{
+        border-bottom:1px solid #AAA2A2;
+    }
+    #giftvoucher_grid tr{border-bottom:1px solid #AAA2A2;}
+    .from-price{float:left;}
+    .to-price{float:left;} 
+    .from-date{float:left;}  
+    .to-date{float:right;}   
+    .data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range .label{
+        width:50px !important; 
+        text-align:right; 
+        padding-right:3px;
+    }
+    .pager-header{display:none !important;}
+    .data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .to-price input.range-text{margin-left:20px;}
+    .data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .from-price  input.range-text{margin-left:20px;}
+    .data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .to-date .label{padding-top:9px !important;}
+    .data-table .giftvoucher-grid-search .giftvoucher-grid-search-item .to-date img{padding-top:9px !important;}
+    /*view giftcard*/
+    #giftcard_history_table .item-hidden{
+        display:block !important;
+        float:left; font-weight:700; 
+        font-size:16px;
+    }
+    #giftcard_history_table thead{display:none;}
+    #giftcard_history_table .item-detail{text-align: left;
+        display: block;
+        padding-left: 165px;
+        font-size:16px;
+    }
+    #giftcard_history_table td{
+        float:left; 
+        width:100%; 
+        border-bottom: none;
+    }
+    #giftcard_history_table tr{
+        border-bottom:1px solid #AAA2A2;
+    } 
+    .giftvoucher-index-view  h2{
+        font-size:18px;
+    }
+    .giftvoucher-index-view .form-list{
+        border-bottom:1px solid #ececec;
+        float:left;
+        margin-bottom:15px;
+    }
+    .giftvoucher-index-view .form-list .field{
+        margin-bottom:20px !important; /* display: block; */
+    }
+    .giftvoucher-index-view .form-list li{
+        width:100%;
+        float: left;
+    }
+    .giftvoucher-index-view .box-account.box-info {        
+        margin-bottom: 15px;
+    }
+    .fields .custom-field-right{width:55% !important;}
+    /**********check giftcard************/
+    .col-main .giftvoucher-fieldset .input-box   input[type=text]{width:95% !important;}
+    /**********check giftcard************/
+    .col-main .giftvoucher-fieldset .input-box   input[type=text]{width:95% !important;}
+}
+@media  (max-width:880px){
+    /************my account***********/
+    #giftvoucher_grid th .giftvoucher-grid-detail{
+        margin-left:230px !important; 
+    }
+    #giftvoucher_grid td .giftvoucher-grid-detail{
+        margin-left:230px  !important;
+    }
+    .data-table   th .giftvoucher-grid-detail{
+        margin-left:230px !important;
+    }
+    .data-table   td .giftvoucher-grid-detail{
+        margin-left:230px  !important; 
+    }
+    #history_grid td{width:100% !important;
+    }
+
+    /**********add giftcard************/
+    #gift-voucher-code{width:100% !important;}
+}
+
+@media only screen and (max-width: 809px){
+    #giftcard-template-left .giftcard-change-image{
+        /*height: 370px;*/
+        padding:0;
+    }
+    #giftcard-template-left .giftcard-title{
+        font-size: 35px;
+    }    
+    #giftcard-template-left .giftcard-style-color.giftcard-price-change{
+        font-size: 20px;
+    }
+   
+}
+@media only screen and (max-width: 770px){
+    /**************details giftcard and popup by Crystal*****************/
+    #giftcard-template-left {width: 100% !important; overflow: hidden !important;}  
+    #giftcard-template-left .giftcard-barcode{margin-top: 5px;}    
+    #giftcard-template-left .giftcard-template-content-left.giftcard-change-image {
+        background-size: 100% 100% !important;
+        width: 50% !important;
+        padding-bottom: 0px;}
+    #giftcard-template-left .giftcard-template-content {
+        width: 48% !important; 
+        padding:0 0 0 2%;
+        box-sizing: content-box;
+    }   
+       
+    /************my account by Sally***********/
+    #giftvoucher_grid th .giftvoucher-grid-detail{ margin-left:300px !important; }
+    #giftvoucher_grid td .giftvoucher-grid-detail{ margin-left:300px  !important; }
+    .data-table   th .giftvoucher-grid-detail{ margin-left:300px !important; }
+    .data-table   td .giftvoucher-grid-detail{ margin-left:300px  !important; }
+    /**********add giftcard by Sally************/
+    .col-main .giftvoucher-fieldset .input-box   input[type=text]{width:365px !important;}
+ 
+    /*theme other*/
+    .hidden-giftcard-content-left .giftcard-template-content {
+        padding: 15px 0px !important;
+    }
+    #giftcard-preview-template .hidden-content .giftcard_value .price{font-size: 25px !important}
+    #giftcard-template-left .hidden-content .giftcard-box{height: 38px !important; margin-top: 5px !important}    
+    #giftcard-template-left .hidden-content .giftcard_value {margin-top: 5px !important}
+    #giftcard-template-left .hidden-content .giftcard-number{margin-top: 5px}
+}
+@media only screen and (max-width: 767px){
+    #giftcard-preview-template {
+        width: 600px !important;
+        margin-left: -300px;
+    }
+    .dialog.giftcard-preview-template-dialog {
+        left: 50% !important; 
+        width: 600px !important; 
+        margin-left: -300px; 
+        position: absolute
+    }   
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content div.giftcard-text {
+        margin-top: 15px;
+    }
+    #giftcard-preview-template .hidden-content .giftcard-box {
+        height: 75px !important;
+        margin-top: 50px;       
+    }
+    #giftcard-preview-template .hidden-content .giftcard-box .giftcard-text-box{
+        height: 60px !important;
+    }
+    #giftcard-preview-template .giftcard-preview-template-dialog .dialog_content{
+        font-size: 12px
+    } 
+    #giftcard-preview-template .giftcard-template-content .giftcard-from-to .giftcard-to{
+        float:left; 
+        clear:both;
+        margin-left:0
+    }
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-from{
+        border-right:none;
+    }
+    #giftcard-preview-template .hidden-content .giftcard_value .price{
+        font-size: 25px
+    }    
+    #giftcard-template-left .hidden-content {height: auto !important}
+    #giftcard-template-left .hidden-content-left {height: 390px !important}
+    .hidden-giftcard-content-left .hidden-content{height: auto}
+    .hidden-giftcard-content-left .hidden-change-image{height: 380px !important}
+    #giftcard-template-left .hidden-content .giftcard-box{height: 65px !important}
+}
+@media only screen and (max-width: 767px){
+#giftcard-template-left .hidden-content .giftcard-box .giftcard-text-box {height: 60px !important}
+  #giftcard-template-left .giftcard-template-content .giftcard-text{margin-top: 15px;}
+}
+@media only screen and (max-width: 700px){
+    /**************details giftcard and popup by Crystal*****************/
+    #giftcard-template-left{height: auto}
+    #giftcard-template-left .giftcard-template-content-left.giftcard-change-image{height: 400px !important;}
+    #giftcard-template-left .giftcard-template-content{height: auto !important;}
+    #giftcard-template-left .giftcard-template-content .giftcard-box {
+        height: 85px !important; height: auto !important}
+    .dialog.giftcard-preview-template-dialog {
+        width: 500px !important; 
+        margin-left: -250px; 
+        left: 50% !important;
+        position: absolute;
+    }   
+    #giftcard-preview-template {
+        width: 500px !important; 
+        margin-left: -250px ;
+    }
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-change-image{
+        background-position: 0 !important;
+        background-size: 100% 100% !important;
+        height: 363px !important;
+    }
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content {height: 363px !important}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-barcode img{width: 80% !important;}
+    /**/
+    #giftcard-preview-template .hidden-content .giftcard-box {
+        height: 55px !important
+    }
+    #giftcard-preview-template .hidden-content .giftcard-box .giftcard-text-box{
+        height: 45px !important;
+    }
+    #giftcard-preview-template .hidden-content .giftcard_value .price{
+        font-size: 25px;
+    }
+}
+@media  (max-width:640px){
+    /************my account by Sally***********/
+    #giftvoucher_grid th .giftvoucher-grid-detail{ margin-left:200px !important; width:auto !important; }
+    #giftvoucher_grid td .giftvoucher-grid-detail{ margin-left:200px  !important;  width:auto !important; }
+    .data-table   th .giftvoucher-grid-detail{ margin-left:200px !important; width:auto !important; }
+    .data-table  td .giftvoucher-grid-detail{ margin-left:200px  !important;  width:auto !important; }
+}
+@media only screen and (max-width: 630px){
+    /************** popup by Crystal*****************/
+    .dialog.giftcard-preview-template-dialog {
+        width: 490px !important; 
+        margin-left: -245px; 
+        left: 50% !important; 
+        position: absolute;
+    }   
+    #giftcard-preview-template {width: 490px !important; margin-left: -245px}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-change-image{
+        width: 50% !important;
+        height: 350px !important;
+    }
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content{
+        width: 46% !important; 
+        height: 350px !important;
+    }
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content div {clear: both; float: left}
+    #giftcard-preview-template .giftcard-box .giftcard-text-box {height: 55px}
+    #giftcard-preview-template .giftcard-template-content .giftcard-box {height: 55px !important}
+    #giftcard-preview-template .giftcard-style-color.giftcard-title{font-size: 30px}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content div.giftcard-text {margin-top: 30px}
+    /**/
+    #giftcard-preview-template .hidden-content .giftcard-box{
+            margin-top: 0 !important;
+            margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 607px){
+    /**************details giftcard and popup by Crystal*****************/    
+    #giftcard-template-left .giftcard-template-content .giftcard-box .giftcard-text-box {height: 95px !important;}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-change-image-temp2{
+        height: 75px !important; 
+        background-position: 0 !important;
+    }
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content .giftcard-text {margin-top: 30px;}
+}
+@media  (max-width:580px){
+    .dialog.giftcard-preview-template-dialog {
+        width: 470px !important; 
+        margin-left: -235px;
+        left: 50% !important; 
+        position: absolute;
+    }   
+    #giftcard-preview-template {
+        width: 470px !important; 
+        margin-left: -235px;
+    }
+    /************my account by Sally***********/
+    #giftvoucher_grid th .giftvoucher-grid-detail{
+        margin-left:150px !important;
+        width:auto!important;
+    }
+    #giftvoucher_grid td .giftvoucher-grid-detail{ 
+        margin-left:150px  !important;
+        width:auto !important;
+    } 
+    .to-price{
+        float:left;
+        margin-left:0px !important;
+    }
+    .to-date{
+        float:left;
+        margin-left:0px !important;
+    }
+    .button{padding:5px !important;}
+    .giftvoucher-grid-search-item{width:auto !important;}
+    .balance .view-detail{background:#3399cc !important; }
+    .balance .view-detail.button:hover{background:#2e8ab8 !important;}
+    .balance .left{
+        color:#fff !important;
+        padding: 7px 15px !important;
+    }
+    #history_grid th .giftvoucher-grid-detail{ 
+        margin-left:150px !important; 
+        width:auto!important; 
+    }
+    #history_grid td .giftvoucher-grid-detail{
+        margin-left:150px  !important; 
+        width:auto !important;
+    }
+    #history_grid td{width:100% !important;}
+    /*end*/
+    #giftcard-preview-template .giftcard-box .giftcard-text-box{height: 55px}
+    #giftcard-preview-template .giftcard-template-content .giftcard-box{height: 55px !important}
+}
+
+@media only screen and (max-width: 550px){
+    .dialog.giftcard-preview-template-dialog {
+        width: 400px !important; 
+        margin-left: -200px; 
+        left: 50% !important; 
+        position: absolute;
+    }   
+    #giftcard-preview-template {
+        width: 400px !important;
+        margin-left: -200px;
+    }
+    
+    /**************details giftcard and popup by Crystal*****************/
+    #giftcard-template-left{height: auto !important;}
+    #giftcard-template-left .giftcard-template-content { height:auto !important; }
+    #giftcard-template-left .giftcard-template-content-left.giftcard-change-image {
+        height: 345px !important;
+        padding:0 !important; 
+    }
+    #giftcard-template-left .giftcard-template-content .giftcard-box {height: auto !important; margin-top: 5px}
+    #giftcard-template-left .giftcard-template-content .giftcard-box .giftcard-text-box {height: 40px !important;}
+    #giftcard-preview-button-add {margin-top: 21px !important;}
+    #giftcard-template-left .giftcard-title{font-size: 25px;}
+    #giftcard-template-left .giftcard-template-content .giftcard_value{margin-top: 10px;}
+    #giftcard-template-left .giftcard-number{margin-top: 5px;}
+    #giftcard-template-left .giftcard-template-content .giftcard-text{margin-top: 5px;}
+    .giftcard-text .giftcard-text-color{height: 32px;}
+    #giftcard-template-left .giftcard-barcode{margin-top: 5px;}
+    #giftcard-template-left .giftcard-style-color.giftcard-price-change{font-size: 16px;margin-top: -5px;}
+    
+      #giftcard-preview-template .hidden-content .giftcard_value .price{font-size: 20px !important}
+}
+@media  (max-width:533px){
+    /**********add giftcard by Sally************/
+    .buttons-set button{margin-bottom:3px;}
+    #addredeem-giftvoucher-code .buttons-set button.button{float:right !important; width:40%;}
+}
+@media  (max-width:480px){
+    /************my account by Sally***********/
+    #giftvoucher_grid th .giftvoucher-grid-detail{
+        margin-left:150px !important;
+        width:auto !important;
+    }
+    #giftvoucher_grid td .giftvoucher-grid-detail{ 
+        margin-left:150px  !important;
+        width:auto !important; 
+    } 
+    .to-price{
+        float:left;
+        margin-left:0px !important; 
+    }
+    .to-date{
+        float:left; 
+        margin-left:0px !important;
+    }
+    .button{padding:4px !important;}
+    .giftvoucher-grid-search-item{width:auto !important;} 
+    #history_grid th .giftvoucher-grid-detail{ 
+        margin-left:150px !important;
+        width:auto !important; 
+    }
+    #history_grid td .giftvoucher-grid-detail{
+        margin-left:150px  !important;
+        width:auto !important;
+    } 	 	
+    #history_grid .giftvoucher-grid-search .giftvoucher-grid-search-item .data-range input.range-text{margin-bottom:10px !important;}
+    #giftcard-template-left .giftcard-template-content-left.giftcard-change-image{height: auto !important}
+}
+@media only screen and (max-width: 460px){
+    /**************details giftcard and popup by Crystal*****************/   
+     .dialog.giftcard-preview-template-dialog {
+         width: 350px !important; 
+         margin-left: -175px; 
+         left: 50% !important; 
+         position: absolute;
+     }   
+    #giftcard-preview-template {width: 350px !important; margin-left: -175px}
+    #giftcard-preview-template .giftcard-box .giftcard-text-box {height: 50px;}
+    #giftcard-preview-template .giftcard-template-content .giftcard-box {height: 50px !important;}
+    #giftcard-preview-template .giftcard_value .giftcard-style-color{font-size: 16px;}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content .logo1 {background-size: 100% 100% !important;}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content .giftcard_value .giftcard-style-color {margin-top: -5px;}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content .giftcard-barcode, 
+    #giftcard-preview-template-content .giftcard-template-content #giftcard-preview-template .giftcard-number{margin-top: 0px;}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content,
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-change-image {height: 300px !important}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-change-image .giftcard-logo {margin-top: 215px !important}
+    #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content div.giftcard-text{margin-top: 15px !important;}
+}
+@media  (max-width:440px){
+    /**********check giftcard by Sally************/
+    .page-title h1{font-size:18px !important;}
+    /* My account */
+    .balance .button{float:none !important; width:185px !important;}
+    .giftvoucher-search-button{text-align:left !important;}
+    .button{padding:5px !important;}
+    #history_grid th .giftvoucher-grid-detail{margin-left:115px !important;}
+    #history_grid .giftvoucher-grid-search .giftvoucher-grid-search-item select{width:50px !important;}
+
+    /*my account*/
+    #giftvoucher_grid-gift_code{width:65px !important; margin-left:70px;}
+}
+@media  (max-width:420px){
+    /***************checkout cart by Sally***************/
+    .giftcard{display:block;}
+}
+@media only screen and (max-width: 380px){
+    /**************details giftcard and popup*****************/
+    .dialog.giftcard-preview-template-dialog {width: 300px !important; margin-left: -150px; left: 50% !important; position: absolute}   
+    #giftcard-preview-template {width: 300px !important; margin-left: -150px }
+    #giftcard-preview-button-add {float: left !important; margin-top: 21px !important;}
+   
+    /*My Account*/
+    #giftvoucher_grid th .giftvoucher-grid-detail{ margin-left:120px !important; width:auto !important; }
+    #giftvoucher_grid td .giftvoucher-grid-detail{ margin-left:120px  !important;  width:auto !important; } 
+
+    /************my account***********/
+    #giftvoucher_grid th .giftvoucher-grid-detail{margin-left:115px !important;}
+    #history_grid .giftvoucher-grid-search .giftvoucher-grid-search-item .search-text{width:50px !important;}
+    .data-table  .balance .button{float:none !important; width:185px !important;}
+    .data-table  .giftvoucher-search-button{text-align:left !important;}
+    .data-table   th .giftvoucher-grid-detail{margin-left:115px !important;}
+    .data-table  .button{padding:5px !important;}
+
+}
+
+@media  (max-width:400px){
+    /**********add giftcard by Sally************/
+    #addredeem-giftvoucher-code .buttons-set button.button{width:100%;}
+    #addredeem-giftvoucher-code .button-add-list{width:100% !important;}
+    input#full_gift_card_code{max-width:100% !important; width:100% !important;} 
+    .giftvoucher-index-view.customer-account .wrapper{min-width:100%}
+}

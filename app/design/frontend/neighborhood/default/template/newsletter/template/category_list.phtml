@@ -1,0 +1,53 @@
+<?php
+$category_id = 283;
+$products = Mage::getModel('catalog/category')->load($category_id)
+ ->getProductCollection()
+ ->addAttributeToSelect('*') // add all attributes - optional
+ ->addAttributeToFilter('status', 1) // enabled
+ ->addAttributeToFilter('visibility', 4) //visibility in catalog,search
+ ->setOrder('price', 'ASC'); //sets the order by price
+ 
+?>
+
+
+<div class="products" style="margin-bottom: 10px;border-bottom: 1px solid #000;">
+	<div style="width: 100%;display: inline-block;text-align: center;">
+		<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA)."wysiwyg/newsletter/sixth.png" ?>" style="width: 100%;" />
+		<div class="img-detail" style="padding: 0px 5px;text-align: center;">
+			<p style="font-size: 12px;margin: 0px;">Feast your eyes on 100's of new arrivals and new brands launching every week.</p>
+			<a href="#" style="padding: 6px 11px;color: #FFF;text-transform: uppercase;background: #000;text-decoration: none;display: inline-block;max-width: 150px;width: 100%;margin: 10px; 0px">Shop Now>></a>
+		</div>
+	</div>
+	<div class="grid" style="margin: 10px 0px;">
+		<ul style="margin: 0;padding: 0;width: 100%;display: inline-block;list-style-type: none;">
+		 <?php $i=1; foreach($products as $_product){ ?>
+			<?php if($i <=8){ ?>
+				<li style="width: 23%;float: left;margin:0 1%;margin-bottom: 15px;box-sizing: border-box;">
+					<a href="<?php echo $_product->getProductUrl() ?>" style="text-align: center;width: 100%;display: inline-block;text-decoration: none;color: #000;" target="_blank">
+						<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA)."catalog/product".$_product->getSmallImage(); ?>" alt="#" width="173" height="193" style="width: 100%;"/>
+						<strong style="font-size: 11px;line-height: normal;"><?php echo $_product->getName(); ?></strong>
+						<?php
+							$categoryIds = $_product->getCategoryIds();
+							if(count($categoryIds)){
+								foreach($categoryIds as $catId){
+									if($catId == 10){
+										$subcats = Mage::getModel('catalog/category')->load($catId)->getChildren();
+										$mainCategory = array_intersect($categoryIds,explode(',',$subcats));
+										foreach($mainCategory as $cat){
+											$subcats = Mage::getModel('catalog/category')->load($cat);
+											$brandName = $subcats->getName();
+										}
+									}
+								}
+							}
+						?>
+						<span style="font-size: 11px;display: block;"><?php echo $brandName; ?></span>
+					</a>
+				</li>
+			<?php } ?>
+		  <?php $i++; } ?>
+		</ul>
+	</div>
+</div>
+ 
+                        

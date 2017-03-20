@@ -1,0 +1,91 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var ekomi_offset_page = 0,
+                ekomi_product_id = "{{ productID }}",
+                ekomi_shop_id = "{{ args.shopID }}",
+                ekomi_count_pages = "{{ ekomi_count_pages }}",
+                ekomi_filter = 0,
+                ekomi_autoload_on_scroll = "{{ EKOMI_AUTOLOAD_ON_SCROLL }}";
+        /* ]]> */
+    </script>
+
+    <div class="ekomi_mm_review_widget reviews_large">
+        <div class="ekomi_header">
+            <div class="ek-row">
+                <div class="ek-small-12 ek-large-6 ek-columns">
+                    <span class="header_first_line">{{ _n("Product review for", "Product reviews for", reviews_data.total_product_reviews) }}</span>
+            <span class="header_second_line"><span
+                        itemprop="name">{% if productName %}{{ productName }}{% else  %}{{ productID }}{% endif %}</span>
+            ({{ reviews_data.total_product_reviews }})</span>
+                </div>
+                <div class="ek-small-12 ek-large-6 ek-columns ek-text-right">
+                    <div class="ek-logo-text" style="">
+                        <span class="ek-powered-by">{{ ___("Powered by") }}</span>
+
+                        {% if ekomiURL %}
+                            <a class="ek-logo" href="{{ ekomiURL }}" target="_blank">
+                                <img src="{{ getAppURI() }}assets/images/ekomi_logo.png"/>
+                            </a>
+                        {% else %}
+                            <img src="{{ getAppURI() }}assets/images/ekomi_logo.png"/>
+                        {% endif %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="ekomi_statistics">
+            <div class="ek-row">
+                <div class="ek-small-12 ek-large-6 ek-columns">
+                    {# product rating overview  #}
+                    {% if reviews_data.total_product_reviews %}
+                        {% include 'partials/rating_graph.html.twig' %}
+                    {% endif %}
+                </div>
+                <div class="ek-small-12 ek-large-6 ek-columns ek-text-center">
+                    <!-- product average rating  -->
+                    {% include 'partials/average_rating.html.twig' with reviews_data %}
+                </div>
+            </div>
+        </div>
+        <div class="ekomi_filter">
+            <div class="ek-row">
+                <div class="ek-small-12 ek-medium-6 ek-columns ek-small-text-center">
+                    {% if EKOMI_REVIEWS_PER_PAGE == '-1' %}
+                    {{ sprintf( _n("%d review", "%d reviews", reviews_data.total_product_reviews), reviews_data.total_product_reviews)|raw }}
+                {% else %}
+                    {% set reviewCountSpan = '<span class="current_review_batch">' ~ ekomi_review_count ~ '</span>' %}
+                    {{ sprintf( _n("%s out of %d review", "%s out of %d reviews", reviews_data.total_product_reviews), reviewCountSpan, reviews_data.total_product_reviews)|raw }}
+                    {% endif %}
+                    :
+                </div>
+                <div class="ek-small-12 ek-medium-6 ek-columns ek-small-text-center ek-medium-text-right">
+                    {% include 'partials/reviews_sort.html.twig' %}
+                </div>
+            </div>
+        </div>
+        <div id="ekomi_reviews_container" class="ekomi_reviews">
+            {% for review in reviews_data.reviews %}
+                {% include 'partials/review.html.twig' with review %}
+            {% endfor %}
+        </div>
+
+        <div class="ekomi_footer">
+            <div class="ek-row">
+                <div class="ek-large-12 ek-columns ek-text-center">
+                    <a href="#"
+                       class="loads_more_reviews" {% if reviews_data.total_product_reviews <= EKOMI_REVIEWS_PER_PAGE or EKOMI_REVIEWS_PER_PAGE == '-1' %} style="display:none" {% endif %}>{{ ___("Show more") }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# Template for use in js to generate more reviews #}
+    <div id="ekomi_review_template_for_js" style="display:none">
+        {% include 'partials/review.html.twig' with {'review': ''} %}
+    </div>
+{% endblock %}

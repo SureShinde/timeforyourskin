@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.resi.tnt.com" xmlns:impl="http://services.resi.tnt.com" xmlns:intf="http://services.resi.tnt.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema targetNamespace="http://services.resi.tnt.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <element name="getPDFLabelResponse">
+    <complexType>
+     <sequence>
+      <element name="getPDFLabelReturn" nillable="true" type="impl:Document"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getPDFLabel">
+    <complexType>
+     <sequence>
+      <element name="inputXml" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Document">
+    <sequence>
+     <element name="binaryDocument" type="xsd:base64Binary"/>
+     <element name="documentCorrect" nillable="true" type="xsd:boolean"/>
+     <element name="outputString" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getPDFLabelResponse">
+     <wsdl:part element="intf:getPDFLabelResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="getPDFLabelRequest">
+     <wsdl:part element="intf:getPDFLabel" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:portType name="ResiServiceImpl">
+     <wsdl:operation name="getPDFLabel">
+       <wsdl:input message="intf:getPDFLabelRequest" name="getPDFLabelRequest"/>
+
+       <wsdl:output message="intf:getPDFLabelResponse" name="getPDFLabelResponse"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="ResiServiceImplSoapBinding" type="intf:ResiServiceImpl">
+ <wsaw:UsingAddressing wsdl:required="false" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="getPDFLabel">
+       <wsdlsoap:operation soapAction="getPDFLabel"/>
+
+       <wsdl:input name="getPDFLabelRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="getPDFLabelResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="ResiServiceImplService">
+     <wsdl:port binding="intf:ResiServiceImplSoapBinding" name="ResiServiceImpl">
+       <wsdlsoap:address location="https://www.mytnt.it/ResiService/services/ResiServiceImpl"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

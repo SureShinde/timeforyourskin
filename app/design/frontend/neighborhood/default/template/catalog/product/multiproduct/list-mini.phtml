@@ -1,0 +1,77 @@
+<?php
+/**
+ * Product list template
+ *
+ * @see Mage_Catalog_Block_Product_List
+ */
+?>
+<?php
+    $_productCollection=$this->getLoadedProductCollection();
+    $_helper = $this->helper('catalog/output');
+    $display_productname_singleline = Mage::getStoreConfig('mygeneral/product_list/display_productname_singleline');
+    
+    
+    if($_GET['layout']) {
+	$page = $_GET['layout'];
+    }
+    else {
+	$page = Mage::app()->getLayout()->getBlock('root')->getTemplate();
+	if ($page == "page/1column.phtml") {
+	    $page = 1;
+	}
+	elseif ($page == "page/2columns-left.phtml" || $page == "page/2columns-right.phtml") {
+	    $page = 2;
+	}	
+	elseif($page == "page/3columns.phtml") {
+	    $page = 3;		
+	}
+	else {
+	    $page = 0;
+	}
+    }
+    
+    $blockId = "";
+    if($this->getCustomBlockId()) {
+	$blockId = "-".$this->getCustomBlockId();
+    }
+?>
+<?php if($_productCollection->count()): ?>
+<?php $_collectionSize = $_productCollection->count() ?>
+    <?php //if($custom_popular == '1'):?>
+	<ul class="homepage-mini mini-products-list">
+	<?php $i=0;$j=0; foreach ($_productCollection as $_product): ?>
+	    <li class="item">
+			<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
+				<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(90,115) ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+			</a>
+			<?php
+			$categoryIds = $_product->getCategoryIds();
+            if(count($categoryIds)){
+				foreach($categoryIds as $catId){
+					if($catId == 10){
+						$subcats = Mage::getModel('catalog/category')->load($catId)->getChildren();
+						$mainCategory = array_intersect($categoryIds,explode(',',$subcats));
+						foreach($mainCategory as $cat){
+							$subcats = Mage::getModel('catalog/category')->load($cat);
+							$brandName = $subcats->getName();
+						}
+					}
+				}
+			}
+			?>                 
+			<div class="product-details">
+				<h4><?php echo $brandName; ?></h4>
+				<p class="product-name<?php if($display_productname_singleline == '1'){ ?> single-line-name<?php } ?>"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $this->htmlEscape($_product->getName()); ?></a></p>
+				<?php echo $this->getPriceHtml($_product, true) ?>			    
+				<?php //echo $this->getReviewsSummaryHtml($_product, false, true); ?>
+			</div>
+			<?php //$categoryIds =  $_product->getCategoryIds();
+			//echo "<pre>";print_R($categoryIds);
+			?>
+			
+		</li>					    
+	 <?php endforeach ?>
+	</ul>
+<script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>	    
+<?php  endif; ?>
+

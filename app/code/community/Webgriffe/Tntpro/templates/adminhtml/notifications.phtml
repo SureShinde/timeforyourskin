@@ -1,0 +1,23 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: manuele
+ * Date: 23/01/15
+ * Time: 11:29
+ */
+
+/** @var Webgriffe_Tntpro_Block_Adminhtml_Notifications $this */
+?>
+
+<?php if ($this->_hasError()): ?>
+<div class="notification-global">
+    <strong class="label"><?php echo $this->__('There has been an error updating TNT Delivery Points!') ?></strong>
+    <?php
+        echo $this->__(
+            'TNT Delivery Points URL was <a href="%s" target="_blank">%s</a>. Please check if URL is still valid.',
+            $this->_getTntPointUrl(),
+            $this->_getTntPointUrl()
+        );
+    ?>
+</div>
+<?php endif ?>

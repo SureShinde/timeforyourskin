@@ -1,0 +1,17 @@
+<?php
+$_categoryData = Mage::registry('current_category');
+$categoryId= $_categoryData->getId();
+?>
+<div class="category-custom" style="/*left: 20px; height: 370px;*/ color: black; opacity: 0.9;margin-bottom: 20px; /*text-align: center; background: white;*/">
+<?php $category = Mage::getModel('catalog/category')->setStoreId(Mage::app()->getStore()->getId())->load($categoryId);?>
+<?php if ($category->getId() && $category->getIsActive() && $_Image = $category->getCategoryTopImage()) : ?>
+    <img alt="<?php echo $category->getName();?>" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'catalog/category/'. $this->helper('catalog/output')->categoryAttribute($category, $_Image, 'category_top_image')?>" width="100%"/>
+<?php endif;?>
+<?php if ($category->getId() && $category->getIsActive() && $_description = $category->getCategoryDescription()) : ?>
+<div class="img-content">
+        <p><?php echo $this->helper('catalog/output')->categoryAttribute($category, $_description, 'category_description')?></p>
+        <p><?php echo $this->__('Scopri le linee').' '.$category->getName().':' ; ?></p>
+</div>
+<?php endif;?>
+
+</div>

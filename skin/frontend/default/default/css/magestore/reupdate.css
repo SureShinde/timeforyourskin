@@ -1,0 +1,815 @@
+/* 
+    Document   : reupdate.css
+    Created on : Aug 14, 2014, 2:27:31 PM
+    Author     : Billy
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/****************************Template 02 _ top*************************************/
+
+	#giftcard-template-top{
+            overflow:hidden; 
+            max-height: 550px;
+            font-size: 14px;
+        }
+	#giftcard-template-top .giftcard-template-content{
+            margin-left:0px;
+        }
+	#giftcard-template-top .giftcard-template-content-top, .giftcard-change-image-temp2{
+            width: 550px; height: 120px; 
+            background-color: #FFFFFF;
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: 100% auto;
+        }
+	#giftcard-template-top .giftcard-template-content-temp2{
+            width: 100%; 
+            height: 235px;
+            padding: 10px; 
+            padding-top: 0px;
+            background-position: center;
+            background-repeat: repeat;
+            background-size: 100%
+        }
+	#giftcard-template-top .giftcard-title-top {
+            width: 100%; 
+            height: 65px; 
+            float:left;
+        }
+	#giftcard-template-top .title{
+            width: 60%;
+            height: 75px; 
+            font-size: 30px; 
+            font-style: italic;
+            color: orange;
+            float: left;
+        }
+	#giftcard-template-top .title .logo-title{
+            height: 50px;
+            background-size: 100% auto !important; 
+            float: left; 
+            width: 35%;
+        }
+	#giftcard-template-top .title .giftcard-title{
+            float: right; 
+            font-family: time new roman; 
+            width: 50% !important; 
+            text-align: right;
+        }
+	#giftcard-template-top .giftcard-value{
+            width: 160px; 
+            height: 65px;
+            float: left;
+        }
+	#giftcard-template-top .giftcard-value .giftcard-text-color{
+            text-align: right; 
+        }
+	#giftcard-template-top .giftcard-value .giftcard-price-change { 
+            text-align: right; 
+            font-size: 25px;
+            color: orange;
+            font-weight: bold; 
+            font-family: time new roman;
+        }
+	#giftcard-template-top .giftcard-value .giftcard-price-change  .price{font-family: time new roman;}
+	#giftcard-template-top .giftcard-date{
+            width: 100%; 
+            height: 30px;
+            margin-top: 15px; 
+            float:left;
+        }
+	#giftcard-template-top .giftcard-from-to{
+            width: 280px; 
+            height: 25px; 
+            float: left;
+            font-size: 13px; 
+            margin-top: -10px;
+        }
+	#giftcard-template-top .giftcard-from-to .giftcard-from{
+            margin-right: 5px;
+            max-width: 100%;
+            overflow: hidden;
+            display: table-cell;
+            float: left;
+            max-height: 25px;
+            margin-top: -25px;
+        }
+	#giftcard-template-top .giftcard-from-to .giftcard-text-color{
+            font-style: italic;
+            font-family: time new roman;
+        }
+	#giftcard-template-top .giftcard-from-to .giftcard-style-color{
+            color: orange;
+            font-size: 95%}
+	#giftcard-template-top .giftcard-to{
+            width: 160px;
+            margin-left:0px; 
+            max-height: 25px; 
+            float:left; 
+            clear:both;
+        }
+	#giftcard-template-top .giftcard-code{
+            width: 250px;
+            float: left; 
+            text-align: right;
+            margin-top:0px;
+            font-size: 14px;
+        }
+	#giftcard-template-top .giftcard-number{
+            width: 290px;
+        }
+	#giftcard-template-top .giftcard-number .giftcard-style-color{
+            color: orange; 
+            font-weight: bold; 
+            font-family: time new roman;
+        }
+	#giftcard-template-top .giftcard-information-top{
+            width: 550px;
+            height: 120px; 
+            float:left;
+        }
+	#giftcard-template-top .giftcard-information{
+            overflow: hidden;
+            float: left;
+            width: 275px;
+            height: 100px;
+        }
+	#giftcard-template-top .giftcard-message{
+            padding: 6px;
+            padding-bottom: 14px; 
+            padding-top: 3px; 
+            height: 75px;
+            vertical-align: middle; 
+            background: #fff; 
+            border-radius: 5px; 
+            border:1px solid #cecece 
+        }
+	#giftcard-template-top .giftcard-custom-message{
+            margin: 0; 
+            white-space: pre-wrap;  
+            max-height: 85px; 
+            overflow: hidden; 
+            font-size: 11px;
+        }
+	#giftcard-template-top .giftcard-barcode{
+            float: right;
+            text-align: right;
+        }
+	#giftcard-template-top .giftcard-barcode-value{
+            height: 50px;float:right;
+        } 
+	#giftcard-template-top .giftcard-barcode .giftcard-style-color{
+            font-size: 24px;
+            line-height: 35px;
+            color: orange;
+            font-weight: bold;
+            font-family: time new roman;
+        }
+	#giftcard-template-top .giftcard-note{
+            height: 45px;
+            overflow: hidden;
+            margin-top: 5px;
+            float: right; 
+            width: 100%
+        }
+	#giftcard-template-top .giftcard-note .giftcard-text-color{
+            font-size: 11px;
+            line-height: 15px; 
+            margin: 0px;
+            padding-right:5px;
+        }
+     
+/*******END**********/
+	
+/**************************responsive temp2*****************************/
+	#giftcard-template-top {width:100% !important;}
+	#giftcard-template-top .giftcard-template-content-top.giftcard-change-image-temp2{width:100% !important;}	
+     /* #giftcard-template-top .giftcard-template-content-temp2 div{padding:5px;} */
+	#giftcard-template-top .giftcard-template-content-temp2{
+            width:100%; 
+            background-size:100% auto !important;
+            float: left;
+        }
+	#giftcard-template-top .giftcard-title-top{
+            width:100% 
+        }
+        .hidden-giftcard-content-temp2 .giftcard-barcode-value {height: 30px !important}
+	#giftcard-template-top .title{width:60% !important;}
+	#giftcard-template-top .giftcard-value{width:40% !important;}
+	#giftcard-template-top .giftcard-date{width:100%}
+	#giftcard-template-top .giftcard-from-to{width:50% !important;}
+	#giftcard-template-top .giftcard-code{width:50% !important;}
+	#giftcard-template-top .giftcard-information-top{width:100%}
+	#giftcard-template-top .giftcard-information{width:50%}
+	#giftcard-template-top .giftcard-barcode{width:48% !important;}
+	
+	#giftcard-template-top .giftcard-value-bottom {display: none}	
+        
+        /*Change Theme*/
+        .hidden-giftcard-template-top-1 .giftcard-title-top,
+        .hidden-giftcard-template-top-1 .giftcard-date,
+        .hidden-giftcard-template-top-1 .giftcard-information-top{
+            width: 100% !important
+        }
+        .hidden-giftcard-template-top-1 .title {
+            width: 65%;
+        }
+        .hidden-giftcard-template-top-1 .title .logo-title{
+            height: 20px !important;
+            width: 50% !important;
+        }
+        .hidden-giftcard-template-top-1 .title .giftcard-title{
+            font-size: 25px;
+        }
+        .hidden-giftcard-template-top-1 {
+            height: auto !important;
+        }       
+       .hidden-giftcard-template-top-1 .giftcard-template-content-temp2 {
+           height: 215px !important;
+           width: 98% !important; 
+           padding: 0px !important}
+       .hidden-giftcard-template-top-1 .giftcard-title-top {
+           height: 50px !important
+       }
+       .hidden-giftcard-template-top-1 .giftcard-code {
+           margin-top: 10px !important; 
+           margin-bottom: 10px;
+       }
+       .hidden-giftcard-template-top-1 .giftcard-code {
+           font-size: 12px !important
+       }
+       .hidden-giftcard-template-top-1 .giftcard-information-top {
+           margin-top:10px
+       }
+       .hidden-giftcard-template-top-1 .giftcard-value .giftcard-price-change .price{
+           font-size: 20px
+       }   
+       .hidden-giftcard-template-top-1 .giftcard-date,
+      /* .hidden-giftcard-content-temp2 .giftcard-value-550{
+           padding-left: 15px
+       }
+       /*.hidden-giftcard-content-temp2 .giftcard-value,       
+       .hidden-giftcard-content-temp2 .giftcard-code,
+       .hidden-giftcard-content-temp2 .giftcard-barcode,
+       .hidden-giftcard-content-temp2 .giftcard-code-550,
+       .hidden-giftcard-content-temp2 .title{
+           padding: 0px 15px;
+       }*/
+       /*.hidden-giftcard-content-temp2 .giftcard-value{margin-top: 10px}*/
+       #giftcard-preview-template .hidden-giftcard-content-temp2 .giftcard-value-550{padding: 0 !important}  
+       #giftcard-preview-template .hidden-giftcard-content-temp2 .giftcard-value, 
+       #giftcard-preview-template .hidden-giftcard-content-temp2 .giftcard-information, 
+       #giftcard-preview-template .hidden-giftcard-content-temp2 .giftcard-code, 
+       #giftcard-preview-template .hidden-giftcard-content-temp2 .giftcard-barcode, 
+       #giftcard-preview-template .hidden-giftcard-content-temp2 .giftcard-code-550,
+       #giftcard-preview-template .hidden-giftcard-content-temp2 .title{padding: 0px !important}
+
+        /*---Detail Popup Template 2---*/
+#giftcard-preview-template .giftcard-template-content-temp2 {
+    width: 100%;
+    float: left; 
+    height: 255px;
+}
+#giftcard-template-top .giftcard-template-content-top, .giftcard-change-image-temp2{padding: 0 !important}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-title-top {
+    padding: 10px 5%;
+    float: left;
+    width: 100%;
+    height: 102px;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-title-top .logo-title{
+    height: 45px;
+    width: 53%; 
+    background-size: 100% !important;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-title-top .title{
+    width: 50%;
+    float: left;
+    width: 60%;
+}
+#giftcard-preview-template .giftcard-template-content-temp2  .giftcard-style-color.giftcard-title{
+    float: right;width: 42%;
+    margin-top: -45px;
+    font-family: time new roman;
+    font-size: 35px;
+    font-style: italic;
+    color: orange;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-style-color.giftcard-price-change span{
+    text-align: right;
+    font-size: 25px;
+    color: orange;
+    font-weight: bold;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-value {
+    width: 35%;
+    float: right;
+    text-align: right;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-date{
+    float: left;
+    padding: 0px 5%;
+    width: 100%; 
+    margin-top: -33px;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-code{
+    float: right;
+    text-align: right !important; 
+    margin-top: 15px !important;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-from-to {
+    float: left; 
+    width: 40%;
+}
+#giftcard-preview-template .giftcard-template-content-temp2  .giftcard-number{
+    float: right!important;
+    width: 100%; 
+    text-align: right !important;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-information-top{
+    float: left;
+    padding: 0px 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 25px;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-information {
+    height: 120px; 
+    float: left;
+    width: 55%;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-message{
+    height: 120px; 
+    background-size: 100% !important;
+    background: #fff;
+    border: 1px solid #cecece;
+    border-radius:5px;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-barcode {
+    float: right !important; 
+    width: 45%; 
+    text-align: right !important;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-barcode-value{
+    float: right; 
+    margin-bottom: 10px;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-note {
+    clear: both;
+    height: 45px;
+    overflow: hidden;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-to{
+    float:left; 
+    margin-left:0; 
+    clear:both;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-value .giftcard-style-color.giftcard-price-change span{
+    font-size: 25px;
+    color: #FFA500;
+    font-weight: bold;
+}
+#giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content-top.giftcard-change-image-temp2.giftcard-change-image {
+    height: 120px !important;
+    width: 100% !important;
+    margin-left: 0px !important;
+}
+#giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content-temp2 .giftcard-from{
+    border-right:none;
+}
+#giftcard-preview-template .giftcard-template-content-temp2 .giftcard-style-color.giftcard-price-change {
+    font-size:25px; 
+    font-weight:bold;
+}
+#giftcard-preview-template .hidden-giftcard-content-temp2 .giftcard-title-top{
+    width: 97% !important;    
+    padding: 0 1% 0 2% !important;
+    box-sizing:  content-box;
+}
+#giftcard-preview-template .hidden-giftcard-content-temp2 .giftcard-date,
+.hidden-giftcard-content-temp2 .giftcard-information-top,
+.hidden-giftcard-content-temp2 .giftcard-title-top,
+.hidden-giftcard-content-temp2 .giftcard-date,
+#giftcard-preview-template .hidden-giftcard-content-temp2 .giftcard-information-top{
+    padding: 0 1% 0 2% !important;
+    width: 97% !important;
+    box-sizing:  content-box;
+}
+.hidden-giftcard-content-temp2 .giftcard-value-550{margin-top: 15px !important;}
+.hidden-giftcard-content-temp2 .giftcard-information {}
+/*Change theme*/
+.hidden-giftcard-template-top-1 .giftcard-barcode-value img {
+    width: 75% !important;
+    float: right;
+}
+#giftcard-preview-template .hidden-giftcard-content-temp2 .giftcard-barcode-value {margin-bottom: 25px !important}
+#giftcard-template-left .giftcard-change-image {}
+@media only screen and (max-width: 1180px){
+.hidden-giftcard-template-top-1 .title .giftcard-title{font-size: 20px !important}
+}
+
+/*---End Detail Popup Template 2---*/
+@media only screen and (max-width: 1080px){
+.hidden-giftcard-template-top-1 .title .giftcard-title{font-size: 20px !important}
+.hidden-giftcard-template-top-1 .giftcard-template-content-temp2 {height: 200px !important}
+}
+@media only screen and (max-width: 1050px){
+        #giftcard-template-top .giftcard-value{display: none}
+	#giftcard-template-top .giftcard-code {display: none;}
+	#giftcard-template-top .giftcard-information{
+            width: 100%; height: 120px}
+	#giftcard-template-top .giftcard-value-550{
+            display: block  !important;
+            float: left; clear: both;
+            width: 100%; 
+            margin-top: 20px;
+        }
+	#giftcard-template-top .giftcard-code-550 {
+            display: block  !important; 
+            float: left; 
+            clear: both;
+            width: 100%;
+        }
+	#giftcard-template-top .giftcard-title-top {
+            margin-bottom: -25px; 
+            width: 97% !important;
+        }
+	#giftcard-template-top .giftcard-message {
+            backgorund-size: 100% 100% !important;
+            display: inherit !important; 
+            width: 100%; 
+            height: 120px;
+        }
+	#giftcard-template-top .giftcard-barcode {
+            clear: both;
+            width: 100% !important;
+        }
+	#giftcard-template-top .giftcard-number {
+            float: left !important;
+            text-align: left;
+        }
+	#giftcard-template-top .giftcard-barcode-value{float: left}
+	#giftcard-template-top .giftcard-note {
+            float: left;
+            clear:both; 
+            text-align: left;
+            overflow: hidden;
+            height: 45px;
+        }
+	#giftcard-template-top .giftcard-value-550 .giftcard-text-color {
+            float: left;
+            margin-right: 20px;
+            font-size: 13px;
+        }
+	#giftcard-template-top .giftcard-value-550 .giftcard-style-color.giftcard-price-change {
+            font-size: 25px !important;
+            color: orange;
+            font-weight: bold;
+            font-family: time new roman;
+            margin-top: -9px;
+        }
+	#giftcard-template-top .title{width: 100% !important}
+	#giftcard-template-top .title .giftcard-title {font-size: 30px}
+	#giftcard-template-top .giftcard-template-content-temp2 {height: 400px}
+	#giftcard-template-top .giftcard-from-to{
+            width: 100% !important;
+            margin-top: 15px;
+        }
+	#giftcard-template-top .giftcard-to{clear:none;}
+	#giftcard-template-top .giftcard-from-to .giftcard-text-color{margin-left:15px}    
+        #giftcard-template-top .giftcard-date{height: 10px;}
+        #giftcard-template-top .giftcard-information-top {margin-top: 40px}  
+        
+        /*Change theme*/
+        .hidden-giftcard-template-top-1 .giftcard-information {
+            height: 65px !important;
+            width: 100% !important;
+        }
+        .hidden-giftcard-template-top-1 .giftcard-information-top{
+            margin-top: 35px !important; 
+            height: 75px !important;
+        }
+        .hidden-giftcard-template-top-1 .giftcard-message {
+            height: 45px !important; 
+            width: 94% !important;
+        }
+        .hidden-giftcard-template-top-1 .giftcard-template-content-temp2 {height: 320px !important}
+         .hidden-giftcard-template-top-1 .giftcard-value-550{margin-bottom: 5px;}
+        .hidden-giftcard-template-top-1 .giftcard-value-550 .giftcard-text-color {margin-top: -5px}
+        .hidden-giftcard-template-top-1 .giftcard-change-image-temp2 {height: 90px}    
+        .hidden-giftcard-template-top-1 .giftcard-from-to .giftcard-text-color {margin-left: 0px !important ;}
+        .hidden-giftcard-template-top-1 .giftcard-barcode-value img {   
+            float: left;
+        }
+}
+@media only screen and (max-width: 979px){
+        #giftcard-template-top .giftcard-template-content-top, .giftcard-change-image-temp2{
+            height: 80px;
+            padding: 0 !important;
+        }
+        #giftcard-template-top .giftcard-message {width: 100%}
+        #giftcard-template-top {}
+        #giftcard-template-top .giftcard-template-content-temp2{height: 380px}
+        #giftcard-template-top .giftcard-information{height: 100px}
+        #giftcard-template-top .giftcard-message{
+            height: 100px;
+            background-size: 100% !important;
+        }
+        
+        /*Change theme*/
+        .hidden-giftcard-template-top-1 .giftcard-message {
+            height: 50px !important;
+            width: 94% !important;
+        }
+        .hidden-giftcard-template-top-1 .giftcard-information {height: 75px !important}
+        .hidden-giftcard-template-top-1 .giftcard-value-550 .giftcard-style-color.giftcard-price-change{font-size: 20px !important}
+        .hidden-giftcard-content-temp2 .title {width: 60% !important;}
+}@media only screen and (max-width: 809px){
+ #giftcard-preview-template .giftcard-template-content-temp2{
+     padding-bottom: 30px !important;
+     height: 255px;
+ }
+ 
+}
+@media only screen and (max-width: 770px){
+    #giftcard-template-top .giftcard-information {height: 100px}
+    #giftcard-template-top .giftcard-message {height: 100px}
+    #giftcard-template-top .giftcard-from-to{margin-top: 22px}
+    /*Popup up detail template 2*/
+    #giftcard-preview-template .giftcard-template-content-temp2 {height: 255px}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-title-top .title{width: 65%}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-value{width: 30%}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-style-color.giftcard-title{width: 45%}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-code {width: 50% !important}
+    #giftcard-preview-template .giftcard-template-content-temp2 {max-height: 400px}
+    .hidden-giftcard-content-temp2 .giftcard-note{margin-top: 30px !important}
+    #giftcard-preview-template .hidden-giftcard-content-temp2 .giftcard-note{margin-top: 0px !important}
+    .hidden-giftcard-content-temp2{}
+}
+   
+    @media only screen and (max-width: 767px){
+         /*Change theme*/
+    .hidden-giftcard-template-top-1 .giftcard-template-content-top, .hidden-giftcard-content-temp2 .giftcard-change-image-temp2 {
+        height: 100px !important;
+        margin-bottom: 20px;
+    }
+    .hidden-giftcard-template-top-1 .title .logo-title {height: 50px !important}
+    .hidden-giftcard-template-top-1 .title .giftcard-title{
+        font-size: 45px !important;
+        margin-top: 20px;
+    }
+    .hidden-giftcard-template-top-1 .giftcard-date {margin-top: 40px !important}
+    .hidden-giftcard-template-top-1 .giftcard-information-top{padding: 0px 10px 1px 30px !important}
+    .hidden-giftcard-template-top-1 .giftcard-message {height: 80px !important}
+    .hidden-giftcard-template-top-1 .giftcard-information {height: 100px !important}
+    .hidden-giftcard-template-top-1 .giftcard-template-content-temp2{height: 365px !important}
+    
+    .hidden-giftcard-template-top-2 .giftcard-template-content-temp2 {padding: 0px !important}
+    .hidden-giftcard-template-top-2 .giftcard-message{height: 75px !important; width: 95% !important}
+    .hidden-giftcard-template-top-2 .giftcard-information {height: 100px !important; width: 90%;}
+    .hidden-giftcard-template-top-2 .title .giftcard-title{font-size: 40px !important;margin-top: 20px;}
+    .hidden-giftcard-template-top-2 .giftcard-value-550 {margin-top: 0px !important; margin-bottom: 10px;}
+   .hidden-giftcard-template-top-2 .giftcard-value-550 .giftcard-style-color.giftcard-price-change{margin-top: 0px !important}
+   .hidden-giftcard-template-top-2 .giftcard-note {margin-top: 10px}
+    
+    }
+@media only screen and (max-width: 700px){
+    #giftcard-template-top {width: 100% !important; margin-left: 0;}
+    #giftcard-preview-template .giftcard-template-content-temp2{height: 390px;padding-bottom: 10px;}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-value{display: none}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-title-top .title {width: 100%}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-title-top .logo-title{width: 40%}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-style-color.giftcard-title{text-align: right}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-number {display: display}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-from-to{width: 100%}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-code{display: none}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-message,
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-information{
+        height: 135px; 
+        width: 100%; 
+        height:65px;
+        margin-top: 15px;
+    }
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-value-550 {
+        display: block !important;
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-value-550 .giftcard-text-color {
+        float: left; 
+        margin-right: 20px !important;
+        margin-top: 25px;
+    }
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-value-550 .giftcard-style-color.giftcard-price-change {
+        text-align: left;
+        font-size: 30px;
+        color: orange;
+        font-weight: bold;
+        font-family: time new roman;
+        margin-top: 10px;
+    }
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-barcode{
+        float: left !important; 
+        width: 100%;
+        text-align: left !important;
+        clear: both;
+    }
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-code-550 {display: block !important}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-code-550 .giftcard-text-color{float: left !important}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-barcode-value{float: left}
+    #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-style-color.giftcard-title{font-size: 32px}
+    .hidden-giftcard-content-temp2 .title {width: 100% !important}
+}
+@media only screen and (max-width: 630px){
+#giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content-top.giftcard-change-image-temp2.giftcard-change-image{height: 80px !important}
+}
+@media only screen and (max-width: 607px){
+        #giftcard-template-top .giftcard-template-content-temp2 {
+            height: 365px !important;
+            float: left;
+        }
+        #giftcard-template-top .title {
+            width: 100% !important;
+            font-size: 35px !important;
+        }
+        #giftcard-template-top .title .logo-title {
+            backgound-size: 90% auto !important;
+        }
+        #giftcard-template-top .giftcard-value{display: none}
+        #giftcard-template-top .giftcard-code {display: none}
+        #giftcard-template-top .giftcard-barcode {
+            clear: both; 
+            width: 100% !important;
+        }
+        #giftcard-template-top .giftcard-from-to {
+            width: 100% !important
+        }
+        #giftcard-template-top .giftcard-information {
+            width: 100% !important; 
+            height: 85px; 
+            margin-top: 10px !important;
+        }    
+        #giftcard-template-top .giftcard-value-550 {
+            display: block !important; 
+            width: 100% !important; 
+            float: left;
+        }
+        #giftcard-template-top .giftcard-value-550 .giftcard-text-color {
+            float: left; 
+            margin-right: 30px;
+        }
+         #giftcard-template-top .giftcard-value-550 .giftcard-style-color.giftcard-price-change {
+             font-size: 25px;
+             color: orange;
+             font-weight: bold;
+             font-family: time new roman;
+             margin-top: -9px;
+         }
+        #giftcard-template-top .giftcard-code-550 {
+            display: block !important; 
+            float: left;
+            width: 100%;
+        }    
+        #giftcard-template-top .giftcard-number{
+            width: 100% !important;
+            float: left!important;
+            text-align: left !important;
+        }
+        #giftcard-template-top .giftcard-message { 
+            display: inherit !important; 
+            height: 85px;
+        }
+        #giftcard-template-top .giftcard-barcode-value{
+            float: left !important;
+        }
+        #giftcard-template-top .giftcard-note {
+            text-align: left;
+            clear: both;
+            float: left;
+        }
+        #giftcard-template-top .giftcard-information-top {
+            float: left;            
+        }
+        #giftcard-template-top .giftcard-template-content-top, .giftcard-change-image-temp2{height: 80px}
+        /*Preview popup tem2*/
+        #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-message,
+        #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-information{
+            height: 70px;
+            margin-bottom: -5px; 
+        }  
+        #giftcard-preview-template .giftcard-template-content-temp2{padding-bottom: 0px}
+        #giftcard-preview-template .giftcard-template-content-temp2 {height: 380px !important}
+
+        
+        /*change theme*/
+        .hidden-giftcard-template-top-1 .giftcard-message {
+            height: 55px !important; 
+        }
+        .hidden-giftcard-template-top-2 .giftcard-value-550 .giftcard-text-color{
+            margin-bottom: 5px
+        }
+        .hidden-giftcard-template-top-2 .giftcard-value-550 .giftcard-style-color.giftcard-price-change{
+            margin-top: 0px !important
+        }
+        .hidden-giftcard-template-top-1 .giftcard-information {
+            height: 80px !important
+        }
+}
+@media only screen and (max-width: 550px){
+        #giftcard-template-top .giftcard-information {
+            padding: 0
+        }
+        .hidden-giftcard-template-top-2 .giftcard-information,
+        .hidden-giftcard-template-top-2 .giftcard-code-550{           
+        }
+        
+}
+@media only screen and (max-width: 460px){
+        #giftcard-template-top .title .giftcard-title {
+            font-size: 35px !important
+        }
+        #giftcard-template-top .title .logo-title{
+            width: 45% !important
+        }
+        /*Preview popup tem2*/
+        #giftcard-preview-template .giftcard-template-content-temp2{
+            padding-bottom: 45px !important
+        }
+        #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-title-top .logo-title{
+            width: 50%;
+        }
+        #giftcard-preview-template .giftcard-template-content-temp2 .giftcard-style-color.giftcard-title{
+            font-size: 29px;
+        }
+        #giftcard-preview-template #giftcard-preview-template-content .giftcard-template-content-top.giftcard-change-image-temp2.giftcard-change-image{
+            height: 65px !important
+        }
+        .hidden-giftcard-template-top-1 .giftcard-template-content-top, .giftcard-change-image-temp2 {
+            margin-bottom: 0px !important
+        }
+        .hidden-giftcard-template-top-1 .giftcard-from-to {
+            margin-top: 15px !important
+        }
+}
+@media  (max-width:440px){
+        #giftcard-template-top .giftcard-information-top{
+            margin-top: 35px;
+        }
+	#giftcard-template-top .giftcard-value-550{
+            margin-top: 10px;
+        }
+	#giftcard-template-top .giftcard-to {
+            clear: both;
+            border-left: none;
+            margin-left: 0;
+        }
+}
+@media only screen and (max-width: 380px){
+        #giftcard-template-top .giftcard-information-top,
+        #giftcard-template-top .giftcard-information {
+            height: 70px
+        }
+        #giftcard-template-top .title {
+            font-size: 27px !important;
+        }
+        #giftcard-template-top .title .giftcard-title {
+            font-size: 27px !important
+        }
+        #giftcard-template-top .title .logo-title {
+            margin-top: 0px
+        }
+        #giftcard-template-top .giftcard-code-550 {
+            padding: 0
+        }
+        #giftcard-template-top .giftcard-message{
+            height: 70px
+        }
+        #giftcard-template-top .giftcard-date {
+            margin-top: 10px !important
+        }
+        #giftcard-template-top .giftcard-template-content-temp2{
+            height: 350px !important;
+        }
+        .hidden-giftcard-template-top-1 .giftcard-from-to {
+            margin-top: 30px !important;
+        }
+        .hidden-giftcard-template-top-1 .giftcard-message {
+            height: 45px !important;
+        }
+        
+        .hidden-giftcard-template-top-2 .giftcard-information{
+            height: 80px !important;
+        }
+        .hidden-giftcard-template-top-2 .giftcard-message{
+            height: 50px !important;
+        }
+        .hidden-giftcard-template-top-1 .giftcard-information-top {
+            padding: 0;
+        }  
+        .hidden-giftcard-template-top-1 .giftcard-barcode-value img {   
+        float: left;
+        }
+        #giftcard-preview-template .hidden-giftcard-content-temp2 .title {padding: 0 !important}
+}

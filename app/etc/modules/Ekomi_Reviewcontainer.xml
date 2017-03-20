@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * eKomi
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ *
+ * @category    eKomi
+ * @package     eKomi_Reviewcontainer
+ * @copyright   Copyright (c) 2015 eKomi Ltd. (http://www.ekomi.de)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Ekomi_Reviewcontainer>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Widget />
+            </depends>
+        </Ekomi_Reviewcontainer>
+    </modules>
+</config>

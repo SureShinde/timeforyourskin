@@ -1,0 +1,232 @@
+/* ********************************************************************************************
+    Custom work from peerforest
+*********************************************************************************************** */
+
+
+/*******************
+ *Logo
+ *********************/
+
+.logo img{width: 100%;}
+
+
+/*******************
+ *Product detail page
+ *********************/
+
+.product-view .brand-price {
+  display: table;
+  width: 100%;
+  border-bottom: 1px solid #E4E4E4;
+  margin-bottom: 20px;
+}
+
+.product-view .brand-price .box-brand {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.product-view .brand-price .price-stock{
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-align: right;
+}
+
+.product-view .brand-price .price-stock .price-box{
+  float: none;margin-right: 0px;
+}
+
+.product-view .availability{
+  margin-bottom: 10px;
+  float: left;
+}
+
+.product-name h1,
+.page-title h2,
+.page-title h1{
+  float: left;
+}
+
+.breadcrumbs{
+  display: none;
+}
+
+.product-name .breadcrumbs,
+.page-title .breadcrumbs{
+  float: right;
+  width: auto;
+  margin-bottom: 0px;
+  background-color: #FFFFFF;
+  padding: 7px;
+  border-radius: 3px;
+  display: block !important;
+}
+
+.product-name .breadcrumbs a,
+.product-name .breadcrumbs li,
+.page-title .breadcrumbs a,
+.page-title .breadcrumbs li{
+  color: #999999;
+}
+
+.product-name .breadcrumbs li strong,
+.page-title .breadcrumbs li strong{
+  font-weight: normal;
+}
+
+.product-name .breadcrumbs .grid_full,
+.page-title .breadcrumbs .grid_full{
+  float: none;
+  margin: 0px;
+}
+
+.block-layered-nav .currently li:first-child span.label{
+  margin-top: 5px;
+}
+
+.block-layered-nav .currently ol li span.multiselect-child{
+  padding: 6px;
+  border: 1px solid;
+  margin: 0px 5px 5px 0px;
+  float: left;
+}
+
+.block-layered-nav .currently ol li span.multiselect-child a{
+  float: right;
+  margin-top: 5px;
+}
+
+.amshopby_attr_search.input-text{
+  width: 100%;
+  height: 30px;
+}
+
+.block-layered-nav .currently ol li span{
+  float: none;
+}
+
+.block-layered-nav .currently .label{
+  float: left;
+}
+
+
+.block.block-layered-nav .block-title:before{
+  width: 90%;
+  border-top: 1px solid #444;
+}
+
+.block.block-layered-nav .block-title strong:after{
+  content: "\f068";
+  position: absolute;
+  width: 10%;
+  right: 0;
+  text-align: center;
+  height: 20px;
+  line-height: 24px;
+  font-family: FontAwesome;
+  font-size: 11px;
+  font-weight: normal;
+}
+.block.block-layered-nav .block-title.amshopby-collapsed strong:after{
+  content: "\f067";
+}
+.block.block-layered-nav .block-title{
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.block.block-layered-nav .block-content dd li{
+  padding: 3px 0px;
+}
+
+.block.block-layered-nav .block-title strong span{
+  padding-left: 0px;
+}
+
+.block-layered-nav dd {
+  padding-bottom: 15px;
+}
+
+
+.scroll-pane ol::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scroll-pane ol::-webkit-scrollbar-track {
+      background-color: #e7e7e7;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+.scroll-pane ol::-webkit-scrollbar-thumb {
+      background-color: #000000; 
+} /* this will style the thumb, ignoring the track */
+.new-cat-left .block,
+.new-cat-left .view,
+.new-cat-right .block,
+.new-cat-right .view{
+    display: none;
+}
+.new-cat-left .block.block-layered-nav,
+.new-cat-right .block.block-layered-nav{
+    display: block;
+}
+.new-cat-left .view:first-child,
+.new-cat-left .view:first-child + .view,
+.new-cat-right .view:first-child,
+.new-cat-right .view:first-child + .view{
+    display: inline-block;
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+    width: 41%;
+    margin: 0 2%;
+    float: left;
+}
+.new-cat-left .block.block-layered-nav .block-title:before,
+.new-cat-right .block.block-layered-nav .block-title:before{
+  display: none;
+}
+.new-cat-left .block-layered-nav dd,
+.new-cat-right .block-layered-nav dd{
+  padding-bottom: 0;
+}
+.new-cat-left .block.block-layered-nav .block-title,
+.new-cat-right .block.block-layered-nav .block-title{
+  margin-bottom: 0px;
+  text-align: center;
+}
+.new-cat-left .block.block-layered-nav .block-title strong:after,
+.new-cat-right .block.block-layered-nav .block-title strong:after{
+  display: none;
+}
+.new-cat-left .block.block-layered-nav dd ol.no-display,
+.new-cat-right .block.block-layered-nav dd ol.no-display{
+  padding-top: 0px;
+}
+.new-cat-left .block.block-layered-nav dd ol,
+.new-cat-right .block.block-layered-nav dd ol{
+  padding-top: 20px;
+}
+
+@media only screen and (max-width:767px){
+  .old-cat-left .view:first-child,
+  .old-cat-left .view:first-child + .view,
+  .old-cat-right .view:first-child,
+  .old-cat-right .view:first-child + .view{
+    display: none;
+  }
+}
+@media only screen and (max-width:479px){
+  .new-cat-left .view:first-child,
+  .new-cat-left .view:first-child + .view,
+  .new-cat-right .view:first-child,
+  .new-cat-right .view:first-child + .view{
+    width: 91%;
+    margin: 1% 1%;
+  }
+}
+
+
+

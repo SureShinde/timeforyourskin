@@ -1,0 +1,240 @@
+<?php
+/** @var Webgriffe_Tntpro_Block_Checkout_Onepage_Billing_Extra_Js $this */
+?>
+
+<script type="text/javascript">
+
+    var tntPoints = <?php echo json_encode($this->_getActiveDeliveryPointsByCode()) ?>;
+    var tntmap;
+    var markers = {};
+    var infowindow = new google.maps.InfoWindow({content: ''});
+
+    function fillShippingAddressWithTntPoint(tntPoint) {
+        var mapping = $H({
+            "address": "shipping:street1",
+            "town": "shipping:city",
+            "companyName": "shipping:company",
+            "region": "shipping:region",
+            "postCode": "shipping:postcode"
+        });
+
+        $('shipping:country_id').value = 'IT';
+        $('shipping:firstname').value = $('billing:firstname').value;
+        $('shipping:lastname').value = $('billing:lastname').value;
+        $('shipping:telephone').value = $('billing:telephone').value;
+        mapping.each(function (pair) {
+            $(pair.value).value = tntPoint[pair.key];
+        });
+    }
+
+    function fillTntPointSelectFromAutoComplete(text, li) {
+        var code = li.readAttribute('data-code');
+        var tntPoint = tntPoints[code];
+        openMarkerWindow(markers[code]);
+        fillShippingAddressWithTntPoint(tntPoint);
+        $('<?php echo Webgriffe_Tntpro_Block_Checkout_Onepage_Billing_Extra::TNT_POINTS_SELECT_NAME ?>').value = code;
+    }
+
+    document.observe("dom:loaded", function() {
+        new Ajax.Autocompleter(
+            "tnt_autocomplete",
+            "tnt_autocomplete_results",
+            "<?php echo $this->getUrl('wgtntpro/point/search') ?>",
+            {
+                "afterUpdateElement": fillTntPointSelectFromAutoComplete,
+                "indicator": "wgtntpro-ajax-loader"
+            }
+        );
+
+        var elemBilling = $$('#co-billing-form ul.form-list')[0];
+        elemBilling.insert(
+            document.getElementById('tnt_delivery_point')
+        );
+
+        var elemShipping = $$('#co-shipping-form ul.form-list')[0];
+        elemShipping.insert(
+            document.getElementById('tnt_delivery_point_selection')
+        );
+
+        $('billing:use_tnt_delivery_point').observe('click', function() {
+            $$('[id^="billing:use_for_shipping_"]').each(function(e) {
+                e.checked = false;
+            });
+            if ($('shipping-address-select')) {
+                $$('#shipping-address-select option:last')[0].selected = true;
+            }
+
+            $$("#co-shipping-form ul.form-list li:not(.exclude_from_hide)").invoke('hide');
+            $('tnt_delivery_point_selection').show();
+        });
+
+        // @todo verificare se è possibile inserire questa logica nel cambio step
+        $$('[id^="billing:use_for_shipping_"]').invoke('observe', 'click', function(e) {
+            $('billing:use_tnt_delivery_point').checked = false;
+            $$("#co-shipping-form ul.form-list li").invoke('show');
+            if ($('shipping-address-select')) {
+                $$('#shipping-address-select option:first')[0].selected = true;
+            }
+            //QuyenNH
+            // @todo verificare funzionamento cross-browser
+            // if($('shipping-address-select')) $('shipping-address-select').onchange();
+            $('tnt_delivery_point_selection').hide();
+        });
+
+        new Protip($('wgtntpro-info'));
+    });
+
+    var tntposition = null;
+
+    function centerMap(address) {
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({
+            'address': address
+        }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                if (results[0].geometry) {
+                    tntposition = results[0].geometry.location;
+                    tntmap.setCenter(tntposition);
+                    tntmap.setZoom(10);
+                }
+            }
+        });
+    }
+
+    function openMarkerWindow(marker) {
+        var t = tntPoints[marker.tntCode];
+        tntmap.setCenter(new google.maps.LatLng(t.lat, t.lon));
+        infowindow.setContent(
+            "<strong>" + t.companyName + "</strong><br />" +
+                t.address + " - " + t.postCode + " " + t.town + "<br />" +
+                t.region + "<br />" +
+                " <em>" + t.pointType + "</em><br /><br /> " +
+                '<a href="#" id="tnt_select_this" data-code="' + marker.tntCode + '" onclick="javascript:tnt_select_this(this);"">' + <?php echo json_encode($this->__('Use as Delivery Point'))?> + '</a>'
+        );
+        infowindow.open(tntmap, marker);
+    }
+
+    function tntGoogleMap() {
+        tntmap = new google.maps.Map(
+            document.getElementById('map_canvas'), {
+                center: new google.maps.LatLng(42.569021, 12.970805),
+                zoom: 5,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+        var icons = {
+            1: <?php echo json_encode($this->getSkinUrl('images/wgtntpro/pin_filiale.png'))?>,
+            3: <?php echo json_encode($this->getSkinUrl('images/wgtntpro/pin_point.png'))?>,
+            5: <?php echo json_encode($this->getSkinUrl('images/wgtntpro/pin_lockerbox.png'))?>
+        }
+
+        function markerCreate(typeselected) {
+            for (var code in tntPoints) {
+                if (!tntPoints.hasOwnProperty(code)) {
+                    continue;
+                }
+                var tntPoint = tntPoints[code];
+                var n_type=3;
+                if (tntPoint.pointType.toLowerCase() === "filiale tnt") {
+                    n_type = 1;
+                }
+                if (tntPoint.pointType.toLowerCase() === "locker") {
+                    n_type = 5;
+                }
+                if (typeselected.indexOf(n_type) < 0) {
+                    continue;
+                }
+                markers[code] = new google.maps.Marker({
+                    position: new google.maps.LatLng(tntPoint.lat, tntPoint.lon),
+                    map: tntmap,
+                    icon: icons[n_type]
+                });
+                markers[code].tntCode = code;
+                google.maps.event.addListener(markers[code], 'click', function () { openMarkerWindow(this); });
+            }
+        }
+
+        function clearOverlays() {
+            for (var k in markers) {
+                if (!markers.hasOwnProperty(k)) {continue;}
+                markers[k].setMap(null);
+            }
+            markers = {};
+        }
+
+        $$('.tntpointtype').invoke(
+            'on',
+            'change',
+            function() {
+                var typeselected = [];
+                $$('.tntpointtype').each(function (element, index) {
+                    if ($F(element.id)) {
+                        typeselected.push(parseInt($F(element.id)));
+                    }
+                });
+                clearOverlays();
+                markerCreate(typeselected);
+            }
+        );
+
+        markerCreate([1, 3, 5]);
+    }
+
+    document.body.observe('billing-request:completed', function () {
+        new Ajax.Request(<?php echo json_encode(Mage::getUrl('wgtntpro/point/billing'))?>, {
+            onSuccess: function(response) {
+                tntGoogleMap();
+                centerMap(response.responseText);
+            }
+        });
+    });
+
+    function tnt_select_this(e) {
+        var t = tntPoints[e.readAttribute('data-code')];
+        $(<?php echo json_encode(Webgriffe_Tntpro_Block_Checkout_Onepage_Billing_Extra::TNT_POINTS_SELECT_NAME) ?>).value = e.readAttribute('data-code');
+        $$('[name="<?php echo Webgriffe_Tntpro_Block_Checkout_Onepage_Billing_Extra::TNT_POINTS_AUTOCOMPLETE_NAME ?>"]')[0].value =  t.companyName +
+        " - " + t.address + " - " + t.postCode + " " + t.town + " " + t.region + " -" + t.pointType + "-";
+        fillShippingAddressWithTntPoint(t);
+        infowindow.close();
+		shippingForm.close();
+		$('co-shipping-form').style.display = 'none';
+        return false;
+    }
+
+    var Protip = Class.create({
+
+        initialize: function(element){
+            this.element = $(element);
+            this.addObservers();
+            this.setupProtip();
+        },
+
+        setupProtip: function() {
+            this.content 	    = this.element.readAttribute('title');
+            this.element.title = '';
+            this._protip	    = new Element('div', {'class':'protip'}).update(this.content);
+            $$('body')[0].insert(this._protip.hide());
+        },
+
+        addObservers: function() {
+            Event.observe(this.element, "mouseover", this.showProtip.bind(this));
+            Event.observe(this.element, "mouseout", this.hideProtip.bind(this));
+            Event.observe(this.element, "mousemove", this.moveProtip.bindAsEventListener(this));
+        },
+
+        showProtip: function() {
+            this._protip.show();
+        },
+
+        hideProtip: function() {
+            this._protip.hide();
+        },
+
+        moveProtip: function(event){
+            this.mouseX = Event.pointerX(event);
+            this.mouseY = Event.pointerY(event);
+            this._protip.setStyle({ top:this.mouseY + 20 + "px", left:this.mouseX + 15 + "px" });
+        }
+
+    });
+</script>

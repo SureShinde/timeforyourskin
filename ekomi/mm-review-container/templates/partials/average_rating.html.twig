@@ -1,0 +1,24 @@
+<section itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+    <div class="ekomi_average_rating">
+        <div class="ek-row ekomi_average_title ek-text-center">
+            {{___("Average rating")}}
+        </div>
+
+        <div class="ek-row ek-text-center">
+            <div class="ekomi_average_stars">
+                <div class="ekomi_stars_wrap">
+                    <div class="ekomi_stars_gold" style="width:{{reviews_data.avg_rating * 20}}%"></div>
+                </div>
+                <div class="ekomi_agregate_rating">
+                    <span itemprop="ratingValue">{{reviews_data.avg_rating}}</span> / 5
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="ek-row ekomi_average_description ek-text-center">
+        {{___("Calculated from")}}
+        <span itemprop="reviewCount">{{reviews_data.total_product_reviews}}</span>
+        {{_n("review", "reviews", reviews_data.total_product_reviews)}}
+    </div>
+</section>

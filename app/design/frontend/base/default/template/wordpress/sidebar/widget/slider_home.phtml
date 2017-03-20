@@ -1,0 +1,55 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php $posts = $this->getPosts() ?>
+<?php if (count($posts) > 0): ?>
+	<div class="block block-blog widget-latest block-recent-posts">
+		<?php if ($title = $this->getTitle()): ?>
+			<div class="block-title section-line">
+				<h2><?php echo $this->__($title) ?></h2>
+			</div>
+		<?php endif; ?>
+		<div class="block-content itemslider" id="blogslider" >
+			<?php foreach($posts as $post): ?>
+			<?php if ($featuredImage = $post->getFeaturedImage()): ?>
+				<div class="item">
+					<div class="postContent peer-wrapper">
+						<div class="img-box scale-on-hover bot-shadow">
+							<img src="<?php echo $featuredImage->getFullSizeImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+						</div>
+						<h5 class="heading"><a href="<?php echo $post->getPermalink() ?>" target = "_blank" title="<?php echo $this->htmlEscape($post->getPostTitle()) ?>"><?php echo $this->htmlEscape($post->getPostTitle()) ?></a></h5>
+					</div>
+				</div>
+			<?php else: ?>
+				<div class="item">
+					<div class="postContent peer-wrapper">
+						<a href="<?php echo $post->getPermalink() ?>" target = "_blank" title="<?php echo $this->htmlEscape($post->getPostTitle()) ?>"><?php echo $this->htmlEscape($post->getPostTitle()) ?></a>
+					</div>
+				</div>
+			<?php endif; ?>
+			<?php endforeach; ?>
+			<script type="text/javascript">decorateList('<?php echo $this->getListId() ?>')</script>
+		</div>
+	</div>
+<?php endif; ?>
+
+<script type="text/javascript">
+    j$(document).ready(function() {
+        
+         j$("#blogslider").owlCarousel({
+	  itemsCustom : [
+	     [0, 1],
+	     [767, 2]
+	     ],
+             navigation : true,
+             slideSpeed : 1000,        
+             autoHeight:true
+        });
+        
+       });
+</script>
