@@ -39,7 +39,7 @@
         </div>
     </div>
     <div class="header-primary-container">
-        <div class="header-primary header container_12">
+        <div class="header-primary header container_12 hiderespo">
             <div class="grid_full">
                 <div class="header-main v-grid-container">
                     <div class="grid_6 v-grid custom-grid-4">
@@ -68,7 +68,7 @@
                     <?php echo $this->getChildHtml('topContainer'); ?>
                     <?php echo $this->getChildHtml('topMenu') ?>
                 </div>
-                <div class="grid_4 v-grid custom-grid-4">
+                <div class="mobile_logo v-grid custom-grid-4 hidefull">
                     <div class="logo">
                         <a href='<?php echo $this->getUrl(''); ?>' title='<?php echo $this->getLogoAlt(); ?>'>
                             <strong><?php echo $this->getLogoAlt(); ?></strong>
@@ -76,8 +76,8 @@
                         </a>
                     </div>                        
                 </div> 
-                <div class="grid_4 hidefull">
-                    <span class="drop-icon"><?php echo $this->__('Account'); ?></span>
+                <div class="mobile_account hidefull">
+                    <span class="drop-icon"><?php //echo $this->__('Account'); ?></span>
                     <div class="left-top">
                         <div class="top-links links-separators">
                             <?php echo $this->getChildHtml('topLinks'); ?>

@@ -404,13 +404,13 @@ padding-top: 15px;
 }
 @media only screen and (max-width:1041px){
 
-.products-grid .actions{
-  top: 10px;
-  bottom: auto;
-  transform:          scale(1);
-  -webkit-transform:  scale(1);
-  -moz-transform:     scale(1);      
-}
+  .products-grid .actions{
+    top: 10px;
+    bottom: auto;
+    transform:          scale(1);
+    -webkit-transform:  scale(1);
+    -moz-transform:     scale(1);      
+  }
 
   .drop-icon {
       display: block !important;
@@ -478,6 +478,28 @@ padding-top: 15px;
     height: auto;
     bottom: 13px;
   }
+
+  .navmain-container .mobile_menu{
+    width: 7.33% !important;
+  }
+  .navmain-container .mobile_logo{
+    width: 63% !important;
+    display:inline;
+    float: left;    
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  .navmain-container .mobile_account{
+    width: 10% !important;
+    display:inline;
+    float: left;    
+    margin-left: 1%;
+    margin-right: 0%;
+  }
+  .navmain-container .mobile_searchcart{
+    float: right;
+  }
 }
 
 @media only screen and (max-width:767px){
@@ -491,12 +513,7 @@ padding-top: 15px;
   .navmain-container .grid_4{
     width: 32.33% !important;
   }
-/*  .navmain-container .grid_5{
-    width: 19% !important;
-  }
-  .navmain-container .grid_6{
-    width: 48% !important;
-  }*/
+
   .product-view .product-third-column,
   .block.block-subscribe,
   .block.block-wishlist,
@@ -521,6 +538,15 @@ padding-top: 15px;
     width: auto;
     height: auto;
     bottom: 13px;
+  }
+  .quick-search .dropdown-toggle.cover.search-icon{
+    padding-left: 0px !important;
+  }
+  .no-right-margin .shopping_cart{
+    border-style: none;
+  }
+  .no-right-margin .shopping_cart .summary-container{
+    padding:0 10% !important;
   }
 }
 
@@ -584,13 +610,19 @@ padding-top: 15px;
     padding: 11px 6px;
     line-height: 12px;
   }
+  .header-container.header2 .logo{width: 100%;}
+  .navmain-container .mobile_logo .logo{
+    margin: 12px 0px 12px 0px;
+  }
+  .drop-icon:before{padding-right: 0px;}
+  .no-right-margin .shopping_cart .summary-container{padding-right: 0px !important;}
 }
 
 @media only screen and (max-width:396px){
   .shopping_cart .dropdown-toggle.cover > div,
   .quick-search .dropdown-toggle.cover > div,
   .wishlist .dropdown-toggle.cover > div{
-    padding: 0px 6px !important;
+    padding: 0px 6px;
   }
   .quick-search .dropdown-menu:before{
     right: 45px;
@@ -604,6 +636,16 @@ padding-top: 15px;
     font-size: 8px;
     padding: 11px 7px;
     line-height: 12px;
+  }
+  .navmain-container .mobile_logo{
+    width: 60% !important;
+    display:inline;
+    float: left;    
+    margin-left: 1%;
+    margin-right: 0%;
+  }
+  .navmain-container .mobile_logo .logo{
+    margin-top: 15px; margin-bottom: 0px;
   }
 }
 
