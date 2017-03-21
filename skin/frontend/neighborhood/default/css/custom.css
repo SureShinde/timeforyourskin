@@ -491,7 +491,12 @@ padding-top: 15px;
   .navmain-container .grid_4{
     width: 32.33% !important;
   }
-  
+/*  .navmain-container .grid_5{
+    width: 19% !important;
+  }
+  .navmain-container .grid_6{
+    width: 48% !important;
+  }*/
   .product-view .product-third-column,
   .block.block-subscribe,
   .block.block-wishlist,

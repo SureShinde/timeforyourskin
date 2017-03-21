@@ -59,11 +59,11 @@ if ($page == "page/1column.phtml") { ?>
     <?php echo $_imgHtml ?>
 <?php endif; ?>
 
-<?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
-    <div class="category-description std">
-        <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
-    </div>
-<?php endif; ?>
+<?php //if($_description=$this->getCurrentCategory()->getDescription()): ?>
+ <!--    <div class="category-description std">
+        <?php //echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
+    </div> -->
+<?php //endif; ?>
     
 <?php $categoryblock = $_category->getData('custom_block_position')?>
 <?php if($this->isContentMode()): ?>
@@ -79,4 +79,9 @@ if ($page == "page/1column.phtml") { ?>
 
 <?php else: ?>
     <?php echo $this->getProductListHtml() ?>
+<?php endif; ?>
+<?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
+    <div class="category-description std">
+        <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
+    </div>
 <?php endif; ?>
