@@ -399,9 +399,10 @@ padding-top: 15px;
   animation-name: fadeInDown; 
 }
 
-@media only screen and (min-width:1041px){
-
+.amshopby-page-container .theiaStickySidebar .category-description.std{
+  padding-top: 9px;
 }
+
 @media only screen and (max-width:1041px){
 
   .products-grid .actions{
